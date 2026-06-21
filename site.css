@@ -38,7 +38,8 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
 .display{font-family:var(--disp);font-weight:600;font-size:clamp(44px,9vw,128px);line-height:.86;letter-spacing:-.035em}
 .h2{font-family:var(--disp);font-weight:600;font-size:clamp(32px,6vw,86px);line-height:.92;letter-spacing:-.03em}
 .lead{font-size:clamp(17px,2vw,23px);color:var(--on-2);max-width:50ch;line-height:1.55}
-.out{color:transparent;-webkit-text-stroke:1.2px currentColor;text-stroke:1.2px currentColor}
+.out{color:transparent;-webkit-text-stroke:1.4px var(--on);text-stroke:1.4px var(--on)}
+.bone .out{-webkit-text-stroke-color:var(--ink-on-bone);text-stroke-color:var(--ink-on-bone)}
 .red{color:var(--red)} .it{font-style:italic;font-family:var(--disp)}
 
 /* marquee */
