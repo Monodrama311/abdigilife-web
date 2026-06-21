@@ -37,8 +37,8 @@
   function frame() {
     var y = window.pageYOffset;
     var dv = y - lastY; lastY = y;
-    vel += (dv - vel) * 0.25;
-    var sk = Math.max(-7, Math.min(7, vel * 0.35));
+    vel += (dv - vel) * 0.3;
+    var sk = Math.max(-3.4, Math.min(3.4, vel * 0.17));
     if (!reduce) skews.forEach(function (el) { el.style.transform = 'skewY(' + (sk * (el.dataset.skew === '-' ? -1 : 1)) + 'deg)'; });
 
     // nav swap when a bone section sits under the header line
