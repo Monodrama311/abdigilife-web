@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Studio — AB Digilife</title>
+<meta name="description" content="AB Digilife is a full-service creative studio led by Patricia Chen — built in Calgary, working across Western Canada, telling brand stories you can see.">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<meta property="og:title" content="Studio — AB Digilife">
+<meta property="og:description" content="Built in Calgary, working across Western Canada — a studio that designs, films, and grows brands.">
+<meta property="og:type" content="website">
+<style>
+  .intro{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(30px,5vw,72px);align-items:end;margin-top:clamp(36px,5vw,60px)}
+  .intro p{color:var(--on-2);font-size:clamp(16px,1.7vw,18px)}
+  .intro .stat{border-left:1px solid var(--line-2);padding-left:22px}
+  .intro .stat .n{font-family:var(--disp);font-size:clamp(36px,5vw,60px);color:var(--red);line-height:1}
+  .intro .stat .l{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-3);margin-top:8px}
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);margin-top:clamp(56px,8vw,110px)}
+  .story h2{margin-bottom:18px}
+  .story p{color:var(--on-2);margin-bottom:16px;max-width:54ch}
+  .vals{margin-top:clamp(56px,8vw,110px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.5vw,30px)}
+  .val{border:1px solid var(--line);border-radius:16px;padding:clamp(22px,3vw,32px);background:rgba(20,20,22,.4);transition:border-color .35s,transform .35s var(--ease)}
+  .val:hover{border-color:var(--red);transform:translateY(-3px)}
+  .val .vn{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--red)}
+  .val h3{font-size:clamp(19px,2.2vw,24px);margin:14px 0 10px}
+  .val p{color:var(--on-2);font-size:15px}
+  @media(max-width:760px){.intro,.story,.vals{grid-template-columns:1fr}.vals{gap:14px}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a href="/" aria-label="AB Digilife home"><img class="logo" src="logo-dark.png" alt="AB Digilife"></a>
+  <nav><a href="/work.html">Work</a><a href="/services.html">Services</a><a href="/studio.html">Studio</a><a href="/contact.html">Contact</a></nav>
+</header>
+
+<main class="wrap hero">
+  <p class="kick reveal">The studio</p>
+  <h1 class="display reveal d1" style="margin-top:18px">A studio that<br>designs, films,<br>and grows brands.</h1>
+  <div class="intro">
+    <p class="reveal d2">AB Digilife is a full-service creative studio. We do branding, commercials, web, events, weddings, interviews, and the stories in between — and we incubate original IP for the brands we believe in. One team, from the first idea to the final cut.</p>
+    <div class="stat reveal d3"><div class="n">4</div><div class="l">Cities served</div></div>
+  </div>
+</main>
+
+<section class="wrap section--tight">
+  <div class="story">
+    <div class="reveal">
+      <h2 class="h2">Built in Calgary.<br>Working everywhere.</h2>
+    </div>
+    <div class="reveal d1">
+      <p>The studio is led by <b>Patricia Chen</b> — a founder who grew up under a Calgary Stampede sky and turned a love of story and craft into a creative practice. What started in Alberta now runs across Western Canada, from Vancouver to Toronto.</p>
+      <p>We started AB Digilife because most marketing is forgettable — informational, safe, and gone the moment you scroll past. We make the opposite: work people stop for, remember, and act on. Marketing you can see, proven on camera.</p>
+      <p>Whether it's a brand born today or a business ready for its next chapter, we bring strategy, film, and growth under one roof — so nothing gets lost in translation between the idea and the screen.</p>
+    </div>
+  </div>
+
+  <div class="vals">
+    <div class="val reveal"><div class="vn">01</div><h3>One roof</h3><p>Strategy, production, and growth in the same room — no handoffs, no diluted vision.</p></div>
+    <div class="val reveal d1"><div class="vn">02</div><h3>Made to be seen</h3><p>If it doesn't make someone stop, it doesn't ship. We build for attention, then conversion.</p></div>
+    <div class="val reveal d2"><div class="vn">03</div><h3>Story first</h3><p>Every brand has one. We find it, write it, and put it on camera.</p></div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="reveal" style="text-align:center">
+    <p class="kick" style="justify-content:center">Let's build</p>
+    <h2 class="h2" style="margin:18px 0 26px">Have an idea? Let's make it unmissable.</h2>
+    <a class="btn" href="/contact.html">Start a project ▸</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="col"><h4>Studio</h4><a href="/work.html">Work</a><a href="/services.html">Services</a><a href="/studio.html">Studio</a><a href="/contact.html">Contact</a></div>
+    <div class="col"><h4>Contact</h4><a href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a href="tel:+15879680316">(587) 968 0316</a></div>
+    <div class="col"><h4>Based in</h4><p class="cities"><b>Vancouver</b> · Calgary · Edmonton · Toronto</p></div>
+  </div>
+  <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life.</div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

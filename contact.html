@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contact — AB Digilife</title>
+<meta name="description" content="Start a project with AB Digilife. Email hello@abdigilife.com or call (587) 968 0316. Serving Vancouver, Calgary, Edmonton, and Toronto.">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<meta property="og:title" content="Contact — AB Digilife">
+<meta property="og:description" content="Have an idea? Let's make it unmissable. Email or call to start a project.">
+<meta property="og:type" content="website">
+<style>
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(30px,4vw,44px)}
+  .channels{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.4vw,26px);margin-top:clamp(56px,8vw,100px)}
+  .ch{border:1px solid var(--line);border-radius:16px;padding:clamp(24px,3vw,34px);background:rgba(20,20,22,.4);
+    transition:border-color .35s,transform .35s var(--ease)}
+  .ch:hover{border-color:var(--red);transform:translateY(-3px)}
+  .ch .l{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-3)}
+  .ch a,.ch p{display:block;font-family:var(--disp);font-size:clamp(20px,2.6vw,28px);margin-top:12px;letter-spacing:-.01em;color:var(--on)}
+  .ch a:hover{color:var(--red)}
+  .brief{margin-top:clamp(56px,8vw,100px);border-top:1px solid var(--line);padding-top:clamp(34px,4vw,52px)}
+  .brief h2{font-size:clamp(22px,2.8vw,32px);margin-bottom:22px}
+  .brief ul{list-style:none;display:grid;gap:14px;max-width:60ch}
+  .brief li{display:flex;gap:14px;color:var(--on-2);font-size:clamp(15px,1.7vw,17px)}
+  .brief li b{color:var(--red);font-family:var(--mono);font-size:12px;letter-spacing:.1em;padding-top:3px;min-width:26px}
+  @media(max-width:620px){.channels{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a href="/" aria-label="AB Digilife home"><img class="logo" src="logo-dark.png" alt="AB Digilife"></a>
+  <nav><a href="/work.html">Work</a><a href="/services.html">Services</a><a href="/studio.html">Studio</a><a href="/contact.html">Contact</a></nav>
+</header>
+
+<main class="wrap hero">
+  <p class="kick reveal">Let's talk</p>
+  <h1 class="display reveal d1" style="margin-top:18px">Have an idea?<br>Let's make it<br>unmissable.</h1>
+  <p class="lead reveal d2">Tell us what you're building. We'll bring the strategy, the camera, and the screen — and turn it into something people stop for.</p>
+  <div class="cta-row reveal d3">
+    <a class="btn" href="mailto:hello@abdigilife.com?subject=New%20project%20—%20AB%20Digilife">Email us ▸</a>
+    <a class="btn btn--ghost" href="tel:+15879680316">Call (587) 968 0316</a>
+  </div>
+</main>
+
+<section class="wrap section--tight">
+  <div class="channels">
+    <div class="ch reveal"><div class="l">Email</div><a href="mailto:hello@abdigilife.com">hello@abdigilife.com</a></div>
+    <div class="ch reveal d1"><div class="l">Phone</div><a href="tel:+15879680316">(587) 968 0316</a></div>
+    <div class="ch reveal"><div class="l">Based in</div><p>Vancouver · Calgary</p></div>
+    <div class="ch reveal d1"><div class="l">Also serving</div><p>Edmonton · Toronto</p></div>
+  </div>
+
+  <div class="brief reveal">
+    <h2>What to send us</h2>
+    <ul>
+      <li><b>01</b><span>Who you are and what you're building — a brand, a product, an event, a story.</span></li>
+      <li><b>02</b><span>What you need: branding, film, web, marketing, or the whole package.</span></li>
+      <li><b>03</b><span>Your timeline and rough budget, if you have one.</span></li>
+      <li><b>04</b><span>Any references that make you go "yes, like that."</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="col"><h4>Studio</h4><a href="/work.html">Work</a><a href="/services.html">Services</a><a href="/studio.html">Studio</a><a href="/contact.html">Contact</a></div>
+    <div class="col"><h4>Contact</h4><a href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a href="tel:+15879680316">(587) 968 0316</a></div>
+    <div class="col"><h4>Based in</h4><p class="cities"><b>Vancouver</b> · Calgary · Edmonton · Toronto</p></div>
+  </div>
+  <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life.</div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
