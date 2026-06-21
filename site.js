@@ -57,21 +57,5 @@
   window.addEventListener('resize', frame, { passive: true });
   frame();
 
-  /* ---------- custom cursor (desktop only) ---------- */
-  if (!coarse && !reduce) {
-    var dot = document.createElement('div'); dot.id = 'curs';
-    var s = dot.style;
-    s.position='fixed';s.top=0;s.left=0;s.width='12px';s.height='12px';s.borderRadius='50%';
-    s.background='var(--red)';s.zIndex='10000';s.pointerEvents='none';s.mixBlendMode='difference';
-    s.transition='width .25s,height .25s,background .25s';s.transform='translate(-50%,-50%)';s.willChange='transform';
-    document.body.appendChild(dot);
-    var cx=innerWidth/2, cy=innerHeight/2, tx=cx, ty=cy;
-    addEventListener('pointermove', function(e){ tx=e.clientX; ty=e.clientY; }, {passive:true});
-    (function loop(){ cx+=(tx-cx)*0.2; cy+=(ty-cy)*0.2; dot.style.transform='translate('+(cx-6)+'px,'+(cy-6)+'px)'; requestAnimationFrame(loop); })();
-    document.addEventListener('pointerover', function(e){
-      var big = e.target.closest('a,button,[data-cursor],.btn,[role="button"]');
-      dot.style.width = big ? '46px' : '12px'; dot.style.height = big ? '46px' : '12px';
-      dot.style.background = big ? 'var(--acid)' : 'var(--red)';
-    });
-  }
+  /* custom cursor removed — native cursor + element hover states only */
 })();

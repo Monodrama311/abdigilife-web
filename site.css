@@ -55,8 +55,8 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
 @keyframes mq{to{transform:translateX(-50%)}}
 
 /* nav */
-header.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
-  padding:clamp(15px,2vw,24px) var(--gut);transition:color .4s var(--e)}
+header.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;flex-direction:column-reverse;align-items:center;gap:9px;
+  padding:clamp(12px,1.6vw,18px) var(--gut);transition:color .4s var(--e)}
 header.nav .logo{height:clamp(28px,3.4vw,38px);width:auto;transition:opacity .3s}
 header.nav .logo.lt{display:none} header.nav.on-light .logo.dk{display:none} header.nav.on-light .logo.lt{display:block}
 header.nav nav{display:flex;gap:clamp(14px,1.8vw,30px);font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}

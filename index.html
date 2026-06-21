@@ -24,8 +24,10 @@
 <style>
   /* homepage hero — particle "killer", now scrollable */
   .hero{position:relative;height:100svh;min-height:560px;overflow:hidden}
-  #flow,#logo{position:absolute;inset:0}
-  #flow{z-index:0} #logo{z-index:2}
+  #flow{position:fixed;inset:0;z-index:-1;opacity:.8}
+  #logo{position:absolute;inset:0;z-index:2}
+  .wlink{display:inline-flex;align-items:baseline;gap:18px;margin-top:clamp(48px,7vw,92px);font-family:var(--serif);font-style:italic;font-size:clamp(32px,5.5vw,76px);line-height:1;color:var(--on);transition:color .35s}
+  .wlink:hover{color:var(--red)} .wlink .ar{font-style:normal;font-family:var(--disp);color:var(--red);transition:transform .35s var(--e)} .wlink:hover .ar{transform:translateX(10px)}
   .hero .vignette{position:absolute;inset:0;z-index:1;pointer-events:none;
     background:radial-gradient(120% 90% at 50% 26%,transparent 36%,rgba(8,8,10,.55) 74%,rgba(8,8,10,.95) 100%)}
   .stack{position:absolute;left:0;right:0;top:63%;z-index:4;display:flex;flex-direction:column;align-items:center;
@@ -78,32 +80,14 @@
   <div class="hscroll">Scroll</div>
 </section>
 
-<div class="marquee" aria-hidden="true"><div class="track"><span>WHERE IDEAS COME TO LIFE</span><span class="dot">✳</span><span>MADE TO BE SEEN</span><span class="dot">✳</span></div></div>
+<div class="marquee" aria-hidden="true" style="border-color:transparent"><div class="track"><span>WHERE IDEAS COME TO LIFE</span><span class="dot">✳</span><span>MADE TO BE SEEN</span><span class="dot">✳</span></div></div>
 
-<section class="sec ink">
-  <div class="wrap" style="max-width:1060px">
-    <p class="kick rv">The studio</p>
-    <h2 class="h2 serif rv d1" style="margin-top:22px">We design, film<br>&amp; <span class="it">grow</span> brands.</h2>
-    <p class="rv d2" style="margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--on-3)">Branding · Film · Web · Social · Events · Story</p>
-  </div>
-</section>
-
-<section class="sec bone">
-  <div class="wrap" style="max-width:1060px">
-    <p class="kick rv">The idea</p>
-    <h2 class="display serif linemask" style="margin-top:18px"><span>Marketing</span></h2>
-    <h2 class="display serif linemask"><span>you can <span class="it" style="color:var(--red)">see.</span></span></h2>
-    <p class="lead rv d2" style="margin-top:26px">Work people stop for, remember, and act on. Proven on camera — never louder than it needs to be.</p>
-  </div>
-</section>
-
-<section class="sec ink">
-  <div class="wrap" style="display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap">
-    <div>
-      <p class="kick rv">Selected work</p>
-      <h2 class="h2 serif rv d1" style="margin-top:16px">The work behind<br>the <span class="it">brands.</span></h2>
-    </div>
-    <a class="btn rv d2" href="/work.html">See the work ▸</a>
+<section class="sec" style="padding-block:clamp(60px,9vw,130px)">
+  <div class="wrap" style="max-width:1120px">
+    <h2 class="display serif linemask"><span>We make brands</span></h2>
+    <h2 class="display serif linemask"><span>worth <span class="it" style="color:var(--red)">watching.</span></span></h2>
+    <p class="lead rv d2" style="margin-top:34px;max-width:48ch">Branding, film, web — and the stories in between. Made to be seen, proven on camera. Never louder than it needs to be.</p>
+    <a class="rv d3 wlink" href="/work.html"><span>See the work</span><span class="ar">→</span></a>
   </div>
 </section>
 
@@ -176,12 +160,11 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
   var heroEl=document.getElementById('hero'),navLogo=document.querySelector('header.nav a[aria-label]'),stackEl=document.querySelector('.hero .stack');
   if(navLogo){navLogo.style.opacity='0';navLogo.style.transition='opacity .45s ease';}
   lcv.style.transformOrigin='50% 42%';lcv.style.willChange='transform,opacity';fcv.style.willChange='opacity';
-  function morph(){var h=(heroEl&&heroEl.offsetHeight)||innerHeight;var p=Math.max(0,Math.min(1,(window.pageYOffset||0)/(h*0.62)));
-    lcv.style.transform='translateY('+(-h*0.17*p).toFixed(1)+'px) scale('+(1-0.74*p).toFixed(3)+')';
-    lcv.style.opacity=Math.max(0,1-p*1.3).toFixed(3);
-    fcv.style.opacity=Math.max(0,1-p*1.35).toFixed(3);
-    if(stackEl){stackEl.style.transform='translateY('+(-46*p).toFixed(1)+'px)';stackEl.style.opacity=Math.max(0,1-p*1.7).toFixed(3);}
-    if(navLogo)navLogo.style.opacity=Math.max(0,Math.min(1,(p-0.34)/0.4)).toFixed(3);}
+  function morph(){var h=(heroEl&&heroEl.offsetHeight)||innerHeight;var p=Math.max(0,Math.min(1,(window.pageYOffset||0)/(h*0.6)));
+    lcv.style.transform='translateY('+(-h*0.40*p).toFixed(1)+'px) scale('+(1-0.86*p).toFixed(3)+')';
+    lcv.style.opacity=Math.max(0,1-p*1.25).toFixed(3);
+    if(stackEl){stackEl.style.transform='translateY('+(-50*p).toFixed(1)+'px)';stackEl.style.opacity=Math.max(0,1-p*1.7).toFixed(3);}
+    if(navLogo)navLogo.style.opacity=Math.max(0,Math.min(1,(p-0.36)/0.4)).toFixed(3);}
   addEventListener('scroll',morph,{passive:true});addEventListener('resize',morph,{passive:true});morph();
 })();
 </script>
