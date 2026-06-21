@@ -4,100 +4,79 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Services — AB Digilife</title>
-<meta name="description" content="A full-service creative studio: brand strategy, commercial film, post-production, web, digital marketing, social, events and brand storytelling.">
+<meta name="description" content="A full-service creative studio: brand strategy, commercial film, post, web, marketing, social, events and story.">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
-<meta property="og:title" content="Services — AB Digilife">
-<meta property="og:description" content="Everything a brand needs to come to life — strategy, film, web, and growth, under one roof.">
-<meta property="og:type" content="website">
+<meta property="og:title" content="Services — AB Digilife"><meta property="og:type" content="website">
 <style>
-  .svc-list{display:grid;gap:0;margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--line)}
-  .svc{display:grid;grid-template-columns:64px 1fr;gap:clamp(16px,3vw,40px);padding:clamp(26px,4vw,42px) 0;
-    border-bottom:1px solid var(--line);align-items:start;transition:background .4s var(--ease)}
-  .svc:hover{background:linear-gradient(90deg,rgba(226,59,38,.06),transparent 60%)}
-  .svc .no{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--red);padding-top:6px}
-  .svc h3{font-size:clamp(22px,3vw,34px);letter-spacing:-.02em}
-  .svc p{color:var(--on-2);margin-top:10px;max-width:60ch;font-size:clamp(15px,1.6vw,17px)}
-  .svc .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
-  .svc .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-3);
-    border:1px solid var(--line-2);padding:5px 10px;border-radius:100px}
-  .ip{margin-top:clamp(48px,7vw,88px);padding:clamp(30px,4vw,48px);border:1px solid var(--line);border-radius:18px;
-    background:linear-gradient(135deg,rgba(226,59,38,.10),rgba(20,20,22,.4))}
-  .ip h2{font-size:clamp(24px,3.4vw,40px);max-width:18ch}
-  .ip p{color:var(--on-2);margin-top:14px;max-width:58ch}
-  @media(max-width:560px){.svc{grid-template-columns:1fr}.svc .no{padding-top:0}}
+  .row{display:grid;grid-template-columns:clamp(56px,9vw,150px) 1fr;gap:clamp(18px,4vw,60px);padding-block:clamp(34px,5vw,64px);border-top:1px solid var(--line);align-items:start}
+  .row:last-child{border-bottom:1px solid var(--line)}
+  .row .n{font-family:var(--disp);font-weight:600;font-size:clamp(28px,4vw,72px);color:transparent;-webkit-text-stroke:1.3px var(--red);line-height:.8;letter-spacing:-.03em}
+  .row h3{font-size:clamp(30px,5.4vw,76px);line-height:.92;letter-spacing:-.03em;transition:transform .5s var(--e)}
+  .row:hover h3{transform:translateX(14px);color:var(--red)}
+  .row .d{color:var(--on-2);max-width:54ch;margin-top:16px;font-size:clamp(15px,1.6vw,18px)}
+  .row .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+  .row .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-3);border:1px solid var(--line-2);padding:5px 11px;border-radius:100px}
+  .ip{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,64px);align-items:center}
+  @media(max-width:780px){.ip{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header class="nav">
-  <a href="/" aria-label="AB Digilife home"><img class="logo" src="logo-dark.png" alt="AB Digilife"></a>
-  <nav><a href="/work.html">Work</a><a href="/services.html">Services</a><a href="/studio.html">Studio</a><a href="/contact.html">Contact</a></nav>
+  <a href="/" aria-label="AB Digilife home"><img class="logo dk" src="logo-dark.png" alt="AB Digilife"><img class="logo lt" src="logo-light.png" alt="AB Digilife"></a>
+  <nav><a class="lnk" href="/work.html">Work</a><a class="lnk" href="/services.html">Services</a><a class="lnk" href="/studio.html">Studio</a><a class="lnk" href="/contact.html">Contact</a></nav>
 </header>
 
-<main class="wrap hero">
-  <p class="kick reveal">What we make</p>
-  <h1 class="display reveal d1" style="margin-top:18px">Everything a brand<br>needs to come to life.</h1>
-  <p class="lead reveal d2">Strategy, film, web, and growth — built under one roof, so the idea, the story, and the screen all say the same thing.</p>
-</main>
-
-<section class="wrap section--tight">
-  <div class="svc-list">
-    <article class="svc reveal"><div class="no">01</div><div>
-      <h3>Brand Strategy &amp; Identity</h3>
-      <p>Naming, positioning, voice, and a full visual identity — the foundation everything else is built on.</p>
-      <div class="tags"><span>Positioning</span><span>Naming</span><span>Logo &amp; System</span><span>Guidelines</span></div></div></article>
-
-    <article class="svc reveal"><div class="no">02</div><div>
-      <h3>Commercial Film &amp; Cinematography</h3>
-      <p>Ads, brand films, product shoots, and founder stories — marketing you can see, proven on camera.</p>
-      <div class="tags"><span>Brand Film</span><span>Commercials</span><span>Product</span><span>Founder Stories</span></div></div></article>
-
-    <article class="svc reveal"><div class="no">03</div><div>
-      <h3>Post-Production</h3>
-      <p>Editing, color, sound, and motion graphics that turn footage into something people finish watching.</p>
-      <div class="tags"><span>Edit</span><span>Color</span><span>Sound</span><span>Motion</span></div></div></article>
-
-    <article class="svc reveal"><div class="no">04</div><div>
-      <h3>Web Design &amp; Development</h3>
-      <p>Fast, clean, custom-built sites that load instantly and turn visitors into customers — no bloated templates.</p>
-      <div class="tags"><span>Design</span><span>Build</span><span>Performance</span><span>E-commerce</span></div></div></article>
-
-    <article class="svc reveal"><div class="no">05</div><div>
-      <h3>Digital Marketing &amp; SEO</h3>
-      <p>Get found, get traffic, get leads — search, paid, and analytics tuned to the numbers that matter.</p>
-      <div class="tags"><span>SEO</span><span>Paid Media</span><span>Analytics</span><span>Lead Gen</span></div></div></article>
-
-    <article class="svc reveal"><div class="no">06</div><div>
-      <h3>Social &amp; New Media</h3>
-      <p>Content systems and short-form built to grow channels and keep an audience coming back.</p>
-      <div class="tags"><span>Short-form</span><span>Content Systems</span><span>Channel Growth</span></div></div></article>
-
-    <article class="svc reveal"><div class="no">07</div><div>
-      <h3>Events &amp; Weddings</h3>
-      <p>Cinematic coverage for the moments that matter — captured, edited, and told as a story worth replaying.</p>
-      <div class="tags"><span>Events</span><span>Weddings</span><span>Coverage</span></div></div></article>
-
-    <article class="svc reveal"><div class="no">08</div><div>
-      <h3>Brand Storytelling &amp; Interviews</h3>
-      <p>We write the story and capture it on camera — interviews, narratives, and the words behind the brand.</p>
-      <div class="tags"><span>Writing</span><span>Interviews</span><span>Narrative</span></div></div></article>
+<section class="sec ink" style="padding-top:clamp(120px,18vw,220px)">
+  <div class="wrap">
+    <p class="kick rv">What we make</p>
+    <h1 class="display linemask" style="margin-top:22px" data-skew><span>Everything a brand</span></h1>
+    <h1 class="display linemask" data-skew><span>needs to <span class="red it">come alive.</span></span></h1>
+    <p class="lead rv d2" style="margin-top:30px">Strategy, film, web and growth — built under one roof, so the idea, the story and the screen all say the same thing.</p>
   </div>
+</section>
 
-  <div class="ip reveal">
-    <h2>We don't just market brands — we build them.</h2>
-    <p>Beyond services, AB Digilife creates and incubates original IP: characters, formats, and stories that become brands of their own. If you have an idea, we can take it from a sentence to something the world can see.</p>
-    <a class="btn" href="/contact.html" style="margin-top:26px">Start a project ▸</a>
+<div class="marquee" aria-hidden="true"><div class="track"><span>BRAND</span><span class="dot">✳</span><span>FILM</span><span class="dot">✳</span><span>WEB</span><span class="dot">✳</span><span>SOCIAL</span><span class="dot">✳</span><span>STORY</span><span class="dot">✳</span></div></div>
+
+<section class="sec ink" style="padding-top:clamp(40px,6vw,80px)">
+  <div class="wrap">
+    <div class="row rv"><div class="n">01</div><div><h3 data-cursor>Brand Strategy &amp; Identity</h3><p class="d">Naming, positioning, voice and a full visual identity — the foundation everything else is built on.</p><div class="tags"><span>Positioning</span><span>Naming</span><span>Logo &amp; System</span><span>Guidelines</span></div></div></div>
+    <div class="row rv"><div class="n">02</div><div><h3 data-cursor>Commercial Film &amp; Cinematography</h3><p class="d">Ads, brand films, product shoots and founder stories — marketing you can see, proven on camera.</p><div class="tags"><span>Brand Film</span><span>Commercials</span><span>Product</span><span>Founder Stories</span></div></div></div>
+    <div class="row rv"><div class="n">03</div><div><h3 data-cursor>Post-Production</h3><p class="d">Edit, color, sound and motion graphics that turn footage into something people finish watching.</p><div class="tags"><span>Edit</span><span>Color</span><span>Sound</span><span>Motion</span></div></div></div>
+    <div class="row rv"><div class="n">04</div><div><h3 data-cursor>Web Design &amp; Development</h3><p class="d">Fast, clean, custom-built sites that load instantly and turn visitors into customers — no bloated templates.</p><div class="tags"><span>Design</span><span>Build</span><span>Performance</span><span>E-commerce</span></div></div></div>
+    <div class="row rv"><div class="n">05</div><div><h3 data-cursor>Digital Marketing &amp; SEO</h3><p class="d">Get found, get traffic, get leads — search, paid and analytics tuned to the numbers that matter.</p><div class="tags"><span>SEO</span><span>Paid Media</span><span>Analytics</span><span>Lead Gen</span></div></div></div>
+    <div class="row rv"><div class="n">06</div><div><h3 data-cursor>Social &amp; New Media</h3><p class="d">Content systems and short-form built to grow channels and keep an audience coming back.</p><div class="tags"><span>Short-form</span><span>Content Systems</span><span>Channel Growth</span></div></div></div>
+    <div class="row rv"><div class="n">07</div><div><h3 data-cursor>Events &amp; Weddings</h3><p class="d">Cinematic coverage for the moments that matter — captured, edited and told as a story worth replaying.</p><div class="tags"><span>Events</span><span>Weddings</span><span>Coverage</span></div></div></div>
+    <div class="row rv"><div class="n">08</div><div><h3 data-cursor>Brand Storytelling &amp; Interviews</h3><p class="d">We write the story and capture it on camera — interviews, narratives and the words behind the brand.</p><div class="tags"><span>Writing</span><span>Interviews</span><span>Narrative</span></div></div></div>
+  </div>
+</section>
+
+<!-- bone intermission: IP -->
+<section class="sec bone">
+  <div class="wrap ip">
+    <div>
+      <p class="kick rv">Beyond services</p>
+      <h2 class="h2 rv d1" style="margin-top:18px">We don't just<br>market brands —<br>we <span class="red">build</span> them.</h2>
+    </div>
+    <div class="rv d2">
+      <p style="font-size:clamp(16px,1.8vw,20px);line-height:1.6">AB Digilife creates and incubates original IP: characters, formats and stories that become brands of their own. If you have an idea, we can take it from a sentence to something the world can see.</p>
+      <a class="btn" href="/contact.html" style="margin-top:28px">Start a project ▸</a>
+    </div>
   </div>
 </section>
 
 <footer class="site">
   <div class="wrap">
-    <div class="col"><h4>Studio</h4><a href="/work.html">Work</a><a href="/services.html">Services</a><a href="/studio.html">Studio</a><a href="/contact.html">Contact</a></div>
-    <div class="col"><h4>Contact</h4><a href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a href="tel:+15879680316">(587) 968 0316</a></div>
-    <div class="col"><h4>Based in</h4><p class="cities"><b>Vancouver</b> · Calgary · Edmonton · Toronto</p></div>
+    <div class="big">Make it<br><span class="red">unmissable.</span></div>
+    <div class="cols">
+      <div><h4>Studio</h4><a class="fl" href="/work.html">Work</a><a class="fl" href="/services.html">Services</a><a class="fl" href="/studio.html">Studio</a><a class="fl" href="/contact.html">Contact</a></div>
+      <div><h4>Contact</h4><a class="fl" href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a class="fl" href="tel:+15879680316">(587) 968 0316</a></div>
+      <div><h4>Based in</h4><p class="fl cities"><b>Vancouver</b> · Calgary · Edmonton · Toronto</p></div>
+      <div><h4>Social</h4><a class="fl" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">@ab.digilife</a></div>
+    </div>
+    <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life.</div>
   </div>
-  <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life.</div>
 </footer>
 <script src="site.js"></script>
 </body>

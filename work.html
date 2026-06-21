@@ -4,150 +4,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Work — AB Digilife</title>
-<meta name="description" content="Selected films and campaigns from AB Digilife — brand films, fashion, events, and stories made for the brands we work with.">
+<meta name="description" content="Selected films and campaigns from AB Digilife — the work behind the brands.">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
-<meta property="og:title" content="Work — AB Digilife">
-<meta property="og:description" content="The work behind the brands — selected films, fashion, and stories.">
-<meta property="og:type" content="website">
+<meta property="og:title" content="Work — AB Digilife"><meta property="og:type" content="website">
 <style>
-  /* featured */
-  .feature{margin-top:clamp(40px,6vw,72px);position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);cursor:pointer;
-    aspect-ratio:16/9;display:flex;align-items:flex-end;background:linear-gradient(135deg,#E23B26,#5e1107 85%)}
-  .feature::after{content:"";position:absolute;inset:0;background:radial-gradient(130% 120% at 75% 10%,rgba(255,255,255,.10),transparent 55%),linear-gradient(0deg,rgba(8,8,10,.78),transparent 55%)}
-  .feature:hover .play{transform:translate(-50%,-50%) scale(1.08);background:rgba(255,255,255,.18)}
-  .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:84px;height:84px;border-radius:50%;
-    border:1.5px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(3px);transition:transform .35s var(--ease),background .35s}
-  .play::before{content:"";border-left:22px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
-  .play.sm{width:60px;height:60px}.play.sm::before{border-left:16px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
-  .meta{position:relative;z-index:3;padding:clamp(22px,3vw,36px)}
-  .meta .cat{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.85}
-  .meta h2,.meta h3{font-family:var(--disp);color:#fff;letter-spacing:-.02em;margin-top:8px}
-  .meta h2{font-size:clamp(28px,4.4vw,56px);line-height:1}
-  .meta h3{font-size:clamp(19px,2.4vw,26px);line-height:1.02}
-  /* grid */
-  .films{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,22px);margin-top:clamp(16px,2vw,22px)}
-  .film{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);cursor:pointer;aspect-ratio:4/5;
-    display:flex;align-items:flex-end;transition:transform .4s var(--ease),border-color .4s}
-  .film:hover{transform:translateY(-4px);border-color:var(--line-2)}
-  .film::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,10,.82),transparent 60%)}
-  .f1{background:linear-gradient(150deg,#2a2a2e,#0d0d0f)}
-  .f2{background:linear-gradient(150deg,#CE3A2A,#23120f)}
-  .f3{background:linear-gradient(150deg,#1c1c20,#E23B26 240%)}
-  .film:hover .play{transform:translate(-50%,-50%) scale(1.1);background:rgba(255,255,255,.16)}
+  .feature{position:relative;border-radius:18px;overflow:hidden;cursor:pointer;aspect-ratio:16/9;display:flex;align-items:flex-end;margin-top:clamp(34px,5vw,64px);
+    background:linear-gradient(125deg,#E23B26,#4d0e06 88%)}
+  .feature::after{content:"";position:absolute;inset:0;background:radial-gradient(130% 120% at 78% 8%,rgba(255,255,255,.12),transparent 52%),linear-gradient(0deg,rgba(8,8,10,.8),transparent 56%)}
+  .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:90px;height:90px;border-radius:50%;border:1.5px solid rgba(255,255,255,.75);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(3px);transition:transform .35s var(--e),background .35s}
+  .play::before{content:"";border-left:24px solid #fff;border-top:14px solid transparent;border-bottom:14px solid transparent;margin-left:7px}
+  .play.sm{width:62px;height:62px}.play.sm::before{border-left:16px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+  .feature:hover .play,.film:hover .play{transform:translate(-50%,-50%) scale(1.1);background:var(--acid)}
+  .feature:hover .play::before,.film:hover .play::before{border-left-color:#10100a}
+  .cap{position:relative;z-index:3;padding:clamp(22px,3vw,40px)}
+  .cap .c{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.85}
+  .cap .t{font-family:var(--disp);color:#fff;font-size:clamp(30px,5.4vw,72px);line-height:.9;letter-spacing:-.03em;margin-top:8px}
+  .cap .t.sm{font-size:clamp(20px,2.6vw,30px)}
+  .films{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(12px,1.6vw,20px);margin-top:clamp(12px,1.6vw,20px)}
+  .film{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;display:flex;align-items:flex-end;transition:transform .4s var(--e)}
+  .film:hover{transform:translateY(-5px)}
+  .film::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,10,.84),transparent 62%)}
+  .film.a{grid-column:span 2;aspect-ratio:3/4;background:linear-gradient(150deg,#2a2a2e,#0c0c0e)}
+  .film.b{grid-column:span 2;aspect-ratio:3/4;margin-top:clamp(20px,4vw,60px);background:linear-gradient(150deg,#CE3A2A,#1e0f0c)}
+  .film.c{grid-column:span 2;aspect-ratio:3/4;background:linear-gradient(150deg,#1c1c20,#E23B26 250%)}
   .idx{position:absolute;top:14px;left:16px;z-index:3;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:rgba(255,255,255,.85)}
-  /* instagram band */
-  .ig{margin-top:clamp(60px,9vw,120px);border:1px solid var(--line);border-radius:18px;padding:clamp(30px,5vw,56px);
-    background:linear-gradient(135deg,rgba(226,59,38,.10),rgba(20,20,22,.45));display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
-  .ig h2{font-size:clamp(24px,3.4vw,40px);max-width:16ch}
-  .ig p{color:var(--on-2);margin-top:14px;max-width:46ch}
-  .ig .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
-  .ig .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-3);border:1px solid var(--line-2);padding:5px 10px;border-radius:100px}
-  .ig .right{text-align:right}
-  .ig .handle{font-family:var(--disp);font-size:clamp(22px,3vw,34px);color:var(--on)}
-  @media(max-width:760px){.films{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr}.ig .right{text-align:left}}
-  @media(max-width:480px){.films{grid-template-columns:1fr}}
-  /* lightbox */
-  .lb{position:fixed;inset:0;z-index:100;background:rgba(5,5,7,.92);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px)}
+  .igband{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
+  .igband .handle{font-family:var(--disp);font-size:clamp(28px,4vw,52px);letter-spacing:-.02em;color:var(--ink-on-bone)}
+  .igband .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+  .igband .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-on-bone-2);border:1px solid var(--line-d2);padding:5px 11px;border-radius:100px}
+  .igband .right{text-align:right}
+  .lb{position:fixed;inset:0;z-index:100;background:rgba(5,5,7,.94);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px)}
   .lb.on{display:flex}
-  .lb-inner{width:min(1100px,100%);aspect-ratio:16/9;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.8)}
+  .lb-inner{width:min(1100px,100%);aspect-ratio:16/9;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 30px 90px -20px #000}
   .lb-inner iframe{width:100%;height:100%;border:0}
-  .lb-close{position:absolute;top:-44px;right:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;cursor:pointer;background:none;border:0;display:flex;align-items:center;gap:8px}
-  .lb-close::before{content:"✕";font-size:15px}
+  .lb-close{position:absolute;top:-44px;right:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;cursor:pointer;background:none;border:0}
+  @media(max-width:760px){.films{grid-template-columns:1fr 1fr}.film.a,.film.b,.film.c{grid-column:span 1;margin-top:0}.igband{grid-template-columns:1fr}.igband .right{text-align:left}}
 </style>
 </head>
 <body>
 <header class="nav">
-  <a href="/" aria-label="AB Digilife home"><img class="logo" src="logo-dark.png" alt="AB Digilife"></a>
-  <nav><a href="/work.html">Work</a><a href="/services.html">Services</a><a href="/studio.html">Studio</a><a href="/contact.html">Contact</a></nav>
+  <a href="/" aria-label="AB Digilife home"><img class="logo dk" src="logo-dark.png" alt="AB Digilife"><img class="logo lt" src="logo-light.png" alt="AB Digilife"></a>
+  <nav><a class="lnk" href="/work.html">Work</a><a class="lnk" href="/services.html">Services</a><a class="lnk" href="/studio.html">Studio</a><a class="lnk" href="/contact.html">Contact</a></nav>
 </header>
 
-<main class="wrap hero">
-  <p class="kick reveal">Selected work</p>
-  <h1 class="display reveal d1" style="margin-top:18px">The work behind<br>the brands.</h1>
-  <p class="lead reveal d2">We make content that doesn't look like an agency made it — it looks like the brand. A few pieces we can show; the rest live where they belong: on our clients' channels.</p>
-</main>
+<section class="sec ink" style="padding-top:clamp(120px,18vw,220px)">
+  <div class="wrap">
+    <p class="kick rv">Selected work</p>
+    <h1 class="giant linemask" style="margin-top:18px" data-skew><span>The work</span></h1>
+    <h1 class="giant linemask" data-skew><span class="out">behind the</span></h1>
+    <h1 class="giant linemask" data-skew><span class="red it">brands.</span></h1>
+    <p class="lead rv d2" style="margin-top:28px">We make content that doesn't look like an agency made it — it looks like the brand. A few pieces we can show; the rest live where they belong: on our clients' channels.</p>
 
-<section class="wrap section--tight">
-  <!-- featured -->
-  <div class="feature reveal" data-yt="6f0QkNxO8mU" role="button" tabindex="0" aria-label="Play: In Fashion 2025">
-    <span class="play"></span>
-    <div class="meta"><div class="cat">Fashion · Brand Film — 2025</div><h2>In Fashion</h2></div>
-  </div>
+    <div class="feature rv" data-yt="6f0QkNxO8mU" role="button" tabindex="0" aria-label="Play: In Fashion 2025" data-cursor>
+      <span class="play"></span>
+      <div class="cap"><div class="c">Fashion · Brand Film — 2025</div><div class="t">In Fashion</div></div>
+    </div>
 
-  <!-- film grid -->
-  <div class="films">
-    <div class="film f1 reveal" data-yt="7tSerANfgpk" role="button" tabindex="0" aria-label="Play: Studio in Motion">
-      <span class="idx">01 / Event</span><span class="play sm"></span>
-      <div class="meta"><div class="cat">Dance · Event Film</div><h3>Studio in Motion</h3></div>
-    </div>
-    <div class="film f2 reveal d1" data-yt="JwshyRJQcyg" role="button" tabindex="0" aria-label="Play: One Song, One Stage">
-      <span class="idx">02 / Stage</span><span class="play sm"></span>
-      <div class="meta"><div class="cat">Performance Film</div><h3>One Song, One Stage</h3></div>
-    </div>
-    <div class="film f3 reveal d2" data-yt="PeK0UpdBzuA" role="button" tabindex="0" aria-label="Play: On the Record">
-      <span class="idx">03 / Story</span><span class="play sm"></span>
-      <div class="meta"><div class="cat">Interview · Story</div><h3>On the Record</h3></div>
-    </div>
-  </div>
-
-  <!-- instagram living feed -->
-  <div class="ig reveal">
-    <div>
-      <p class="kick">Currently shooting</p>
-      <h2 style="margin-top:14px">The latest lives on Instagram.</h2>
-      <p>Photography, food &amp; hospitality, retail, sport — the day-to-day client work goes up as we shoot it. Follow along for the newest.</p>
-      <div class="tags"><span>Photography</span><span>Food &amp; Hospitality</span><span>Retail</span><span>Sport</span><span>Social</span></div>
-    </div>
-    <div class="right">
-      <a class="handle" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">@ab.digilife</a>
-      <div style="margin-top:20px"><a class="btn" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">See the latest ▸</a></div>
+    <div class="films">
+      <div class="film a rv" data-yt="7tSerANfgpk" role="button" tabindex="0" aria-label="Play: Studio in Motion" data-cursor>
+        <span class="idx">01 / Event</span><span class="play sm"></span>
+        <div class="cap"><div class="c">Dance · Event Film</div><div class="t sm">Studio in Motion</div></div>
+      </div>
+      <div class="film b rv d1" data-yt="JwshyRJQcyg" role="button" tabindex="0" aria-label="Play: One Song, One Stage" data-cursor>
+        <span class="idx">02 / Stage</span><span class="play sm"></span>
+        <div class="cap"><div class="c">Performance Film</div><div class="t sm">One Song, One Stage</div></div>
+      </div>
+      <div class="film c rv d2" data-yt="PeK0UpdBzuA" role="button" tabindex="0" aria-label="Play: On the Record" data-cursor>
+        <span class="idx">03 / Story</span><span class="play sm"></span>
+        <div class="cap"><div class="c">Interview · Story</div><div class="t sm">On the Record</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="wrap section">
-  <div class="reveal" style="text-align:center">
-    <p class="kick" style="justify-content:center">Your turn</p>
-    <h2 class="h2" style="margin:18px 0 26px">Let's make something worth watching.</h2>
-    <a class="btn" href="/contact.html">Start a project ▸</a>
+<div class="marquee" aria-hidden="true"><div class="track"><span>MADE TO BE SEEN</span><span class="dot">✳</span><span>PROVEN ON CAMERA</span><span class="dot">✳</span></div></div>
+
+<!-- bone IG band -->
+<section class="sec bone">
+  <div class="wrap igband">
+    <div>
+      <p class="kick">Currently shooting</p>
+      <h2 class="h2" style="margin-top:16px">The latest lives<br>on Instagram.</h2>
+      <p style="color:var(--ink-on-bone-2);margin-top:16px;max-width:44ch">Photography, food &amp; hospitality, retail, sport — the day-to-day client work goes up as we shoot it.</p>
+      <div class="tags"><span>Photography</span><span>Food &amp; Hospitality</span><span>Retail</span><span>Sport</span><span>Social</span></div>
+    </div>
+    <div class="right">
+      <a class="handle" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener" data-cursor>@ab.digilife</a>
+      <div style="margin-top:22px"><a class="btn" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">See the latest ▸</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec ink" style="text-align:center">
+  <div class="wrap">
+    <p class="kick rv" style="justify-content:center">Your turn</p>
+    <h2 class="display rv d1" style="margin:22px 0 30px">Let's make something<br>worth <span class="red">watching.</span></h2>
+    <a class="btn rv d2" href="/contact.html">Start a project ▸</a>
   </div>
 </section>
 
 <footer class="site">
   <div class="wrap">
-    <div class="col"><h4>Studio</h4><a href="/work.html">Work</a><a href="/services.html">Services</a><a href="/studio.html">Studio</a><a href="/contact.html">Contact</a></div>
-    <div class="col"><h4>Contact</h4><a href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a href="tel:+15879680316">(587) 968 0316</a></div>
-    <div class="col"><h4>Based in</h4><p class="cities"><b>Vancouver</b> · Calgary · Edmonton · Toronto</p></div>
+    <div class="big">Make it<br><span class="red">unmissable.</span></div>
+    <div class="cols">
+      <div><h4>Studio</h4><a class="fl" href="/work.html">Work</a><a class="fl" href="/services.html">Services</a><a class="fl" href="/studio.html">Studio</a><a class="fl" href="/contact.html">Contact</a></div>
+      <div><h4>Contact</h4><a class="fl" href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a class="fl" href="tel:+15879680316">(587) 968 0316</a></div>
+      <div><h4>Based in</h4><p class="fl cities"><b>Vancouver</b> · Calgary · Edmonton · Toronto</p></div>
+      <div><h4>Social</h4><a class="fl" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">@ab.digilife</a></div>
+    </div>
+    <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life.</div>
   </div>
-  <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life.</div>
 </footer>
 
-<!-- lightbox -->
 <div class="lb" id="lb" role="dialog" aria-modal="true">
-  <div class="lb-inner">
-    <button class="lb-close" id="lbClose" aria-label="Close">Close</button>
-    <div id="lbFrame"></div>
-  </div>
+  <div class="lb-inner"><button class="lb-close" id="lbClose" aria-label="Close">✕ Close</button><div id="lbFrame"></div></div>
 </div>
 
 <script src="site.js"></script>
 <script>
 (function(){
-  var lb=document.getElementById('lb'), frame=document.getElementById('lbFrame'), close=document.getElementById('lbClose');
-  function open(id){
-    frame.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
-    lb.classList.add('on'); document.body.style.overflow='hidden';
-  }
-  function shut(){ lb.classList.remove('on'); frame.innerHTML=''; document.body.style.overflow=''; }
+  var lb=document.getElementById('lb'),frame=document.getElementById('lbFrame'),close=document.getElementById('lbClose');
+  function open(id){frame.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';lb.classList.add('on');document.body.style.overflow='hidden';}
+  function shut(){lb.classList.remove('on');frame.innerHTML='';document.body.style.overflow='';}
   document.querySelectorAll('[data-yt]').forEach(function(el){
-    el.addEventListener('click',function(){ open(el.getAttribute('data-yt')); });
-    el.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(el.getAttribute('data-yt')); }});
+    el.addEventListener('click',function(){open(el.getAttribute('data-yt'));});
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(el.getAttribute('data-yt'));}});
   });
   close.addEventListener('click',shut);
-  lb.addEventListener('click',function(e){ if(e.target===lb) shut(); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') shut(); });
+  lb.addEventListener('click',function(e){if(e.target===lb)shut();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')shut();});
 })();
 </script>
 </body>
