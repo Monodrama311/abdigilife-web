@@ -4,38 +4,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Work — AB Digilife</title>
-<meta name="description" content="Selected work from AB Digilife — brand films, commercials, and campaigns for local makers and businesses across Western Canada.">
+<meta name="description" content="Selected films and campaigns from AB Digilife — brand films, fashion, events, and stories made for the brands we work with.">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <meta property="og:title" content="Work — AB Digilife">
-<meta property="og:description" content="Brand films, commercials, and campaigns for makers and businesses across Western Canada.">
+<meta property="og:description" content="The work behind the brands — selected films, fashion, and stories.">
 <meta property="og:type" content="website">
 <style>
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.5vw,30px);margin-top:clamp(40px,6vw,72px)}
-  .proj{display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card);
-    transition:transform .4s var(--ease),border-color .4s}
-  .proj:hover{transform:translateY(-4px);border-color:var(--line-2)}
-  .poster{position:relative;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;overflow:hidden}
-  .poster::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at 30% 0%,rgba(255,255,255,.08),transparent 60%)}
-  .p1{background:linear-gradient(135deg,#E23B26,#7a1d12)}
-  .p2{background:linear-gradient(135deg,#1c1c20,#E23B26 220%)}
-  .p3{background:linear-gradient(135deg,#2a2a2e,#0d0d0f)}
-  .p4{background:linear-gradient(135deg,#CE3A2A,#23120f)}
-  .poster .pl{position:relative;z-index:2;width:62px;height:62px;border-radius:50%;border:1.5px solid rgba(255,255,255,.6);
-    display:flex;align-items:center;justify-content:center;backdrop-filter:blur(2px);transition:transform .35s var(--ease),background .35s}
-  .poster .pl::before{content:"";border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
-  .proj:hover .pl{transform:scale(1.1);background:rgba(255,255,255,.14)}
-  .poster .idx{position:absolute;top:16px;left:18px;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:rgba(255,255,255,.85)}
-  .meta{padding:20px 22px 24px}
-  .meta .cat{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
-  .meta h3{font-size:clamp(20px,2.4vw,27px);margin:8px 0 12px}
-  .meta .tags{display:flex;flex-wrap:wrap;gap:7px}
-  .meta .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-3);
-    border:1px solid var(--line-2);padding:4px 9px;border-radius:100px}
-  .note{margin-top:clamp(40px,6vw,72px);text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--on-3)}
-  @media(max-width:680px){.grid{grid-template-columns:1fr}}
+  /* featured */
+  .feature{margin-top:clamp(40px,6vw,72px);position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);cursor:pointer;
+    aspect-ratio:16/9;display:flex;align-items:flex-end;background:linear-gradient(135deg,#E23B26,#5e1107 85%)}
+  .feature::after{content:"";position:absolute;inset:0;background:radial-gradient(130% 120% at 75% 10%,rgba(255,255,255,.10),transparent 55%),linear-gradient(0deg,rgba(8,8,10,.78),transparent 55%)}
+  .feature:hover .play{transform:translate(-50%,-50%) scale(1.08);background:rgba(255,255,255,.18)}
+  .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:84px;height:84px;border-radius:50%;
+    border:1.5px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(3px);transition:transform .35s var(--ease),background .35s}
+  .play::before{content:"";border-left:22px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+  .play.sm{width:60px;height:60px}.play.sm::before{border-left:16px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+  .meta{position:relative;z-index:3;padding:clamp(22px,3vw,36px)}
+  .meta .cat{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.85}
+  .meta h2,.meta h3{font-family:var(--disp);color:#fff;letter-spacing:-.02em;margin-top:8px}
+  .meta h2{font-size:clamp(28px,4.4vw,56px);line-height:1}
+  .meta h3{font-size:clamp(19px,2.4vw,26px);line-height:1.02}
+  /* grid */
+  .films{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,22px);margin-top:clamp(16px,2vw,22px)}
+  .film{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);cursor:pointer;aspect-ratio:4/5;
+    display:flex;align-items:flex-end;transition:transform .4s var(--ease),border-color .4s}
+  .film:hover{transform:translateY(-4px);border-color:var(--line-2)}
+  .film::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,10,.82),transparent 60%)}
+  .f1{background:linear-gradient(150deg,#2a2a2e,#0d0d0f)}
+  .f2{background:linear-gradient(150deg,#CE3A2A,#23120f)}
+  .f3{background:linear-gradient(150deg,#1c1c20,#E23B26 240%)}
+  .film:hover .play{transform:translate(-50%,-50%) scale(1.1);background:rgba(255,255,255,.16)}
+  .idx{position:absolute;top:14px;left:16px;z-index:3;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:rgba(255,255,255,.85)}
+  /* instagram band */
+  .ig{margin-top:clamp(60px,9vw,120px);border:1px solid var(--line);border-radius:18px;padding:clamp(30px,5vw,56px);
+    background:linear-gradient(135deg,rgba(226,59,38,.10),rgba(20,20,22,.45));display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
+  .ig h2{font-size:clamp(24px,3.4vw,40px);max-width:16ch}
+  .ig p{color:var(--on-2);margin-top:14px;max-width:46ch}
+  .ig .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+  .ig .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-3);border:1px solid var(--line-2);padding:5px 10px;border-radius:100px}
+  .ig .right{text-align:right}
+  .ig .handle{font-family:var(--disp);font-size:clamp(22px,3vw,34px);color:var(--on)}
+  @media(max-width:760px){.films{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr}.ig .right{text-align:left}}
+  @media(max-width:480px){.films{grid-template-columns:1fr}}
+  /* lightbox */
+  .lb{position:fixed;inset:0;z-index:100;background:rgba(5,5,7,.92);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px)}
+  .lb.on{display:flex}
+  .lb-inner{width:min(1100px,100%);aspect-ratio:16/9;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.8)}
+  .lb-inner iframe{width:100%;height:100%;border:0}
+  .lb-close{position:absolute;top:-44px;right:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;cursor:pointer;background:none;border:0;display:flex;align-items:center;gap:8px}
+  .lb-close::before{content:"✕";font-size:15px}
 </style>
 </head>
 <body>
@@ -46,38 +65,54 @@
 
 <main class="wrap hero">
   <p class="kick reveal">Selected work</p>
-  <h1 class="display reveal d1" style="margin-top:18px">Brands, on camera.</h1>
-  <p class="lead reveal d2">A look at the makers and businesses we've helped come to life — from pastry counters to fashion floors. Films, campaigns, and identities built to be remembered.</p>
+  <h1 class="display reveal d1" style="margin-top:18px">The work behind<br>the brands.</h1>
+  <p class="lead reveal d2">We make content that doesn't look like an agency made it — it looks like the brand. A few pieces we can show; the rest live where they belong: on our clients' channels.</p>
 </main>
 
 <section class="wrap section--tight">
-  <div class="grid">
-    <a class="proj reveal" href="/contact.html">
-      <div class="poster p1"><span class="idx">01 / Film</span><span class="pl"></span></div>
-      <div class="meta"><div class="cat">Brand Film · Pâtisserie</div><h3>Yann Haute Pâtisserie</h3>
-        <div class="tags"><span>Brand Film</span><span>Cinematography</span><span>Edit</span></div></div>
-    </a>
-
-    <a class="proj reveal d1" href="/contact.html">
-      <div class="poster p2"><span class="idx">02 / Campaign</span><span class="pl"></span></div>
-      <div class="meta"><div class="cat">Commercial · Bakery</div><h3>Pie Junkie</h3>
-        <div class="tags"><span>Commercial</span><span>Social</span><span>Content System</span></div></div>
-    </a>
-
-    <a class="proj reveal" href="/contact.html">
-      <div class="poster p3"><span class="idx">03 / Identity</span><span class="pl"></span></div>
-      <div class="meta"><div class="cat">Branding · Retail</div><h3>In Fashion Boutique</h3>
-        <div class="tags"><span>Identity</span><span>Lookbook</span><span>Web</span></div></div>
-    </a>
-
-    <a class="proj reveal d1" href="/contact.html">
-      <div class="poster p4"><span class="idx">04 / Story</span><span class="pl"></span></div>
-      <div class="meta"><div class="cat">Brand Story · Hospitality</div><h3>Petit Pont</h3>
-        <div class="tags"><span>Interview</span><span>Story</span><span>Film</span></div></div>
-    </a>
+  <!-- featured -->
+  <div class="feature reveal" data-yt="6f0QkNxO8mU" role="button" tabindex="0" aria-label="Play: In Fashion 2025">
+    <span class="play"></span>
+    <div class="meta"><div class="cat">Fashion · Brand Film — 2025</div><h2>In Fashion</h2></div>
   </div>
 
-  <p class="note reveal">More work available on request — <a href="/contact.html" style="color:var(--red)">get in touch</a></p>
+  <!-- film grid -->
+  <div class="films">
+    <div class="film f1 reveal" data-yt="7tSerANfgpk" role="button" tabindex="0" aria-label="Play: Studio in Motion">
+      <span class="idx">01 / Event</span><span class="play sm"></span>
+      <div class="meta"><div class="cat">Dance · Event Film</div><h3>Studio in Motion</h3></div>
+    </div>
+    <div class="film f2 reveal d1" data-yt="JwshyRJQcyg" role="button" tabindex="0" aria-label="Play: One Song, One Stage">
+      <span class="idx">02 / Stage</span><span class="play sm"></span>
+      <div class="meta"><div class="cat">Performance Film</div><h3>One Song, One Stage</h3></div>
+    </div>
+    <div class="film f3 reveal d2" data-yt="PeK0UpdBzuA" role="button" tabindex="0" aria-label="Play: On the Record">
+      <span class="idx">03 / Story</span><span class="play sm"></span>
+      <div class="meta"><div class="cat">Interview · Story</div><h3>On the Record</h3></div>
+    </div>
+  </div>
+
+  <!-- instagram living feed -->
+  <div class="ig reveal">
+    <div>
+      <p class="kick">Currently shooting</p>
+      <h2 style="margin-top:14px">The latest lives on Instagram.</h2>
+      <p>Photography, food &amp; hospitality, retail, sport — the day-to-day client work goes up as we shoot it. Follow along for the newest.</p>
+      <div class="tags"><span>Photography</span><span>Food &amp; Hospitality</span><span>Retail</span><span>Sport</span><span>Social</span></div>
+    </div>
+    <div class="right">
+      <a class="handle" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">@ab.digilife</a>
+      <div style="margin-top:20px"><a class="btn" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">See the latest ▸</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="reveal" style="text-align:center">
+    <p class="kick" style="justify-content:center">Your turn</p>
+    <h2 class="h2" style="margin:18px 0 26px">Let's make something worth watching.</h2>
+    <a class="btn" href="/contact.html">Start a project ▸</a>
+  </div>
 </section>
 
 <footer class="site">
@@ -88,6 +123,32 @@
   </div>
   <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life.</div>
 </footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <div class="lb-inner">
+    <button class="lb-close" id="lbClose" aria-label="Close">Close</button>
+    <div id="lbFrame"></div>
+  </div>
+</div>
+
 <script src="site.js"></script>
+<script>
+(function(){
+  var lb=document.getElementById('lb'), frame=document.getElementById('lbFrame'), close=document.getElementById('lbClose');
+  function open(id){
+    frame.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    lb.classList.add('on'); document.body.style.overflow='hidden';
+  }
+  function shut(){ lb.classList.remove('on'); frame.innerHTML=''; document.body.style.overflow=''; }
+  document.querySelectorAll('[data-yt]').forEach(function(el){
+    el.addEventListener('click',function(){ open(el.getAttribute('data-yt')); });
+    el.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(el.getAttribute('data-yt')); }});
+  });
+  close.addEventListener('click',shut);
+  lb.addEventListener('click',function(e){ if(e.target===lb) shut(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') shut(); });
+})();
+</script>
 </body>
 </html>
