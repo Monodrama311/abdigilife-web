@@ -139,7 +139,7 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
     return{x:LW/2+Math.cos(a)*rr,y:LH/2+Math.sin(a)*rr,sx:s.sx,sy:s.sy,ph:Math.random()*6.28,vx:0,vy:0,r:s.r,g:s.g,b:s.b,e:0.06+Math.random()*0.04};});}
   function ldraw(){
     tt+=0.02;
-    var big=Math.min(560*DPR,LW*0.62),sc=big/iw,oyf=0.42,ox=(LW-iw*sc)/2,oy=LH*oyf-(ih*sc)/2,sz=Math.max(1,STEP*sc*0.62),R=120*DPR,shim=reduce?0:1.0*DPR;
+    var big=Math.min(500*DPR,LW*0.54),sc=big/iw,oyf=0.41,ox=(LW-iw*sc)/2,oy=LH*oyf-(ih*sc)/2,sz=Math.max(1,STEP*sc*0.62),R=120*DPR,shim=reduce?0:1.0*DPR;
     lx.clearRect(0,0,LW,LH);
     for(var i=0;i<P.length;i++){var q=P[i];
       var tx=ox+q.sx*sc+Math.sin(tt+q.ph)*shim, ty=oy+q.sy*sc+Math.cos(tt*0.9+q.ph)*shim;
