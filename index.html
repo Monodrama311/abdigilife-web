@@ -14,11 +14,11 @@
   #flow{z-index:0} #logo{z-index:2}
   .hero .vignette{position:absolute;inset:0;z-index:1;pointer-events:none;
     background:radial-gradient(120% 90% at 50% 26%,transparent 36%,rgba(8,8,10,.55) 74%,rgba(8,8,10,.95) 100%)}
-  .stack{position:absolute;left:0;right:0;top:53%;z-index:4;display:flex;flex-direction:column;align-items:center;
+  .stack{position:absolute;left:0;right:0;top:63%;z-index:4;display:flex;flex-direction:column;align-items:center;
     text-align:center;padding:0 var(--gut);pointer-events:none}
   .stack .k{font-family:var(--mono);font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--red);
     opacity:0;animation:fade 1s 1.7s var(--e) forwards}
-  .hl{margin-top:18px;font-family:var(--disp);font-weight:600;font-size:clamp(40px,8.4vw,128px);line-height:.84;letter-spacing:-.035em;
+  .hl{margin-top:16px;font-family:var(--disp);font-weight:600;font-size:clamp(30px,5.6vw,82px);line-height:.84;letter-spacing:-.035em;
     background:linear-gradient(180deg,#fff 0%,#d4cfc4 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
     opacity:0;transform:translateY(22px);animation:rise 1.1s 1.9s var(--e) forwards}
   .stack .cta{pointer-events:auto;margin-top:30px;display:inline-flex;align-items:center;gap:11px;font-family:var(--mono);font-size:12px;
@@ -64,54 +64,39 @@
   <div class="hscroll">Scroll</div>
 </section>
 
-<div class="marquee" aria-hidden="true"><div class="track"><span>WHERE IDEAS COME TO LIFE</span><span class="dot">✳</span><span>MAKE IT UNMISSABLE</span><span class="dot">✳</span></div></div>
+<div class="marquee" aria-hidden="true"><div class="track"><span>WHERE IDEAS COME TO LIFE</span><span class="dot">✳</span><span>MADE TO BE SEEN</span><span class="dot">✳</span></div></div>
 
 <section class="sec ink">
-  <div class="wrap htease">
-    <p class="lbl rv">What we do</p>
-    <div class="svclist">
-      <a href="/services.html" class="rv">Branding</a><span class="sep">/</span>
-      <a href="/services.html" class="rv d1">Film</a><span class="sep">/</span>
-      <a href="/services.html" class="rv d1">Web</a><span class="sep">/</span>
-      <a href="/services.html" class="rv d2">Social</a><span class="sep">/</span>
-      <a href="/services.html" class="rv d2">Events</a><span class="sep">/</span>
-      <a href="/services.html" class="rv d3">Story</a>
-    </div>
+  <div class="wrap" style="max-width:1060px">
+    <p class="kick rv">The studio</p>
+    <h2 class="h2 serif rv d1" style="margin-top:22px">We design, film<br>&amp; <span class="it">grow</span> brands.</h2>
+    <p class="rv d2" style="margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--on-3)">Branding · Film · Web · Social · Events · Story</p>
   </div>
 </section>
 
 <section class="sec bone">
-  <div class="wrap">
+  <div class="wrap" style="max-width:1060px">
     <p class="kick rv">The idea</p>
-    <h2 class="display linemask" style="margin-top:20px" data-skew><span>Most marketing</span></h2>
-    <h2 class="display linemask" data-skew><span>is <span class="out">forgettable.</span></span></h2>
-    <h2 class="display linemask" data-skew><span>We make the <span class="red it">opposite.</span></span></h2>
-    <p class="lead rv d2" style="margin-top:28px">Work people stop for, remember and act on — like an audience flooding in. Marketing you can see, proven on camera.</p>
+    <h2 class="display serif linemask" style="margin-top:18px"><span>Marketing</span></h2>
+    <h2 class="display serif linemask"><span>you can <span class="it" style="color:var(--red)">see.</span></span></h2>
+    <p class="lead rv d2" style="margin-top:26px">Work people stop for, remember, and act on. Proven on camera — never louder than it needs to be.</p>
   </div>
 </section>
 
 <section class="sec ink">
-  <div class="wrap">
-    <div class="htease"><p class="lbl rv">Selected work</p></div>
-    <div class="hwork">
-      <a href="/work.html" class="rv" data-cursor><span class="w1"></span><span class="cp">In Fashion — Brand Film</span></a>
-      <a href="/work.html" class="rv d1" data-cursor><span class="w2"></span><span class="cp">Studio in Motion — Event</span></a>
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap">
+    <div>
+      <p class="kick rv">Selected work</p>
+      <h2 class="h2 serif rv d1" style="margin-top:16px">The work behind<br>the <span class="it">brands.</span></h2>
     </div>
-    <div style="margin-top:32px"><a class="btn" href="/work.html">See the work ▸</a></div>
-  </div>
-</section>
-
-<section class="sec ink" style="text-align:center;padding-top:0">
-  <div class="wrap">
-    <p class="kick rv" style="justify-content:center">Let's go</p>
-    <h2 class="giant rv d1" style="margin:22px 0 32px">Have an idea?</h2>
-    <a class="btn rv d2" href="/contact.html">Start a project ▸</a>
+    <a class="btn rv d2" href="/work.html">See the work ▸</a>
   </div>
 </section>
 
 <footer class="site">
   <div class="wrap">
-    <div class="big">Make it<br><span class="red">unmissable.</span></div>
+    <div class="big">Make it<br><span class="it" style="color:var(--red)">unmissable.</span></div>
+    <a class="btn" href="/contact.html" style="margin-bottom:46px">Start a project ▸</a>
     <div class="cols">
       <div><h4>Studio</h4><a class="fl" href="/work.html">Work</a><a class="fl" href="/services.html">Services</a><a class="fl" href="/studio.html">Studio</a><a class="fl" href="/contact.html">Contact</a></div>
       <div><h4>Contact</h4><a class="fl" href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a class="fl" href="tel:+15879680316">(587) 968 0316</a></div>
@@ -148,7 +133,7 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
     fx.globalCompositeOperation='source-over';requestAnimationFrame(fframe);}
 
   /* ---- the killer: logo from particles, parked up top as the masthead. never stops. ---- */
-  var lcv=document.getElementById('logo'),lx=lcv.getContext('2d'),LW,LH,P=[],img=new Image(),tt=0,iw=0,ih=0,samples=[],STEP=coarse?3:2;
+  var lcv=document.getElementById('logo'),lx=lcv.getContext('2d'),LW,LH,P=[],img=new Image(),tt=0,iw=0,ih=0,samples=[],STEP=coarse?2:1;
   function lsize(){LW=lcv.width=Math.floor(innerWidth*DPR);LH=lcv.height=Math.floor(innerHeight*DPR);lcv.style.width=innerWidth+'px';lcv.style.height=innerHeight+'px';}
   function sampleLogo(){iw=img.width;ih=img.height;var off=document.createElement('canvas'),o=off.getContext('2d');off.width=iw;off.height=ih;o.drawImage(img,0,0);
     var d=o.getImageData(0,0,iw,ih).data;samples=[];for(var y=0;y<ih;y+=STEP)for(var x=0;x<iw;x+=STEP){var i=(y*iw+x)*4;if(d[i+3]>140)samples.push({sx:x,sy:y,r:d[i],g:d[i+1],b:d[i+2]});}}
@@ -156,7 +141,7 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
     return{x:LW/2+Math.cos(a)*rr,y:LH/2+Math.sin(a)*rr,sx:s.sx,sy:s.sy,ph:Math.random()*6.28,vx:0,vy:0,r:s.r,g:s.g,b:s.b,e:0.06+Math.random()*0.04};});}
   function ldraw(){
     tt+=0.02;
-    var big=Math.min(470*DPR,LW*0.56),sc=big/iw,oyf=0.255,ox=(LW-iw*sc)/2,oy=LH*oyf-(ih*sc)/2,sz=Math.max(1,STEP*sc*0.5),R=110*DPR,shim=reduce?0:1.0*DPR;
+    var big=Math.min(560*DPR,LW*0.62),sc=big/iw,oyf=0.42,ox=(LW-iw*sc)/2,oy=LH*oyf-(ih*sc)/2,sz=Math.max(1,STEP*sc*0.62),R=120*DPR,shim=reduce?0:1.0*DPR;
     lx.clearRect(0,0,LW,LH);
     for(var i=0;i<P.length;i++){var q=P[i];
       var tx=ox+q.sx*sc+Math.sin(tt+q.ph)*shim, ty=oy+q.sy*sc+Math.cos(tt*0.9+q.ph)*shim;
@@ -172,6 +157,18 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
 
   var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){fsize();lsize();},180);});
   fsize();lsize();if(!reduce)requestAnimationFrame(fframe);
+
+  /* ---- scroll morph: the big centre logo melts & rises into the corner mark ---- */
+  var heroEl=document.getElementById('hero'),navLogo=document.querySelector('header.nav a[aria-label]'),stackEl=document.querySelector('.hero .stack');
+  if(navLogo){navLogo.style.opacity='0';navLogo.style.transition='opacity .45s ease';}
+  lcv.style.transformOrigin='50% 42%';lcv.style.willChange='transform,opacity';fcv.style.willChange='opacity';
+  function morph(){var h=(heroEl&&heroEl.offsetHeight)||innerHeight;var p=Math.max(0,Math.min(1,(window.pageYOffset||0)/(h*0.62)));
+    lcv.style.transform='translateY('+(-h*0.17*p).toFixed(1)+'px) scale('+(1-0.74*p).toFixed(3)+')';
+    lcv.style.opacity=Math.max(0,1-p*1.3).toFixed(3);
+    fcv.style.opacity=Math.max(0,1-p*1.35).toFixed(3);
+    if(stackEl){stackEl.style.transform='translateY('+(-46*p).toFixed(1)+'px)';stackEl.style.opacity=Math.max(0,1-p*1.7).toFixed(3);}
+    if(navLogo)navLogo.style.opacity=Math.max(0,Math.min(1,(p-0.34)/0.4)).toFixed(3);}
+  addEventListener('scroll',morph,{passive:true});addEventListener('resize',morph,{passive:true});morph();
 })();
 </script>
 </body>
