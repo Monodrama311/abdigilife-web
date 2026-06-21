@@ -147,7 +147,7 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
     fx.globalCompositeOperation='source-over';requestAnimationFrame(fframe);}
 
   /* ---- the killer: logo from particles, parked up top as the masthead. never stops. ---- */
-  var lcv=document.getElementById('logo'),lx=lcv.getContext('2d'),LW,LH,P=[],img=new Image(),tt=0,iw=0,ih=0,samples=[],STEP=coarse?2:1;
+  var lcv=document.getElementById('logo'),lx=lcv.getContext('2d'),LW,LH,P=[],img=new Image(),tt=0,iw=0,ih=0,samples=[],STEP=coarse?3:2;
   function lsize(){LW=lcv.width=Math.floor(innerWidth*DPR);LH=lcv.height=Math.floor(innerHeight*DPR);lcv.style.width=innerWidth+'px';lcv.style.height=innerHeight+'px';}
   function sampleLogo(){iw=img.width;ih=img.height;var off=document.createElement('canvas'),o=off.getContext('2d');off.width=iw;off.height=ih;o.drawImage(img,0,0);
     var d=o.getImageData(0,0,iw,ih).data;samples=[];for(var y=0;y<ih;y+=STEP)for(var x=0;x<iw;x+=STEP){var i=(y*iw+x)*4;if(d[i+3]>140)samples.push({sx:x,sy:y,r:d[i],g:d[i+1],b:d[i+2]});}}
@@ -167,7 +167,7 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
     requestAnimationFrame(ldraw);
   }
   img.onload=function(){sampleLogo();buildParticles();requestAnimationFrame(ldraw);};
-  img.src=LOGO_SRC;
+  img.src='logo-particle.png';
 
   var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){fsize();lsize();},180);});
   fsize();lsize();if(!reduce)requestAnimationFrame(fframe);
