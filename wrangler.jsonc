@@ -1,0 +1,9 @@
+{
+  "name": "abdigilife-web",
+  "compatibility_date": "2025-06-09",
+  "main": "worker.js",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS"
+  }
+}
