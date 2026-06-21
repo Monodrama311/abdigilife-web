@@ -24,7 +24,7 @@
 <style>
   /* homepage hero — particle "killer", now scrollable */
   .hero{position:relative;height:100svh;min-height:560px;overflow:hidden}
-  #flow{position:fixed;inset:0;z-index:-1;opacity:.8}
+  #flow{position:fixed;inset:0;z-index:-1;opacity:.95}
   #logo{position:absolute;inset:0;z-index:2}
   .wlink{display:inline-flex;align-items:baseline;gap:18px;margin-top:clamp(48px,7vw,92px);font-family:var(--serif);font-style:italic;font-size:clamp(32px,5.5vw,76px);line-height:1;color:var(--on);transition:color .35s}
   .wlink:hover{color:var(--red)} .wlink .ar{font-style:normal;font-family:var(--disp);color:var(--red);transition:transform .35s var(--e)} .wlink:hover .ar{transform:translateX(10px)}
@@ -41,9 +41,9 @@
     letter-spacing:.16em;text-transform:uppercase;background:var(--red);color:#fff;padding:16px 30px;border-radius:100px;
     opacity:0;animation:fade 1s 2.15s var(--e) forwards;transition:transform .15s,background .25s,box-shadow .3s}
   .stack .cta:hover{background:var(--red-2);transform:translateY(-1px);box-shadow:0 10px 32px -8px rgba(226,59,38,.6)}
-  .hscroll{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:4;font-family:var(--mono);font-size:10px;
+  .hscroll{margin-top:30px;font-family:var(--mono);font-size:10px;
     letter-spacing:.24em;text-transform:uppercase;color:var(--on-3);text-align:center;opacity:0;animation:fade 1s 2.4s var(--e) forwards}
-  .hscroll::after{content:"";display:block;width:1px;height:28px;background:linear-gradient(var(--red),transparent);margin:9px auto 0}
+  .hscroll::after{content:"";display:block;width:1px;height:26px;background:linear-gradient(var(--red),transparent);margin:9px auto 0}
   @keyframes fade{to{opacity:1}} @keyframes rise{to{opacity:1;transform:none}}
 
   /* home sections */
@@ -74,10 +74,10 @@
   <div class="vignette"></div>
   <div class="stack">
     <div class="k">Where ideas come to life</div>
-    <h1 class="hl">Make it<br>unmissable.</h1>
+    <h1 class="hl">Make it<br>unmissable</h1>
     <a class="cta" href="/contact.html">Start a project ▸</a>
+    <div class="hscroll">Scroll</div>
   </div>
-  <div class="hscroll">Scroll</div>
 </section>
 
 <div class="marquee" aria-hidden="true" style="border-color:transparent"><div class="track"><span>WHERE IDEAS COME TO LIFE</span><span class="dot">✳</span><span>MADE TO BE SEEN</span><span class="dot">✳</span></div></div>
@@ -85,7 +85,7 @@
 <section class="sec" style="padding-block:clamp(60px,9vw,130px)">
   <div class="wrap" style="max-width:1120px">
     <h2 class="display serif linemask"><span>We make brands</span></h2>
-    <h2 class="display serif linemask"><span>worth <span class="it" style="color:var(--red)">watching.</span></span></h2>
+    <h2 class="display serif linemask"><span>worth <span class="it" style="color:var(--red)">watching</span></span></h2>
     <p class="lead rv d2" style="margin-top:34px;max-width:48ch">Branding, film, web — and the stories in between. Made to be seen, proven on camera. Never louder than it needs to be.</p>
     <a class="rv d3 wlink" href="/work.html"><span>See the work</span><span class="ar">→</span></a>
   </div>
@@ -93,7 +93,7 @@
 
 <footer class="site">
   <div class="wrap">
-    <div class="big">Make it<br><span class="it" style="color:var(--red)">unmissable.</span></div>
+    <div class="big">Make it<br><span class="it" style="color:var(--red)">unmissable</span></div>
     <a class="btn" href="/contact.html" style="margin-bottom:46px">Start a project ▸</a>
     <div class="cols">
       <div><h4>Studio</h4><a class="fl" href="/work.html">Work</a><a class="fl" href="/services.html">Services</a><a class="fl" href="/studio.html">Studio</a><a class="fl" href="/contact.html">Contact</a></div>
@@ -123,9 +123,9 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
   function fang(x,y){var nx=x/FW,ny=y/FH;return -Math.PI/2+Math.sin(ny*3+t*0.6)*0.5+Math.sin(nx*4-t*0.4)*0.45+Math.cos((nx+ny)*2+t*0.3)*0.3;}
   function fframe(){t+=0.005;fx.fillStyle='rgba(8,8,10,0.12)';fx.fillRect(0,0,FW,FH);fx.globalCompositeOperation='lighter';
     for(var i=0;i<FP.length;i++){var p=FP[i],a=fang(p.x,p.y),vx=Math.cos(a)*1.4*DPR,vy=Math.sin(a)*1.4*DPR;if(p.hot){vx*=1.85;vy*=1.85;}
-      var dx=p.x-mx,dy=p.y-my,d2=dx*dx+dy*dy,R=150*DPR;if(d2<R*R){var d=Math.sqrt(d2)||1,f=(R*R-d2)/(R*R);vx+=(-dy/d)*f*3.5*DPR;vy+=(dx/d)*f*3.5*DPR-f*1.6*DPR;}
+      var dx=mx-p.x,dy=my-p.y,d2=dx*dx+dy*dy,R=340*DPR;if(d2<R*R){var d=Math.sqrt(d2)||1,f=(R*R-d2)/(R*R);vx+=dx/d*f*2.8*DPR;vy+=dy/d*f*2.8*DPR;}
       var px=p.x,py=p.y;p.x+=vx;p.y+=vy;p.life++;var fade=Math.min(1,p.life/30)*Math.max(0,1-p.life/p.max);
-      var c=p.hot?[255,120,90]:[226,59,38];fx.strokeStyle='rgba('+c[0]+','+c[1]+','+c[2]+','+((p.hot?0.34:0.2)*fade)+')';
+      var c=p.hot?[255,120,90]:[226,59,38];fx.strokeStyle='rgba('+c[0]+','+c[1]+','+c[2]+','+((p.hot?0.42:0.26)*fade)+')';
       fx.lineWidth=p.s;fx.beginPath();fx.moveTo(px,py);fx.lineTo(p.x,p.y);fx.stroke();
       if(p.y<-20||p.life>p.max||p.x<-20||p.x>FW+20)FP[i]=fspawn();}
     fx.globalCompositeOperation='source-over';requestAnimationFrame(fframe);}
@@ -139,7 +139,8 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
     return{x:LW/2+Math.cos(a)*rr,y:LH/2+Math.sin(a)*rr,sx:s.sx,sy:s.sy,ph:Math.random()*6.28,vx:0,vy:0,r:s.r,g:s.g,b:s.b,e:0.06+Math.random()*0.04};});}
   function ldraw(){
     tt+=0.02;
-    var big=Math.min(500*DPR,LW*0.54),sc=big/iw,oyf=0.41,ox=(LW-iw*sc)/2,oy=LH*oyf-(ih*sc)/2,sz=Math.max(1,STEP*sc*0.62),R=120*DPR,shim=reduce?0:1.0*DPR;
+    var big=Math.min(360*DPR,LW*0.44),sc=big/iw,oyf=0.40,ox=(LW-iw*sc)/2,oy=LH*oyf-(ih*sc)/2,sz=Math.max(1,STEP*sc*0.62),R=120*DPR,shim=reduce?0:1.0*DPR;
+      var lmy=my+(window.pageYOffset||0)*DPR;
     lx.clearRect(0,0,LW,LH);
     for(var i=0;i<P.length;i++){var q=P[i];
       var tx=ox+q.sx*sc+Math.sin(tt+q.ph)*shim, ty=oy+q.sy*sc+Math.cos(tt*0.9+q.ph)*shim;
@@ -156,15 +157,11 @@ var LOGO_SRC="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAIvCAYAAABqceEh
   var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){fsize();lsize();},180);});
   fsize();lsize();if(!reduce)requestAnimationFrame(fframe);
 
-  /* ---- scroll morph: the big centre logo melts & rises into the corner mark ---- */
-  var heroEl=document.getElementById('hero'),navLogo=document.querySelector('header.nav a[aria-label]'),stackEl=document.querySelector('.hero .stack');
+  /* ---- scroll: hero scrolls away naturally (no fade, no canvas transform); the small nav logo fades in after it ---- */
+  var heroEl=document.getElementById('hero'),navLogo=document.querySelector('header.nav a[aria-label]');
   if(navLogo){navLogo.style.opacity='0';navLogo.style.transition='opacity .45s ease';}
-  lcv.style.transformOrigin='50% 42%';lcv.style.willChange='transform,opacity';fcv.style.willChange='opacity';
-  function morph(){var h=(heroEl&&heroEl.offsetHeight)||innerHeight;var p=Math.max(0,Math.min(1,(window.pageYOffset||0)/(h*0.6)));
-    lcv.style.transform='translateY('+(-h*0.40*p).toFixed(1)+'px) scale('+(1-0.86*p).toFixed(3)+')';
-    lcv.style.opacity=Math.max(0,1-p*1.25).toFixed(3);
-    if(stackEl){stackEl.style.transform='translateY('+(-50*p).toFixed(1)+'px)';stackEl.style.opacity=Math.max(0,1-p*1.7).toFixed(3);}
-    if(navLogo)navLogo.style.opacity=Math.max(0,Math.min(1,(p-0.36)/0.4)).toFixed(3);}
+  function morph(){var h=(heroEl&&heroEl.offsetHeight)||innerHeight;var p=Math.max(0,Math.min(1,(window.pageYOffset||0)/(h*0.85)));
+    if(navLogo)navLogo.style.opacity=Math.max(0,Math.min(1,(p-0.5)/0.35)).toFixed(3);}
   addEventListener('scroll',morph,{passive:true});addEventListener('resize',morph,{passive:true});morph();
 })();
 </script>

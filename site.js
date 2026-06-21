@@ -27,6 +27,18 @@
   });
   var yr = document.getElementById('yr'); if (yr) yr.textContent = new Date().getFullYear();
 
+  /* iykyk — a quiet mark that knows where it came from */
+  var legal = document.querySelector('footer.site .legal');
+  if (legal) {
+    var x = document.createElement('a');
+    x.href = 'https://dmlogic.ca'; x.target = '_blank'; x.rel = 'noopener';
+    x.textContent = '◦'; x.setAttribute('aria-label', '◦');
+    x.style.cssText = 'margin-left:14px;opacity:.28;color:inherit;text-decoration:none;transition:opacity .35s';
+    x.addEventListener('mouseenter', function () { x.style.opacity = '.7'; });
+    x.addEventListener('mouseleave', function () { x.style.opacity = '.28'; });
+    legal.appendChild(x);
+  }
+
   /* ---------- scroll loop: velocity-skew + ink/bone nav swap ---------- */
   var header = document.querySelector('header.nav');
   var navH = 64;
