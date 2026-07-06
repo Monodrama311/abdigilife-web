@@ -46,9 +46,10 @@
   @media(max-width:760px){.igband{grid-template-columns:1fr}.igband .right{text-align:left}}
   .lb{position:fixed;inset:0;z-index:100;background:rgba(5,5,7,.96);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:clamp(14px,3vw,40px);opacity:0;transition:opacity .35s}
   .lb.on{display:flex;opacity:1}
-  .lb-inner{width:min(1280px,100%);aspect-ratio:16/9;position:relative;border-radius:8px;overflow:hidden;box-shadow:0 40px 110px -22px #000}
-  .lb-inner iframe{width:100%;height:100%;border:0}
-  .lb-close{position:absolute;top:-42px;right:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;cursor:pointer;background:none;border:0}
+  .lb-inner{width:min(1240px,94vw,calc(82vh * 16 / 9));aspect-ratio:16/9;position:relative;border-radius:8px;overflow:hidden;box-shadow:0 40px 120px -20px #000}
+  .lb-inner iframe{width:100%;height:100%;border:0;display:block}
+  .lb-close{position:absolute;top:12px;right:14px;z-index:3;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;cursor:pointer;background:rgba(0,0,0,.5);border:1px solid #ffffff33;border-radius:3px;padding:7px 12px;backdrop-filter:blur(4px)}
+  .lb-close:hover{background:var(--red);border-color:var(--red)}
 </style>
 </head>
 <body>
