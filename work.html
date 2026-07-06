@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Work — AB Digilife</title>
-<meta name="description" content="Selected films from AB Digilife — flip through the bin, the work behind the brands.">
+<meta name="description" content="Selected films from AB Digilife — brand film across fashion, dance, medical aesthetics, real estate, retail and story. The work behind the brands.">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
@@ -18,54 +18,37 @@
 <meta name="twitter:image" content="https://abdigilife.com/og.jpg">
 <meta property="og:title" content="Work — AB Digilife"><meta property="og:type" content="website">
 <style>
-  .stage{position:relative;height:100svh;min-height:600px;overflow:hidden}
-  .shead{position:absolute;top:clamp(92px,13vw,148px);left:var(--gut);right:var(--gut);z-index:6;pointer-events:none}
-  .shead .kick{pointer-events:auto}
-  .shead h1{font-family:var(--serif);font-weight:500;font-size:clamp(28px,5vw,68px);line-height:.98;letter-spacing:-.01em;margin-top:14px;max-width:15ch}
-  .shead h1 em{font-style:italic;color:var(--red)}
-  .scrub{position:absolute;top:clamp(26px,4vw,38px);left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:14px;z-index:6;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--on-2)}
-  .scrub .bars{width:88px;height:9px;background:repeating-linear-gradient(90deg,var(--on-3) 0 1px,transparent 1px 7px);opacity:.5}
-  .scrub b{color:var(--red);font-weight:700}
-  .viewport{position:absolute;inset:0;overflow:hidden;perspective:1700px;cursor:grab}
-  body.dragging .viewport{cursor:grabbing}
-  .track{position:absolute;top:50%;left:0;display:flex;align-items:center;gap:18px;transform:translateX(0);will-change:transform;height:0;transform-style:preserve-3d}
-  .spacer{flex:0 0 auto}
-  .sleeve{position:relative;flex:0 0 auto;width:clamp(232px,27vw,322px);height:min(58vh,470px);overflow:hidden;cursor:pointer;border:1px solid var(--line);border-radius:8px;
-    background:#16140f;transform-style:preserve-3d;backface-visibility:hidden;will-change:transform,opacity;box-shadow:0 34px 70px -36px rgba(0,0,0,.75)}
-  .sleeve .img{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;filter:grayscale(1) brightness(.6) contrast(1.03);transition:filter .7s var(--e)}
-  .sleeve .prev{position:absolute;inset:0;z-index:1;overflow:hidden;opacity:0;transition:opacity .8s var(--e);pointer-events:none}
-  .sleeve .prev iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;aspect-ratio:16/9;border:0}
-  .sleeve .gr{position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(8,8,10,.88),transparent 50%)}
-  .sleeve .idx{position:absolute;top:15px;left:15px;z-index:3;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.82)}
-  .sleeve .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.7);z-index:4;width:66px;height:66px;border-radius:50%;border:1.5px solid rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .45s,transform .45s var(--e),background .3s;backdrop-filter:blur(2px)}
-  .sleeve .play::before{content:"";border-left:17px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
-  .sleeve .vt{position:absolute;left:18px;bottom:18px;right:18px;z-index:4;font-family:var(--serif);font-weight:500;font-size:clamp(16px,1.6vw,21px);line-height:1.05;color:#fff}
-  .sleeve .vc{position:absolute;left:18px;bottom:0;z-index:4;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);opacity:0;transition:opacity .4s}
-  .sleeve.active .img,.sleeve:hover .img{filter:grayscale(0) brightness(.94)}
-  .sleeve.active .prev{opacity:1}
-  .sleeve.active .play,.sleeve:hover .play{opacity:1;transform:translate(-50%,-50%) scale(1)}
-  .sleeve.active .play{background:rgba(226,59,38,.22)}
-  .sleeve.folding{transition:transform .4s var(--e),opacity .4s}
-  .cap{position:absolute;left:50%;bottom:clamp(48px,7vw,84px);transform:translateX(-50%);text-align:center;z-index:6;max-width:80vw;pointer-events:none;display:none}
-  .hint{position:absolute;left:50%;bottom:clamp(18px,3vw,28px);transform:translateX(-50%);z-index:6;font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--on-3)}
-  /* mobile cover-flow */
-  body.touch .viewport{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  body.touch .viewport::-webkit-scrollbar{display:none}
-  body.touch .track{position:relative;top:auto;left:auto;transform:none!important;height:100%;align-items:center;gap:18px;will-change:auto}
-  body.touch .sleeve{width:min(72vw,330px);height:min(58vh,490px);scroll-snap-align:center;transform:scale(.9);opacity:1!important;transition:transform .5s var(--e),filter .5s}
-  body.touch .sleeve.active{transform:scale(1)}
+  .whead{padding:clamp(104px,14vw,168px) 0 clamp(30px,4vw,54px)}
+  .whead .lead{max-width:40ch;color:var(--on-2);margin-top:18px;font-size:clamp(15px,1.5vw,18px);line-height:1.55}
+  .reelno{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--on-3);
+    display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:clamp(30px,4vw,52px)}
+  .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(26px,3.2vw,56px);padding-bottom:clamp(40px,6vw,80px)}
+  @media(max-width:720px){.gal{grid-template-columns:1fr;gap:34px}}
+  .gitem{cursor:pointer}
+  .gframe{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:5px;background:#100f0d;border:1px solid var(--line)}
+  .gframe img{width:100%;height:100%;object-fit:cover;filter:grayscale(.16) brightness(.9) contrast(1.03);
+    transition:transform .7s var(--e),filter .7s var(--e);will-change:transform}
+  .gitem:hover .gframe img{filter:grayscale(0) brightness(1);transform:scale(1.04)}
+  .gno{position:absolute;top:14px;left:16px;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:#ffffffcf;mix-blend-mode:difference}
+  .gplay{position:absolute;inset:0;z-index:2;display:grid;place-items:center;opacity:0;transition:opacity .4s}
+  .gitem:hover .gplay{opacity:1}
+  .gplay i{width:62px;height:62px;border-radius:50%;border:1.5px solid #ffffffdd;display:grid;place-items:center;backdrop-filter:blur(2px)}
+  .gplay i::before{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+  .gcap{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:15px}
+  .gt{font-family:var(--serif);font-weight:500;font-size:clamp(20px,2.2vw,28px);line-height:1.05;letter-spacing:-.01em;transition:color .3s}
+  .gitem:hover .gt{color:var(--red)}
+  .gc{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);white-space:nowrap;text-align:right}
   .igband{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
-  .igband .handle{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(28px,4vw,52px);color:var(--ink-on-bone)}
+  .igband .handle{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(28px,4vw,52px);color:var(--ink-on-bone);text-decoration:none}
   .igband .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
   .igband .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-on-bone-2);border:1px solid var(--line-d2);padding:5px 11px;border-radius:100px}
   .igband .right{text-align:right}
+  @media(max-width:760px){.igband{grid-template-columns:1fr}.igband .right{text-align:left}}
   .lb{position:fixed;inset:0;z-index:100;background:rgba(5,5,7,.96);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:clamp(14px,3vw,40px);opacity:0;transition:opacity .35s}
   .lb.on{display:flex;opacity:1}
-  .lb-inner{width:min(1280px,100%);aspect-ratio:16/9;position:relative;border-radius:10px;overflow:hidden;box-shadow:0 40px 110px -22px #000;transform:scale(.94);transition:transform .45s var(--e)}
-  .lb.on .lb-inner{transform:scale(1)}
+  .lb-inner{width:min(1280px,100%);aspect-ratio:16/9;position:relative;border-radius:8px;overflow:hidden;box-shadow:0 40px 110px -22px #000}
   .lb-inner iframe{width:100%;height:100%;border:0}
   .lb-close{position:absolute;top:-42px;right:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;cursor:pointer;background:none;border:0}
-  @media(max-width:760px){.igband{grid-template-columns:1fr}.igband .right{text-align:left}}
 </style>
 </head>
 <body>
@@ -74,17 +57,20 @@
   <nav><a class="lnk" href="/work.html">Work</a><a class="lnk" href="/services.html">Services</a><a class="lnk" href="/process.html">Process</a><a class="lnk" href="/studio.html">Studio</a><a class="lnk" href="/contact.html">Contact</a></nav>
 </header>
 
-<section class="stage ink">
-  <div class="shead">
-    <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">Selected work — AB Digilife film &amp; video portfolio</h1>
-    <p class="kick">Selected work — the films behind the brands</p>
+<section class="sec ink">
+  <div class="wrap">
+    <div class="whead">
+      <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">Selected work — AB Digilife film &amp; video portfolio</h1>
+      <p class="kick rv">Reel 2026 · Selected work</p>
+      <h2 class="display serif rv d1" style="margin-top:20px">The films behind<br>the <span class="it" style="color:var(--red)">brands</span></h2>
+      <p class="lead rv d2">Brand film across fashion, dance, medical aesthetics, real estate, retail and story. Made to be seen — proven on camera, never louder than it needs to be.</p>
+    </div>
+    <div class="reelno"><span>Reel 02 · Work</span><span>8 films · 7 industries</span></div>
+    <div class="gal" id="gal"></div>
   </div>
-  <div class="scrub"><span class="bars"></span><span><b id="cur">01</b> / <span id="tot">05</span></span><span class="bars"></span></div>
-  <div class="viewport" id="vp"><div class="track" id="track"></div></div>
-  <div class="hint">Scroll · drag · ← → &nbsp;·&nbsp; click to play</div>
 </section>
 
-<div class="marquee" aria-hidden="true"><div class="track"><span>MADE TO BE SEEN</span><span class="dot">✳</span><span>PROVEN ON CAMERA</span><span class="dot">✳</span></div></div>
+<div class="marquee" aria-hidden="true"><div class="track"><span>MADE TO BE SEEN</span><span class="dot">✳</span><span>PROVEN ON CAMERA</span><span class="dot">✳</span><span>MADE TO BE SEEN</span><span class="dot">✳</span><span>PROVEN ON CAMERA</span><span class="dot">✳</span></div></div>
 
 <section class="sec bone">
   <div class="wrap igband">
@@ -95,7 +81,7 @@
       <div class="tags"><span>Photography</span><span>Food &amp; Hospitality</span><span>Retail</span><span>Sport</span><span>Social</span></div>
     </div>
     <div class="right">
-      <a class="handle" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener" data-cursor>@ab.digilife</a>
+      <a class="handle" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">@ab.digilife</a>
       <div style="margin-top:22px"><a class="btn" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">See the latest ▸</a></div>
     </div>
   </div>
@@ -113,12 +99,12 @@
   <div class="wrap">
     <div class="big">Make it<br><span class="it" style="color:var(--red)">unmissable</span></div>
     <div class="cols">
-      <div><h4>Studio</h4><a class="fl" href="/work.html">Work</a><a class="fl" href="/services.html">Services</a><a class="fl" href="/studio.html">Studio</a><a class="fl" href="/contact.html">Contact</a></div>
+      <div><h4>Studio</h4><a class="fl" href="/work.html">Work</a><a class="fl" href="/services.html">Services</a><a class="fl" href="/process.html">Process</a><a class="fl" href="/studio.html">Studio</a><a class="fl" href="/contact.html">Contact</a></div>
       <div><h4>Contact</h4><a class="fl" href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a class="fl" href="tel:+15879680316">(587) 968 0316</a></div>
       <div><h4>Based in</h4><p class="fl cities"><b>Vancouver</b> · Calgary · Edmonton · Toronto</p></div>
       <div><h4>Social</h4><a class="fl" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">@ab.digilife</a><a class="fl" href="https://www.youtube.com/@MrGlvte" target="_blank" rel="noopener">YouTube ↗</a></div>
     </div>
-    <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life.</div>
+    <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life. · <a href="https://dmlogic.ca" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Powered by DMLogic ↗</a></div>
   </div>
 </footer>
 
@@ -128,113 +114,34 @@
 
 <script src="site.js"></script>
 <script>
-/* ===== Work — Aristide-grade film bin: flip · the centred film plays · click folds open ===== */
 var FILMS=[
   {no:'01',t:'In Fashion',          cat:'Fashion · Brand Film',        yt:'6f0QkNxO8mU'},
   {no:'02',t:'Studio in Motion',    cat:'Dance · Event Film',          yt:'7tSerANfgpk'},
   {no:'03',t:'One Song, One Stage', cat:'Performance Film',            yt:'JwshyRJQcyg'},
-  {no:'04',t:'The Clinic',          cat:'Medical Aesthetics · Brand',  yt:'WAu69V64gxA'},
-  {no:'05',t:'Open House',          cat:'Real Estate · Property Film', yt:'T9bhf0b1gjM'},
+  {no:'04',t:'The Clinic',          cat:'Medical Aesthetics',          yt:'WAu69V64gxA'},
+  {no:'05',t:'Open House',          cat:'Real Estate · Property',      yt:'T9bhf0b1gjM'},
   {no:'06',t:'Cozy Lab',            cat:'Retail · Space Film',         yt:'heEe8QrI6hA'},
   {no:'07',t:'On the Record',       cat:'Interview · Story',           yt:'PeK0UpdBzuA'},
   {no:'08',t:'Back to School',      cat:'Lifestyle · Talk',            yt:'K8UAlFxa8sM'}
 ];
-var track=document.getElementById('track'),vp=document.getElementById('vp'),curEl=document.getElementById('cur');
-document.getElementById('tot').textContent=String(FILMS.length).padStart(2,'0');
-var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-var isMobile=!matchMedia('(hover:hover) and (pointer:fine)').matches||innerWidth<=820;
-if(isMobile)document.body.classList.add('touch');
+var gal=document.getElementById('gal');
+gal.innerHTML=FILMS.map(function(f){
+  return '<figure class="gitem" data-yt="'+f.yt+'" role="button" tabindex="0" aria-label="Play '+f.t+'">'+
+    '<div class="gframe"><img loading="lazy" src="https://i.ytimg.com/vi/'+f.yt+'/maxresdefault.jpg" alt="'+f.t+'" '+
+    'onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/'+f.yt+'/hqdefault.jpg\'">'+
+    '<span class="gno">'+f.no+'</span><span class="gplay"><i></i></span></div>'+
+    '<figcaption class="gcap"><span class="gt">'+f.t+'</span><span class="gc">'+f.cat+'</span></figcaption></figure>';
+}).join('');
 
-var html='<div class="spacer lead"></div>';
-FILMS.forEach(function(f){
-  html+='<div class="sleeve" data-yt="'+f.yt+'" role="button" tabindex="0" aria-label="Play '+f.t+'">'
-    +'<div class="img" style="background-image:url(https://i.ytimg.com/vi/'+f.yt+'/hqdefault.jpg)"></div>'
-    +'<div class="prev"></div><div class="gr"></div>'
-    +'<span class="idx">'+f.no+'</span><span class="play"></span>'
-    +'<div class="vt">'+f.t+'</div><div class="vc">'+f.cat+'</div></div>';
-});
-html+='<div class="spacer trail"></div>';
-track.innerHTML=html;
-
-var slices=track.querySelectorAll('.sleeve'),leadEl=track.querySelector('.lead'),trailEl=track.querySelector('.trail');
-var BASE=300,target=0,cur=0,prev=0,maxX=0,hovered=-1;
-function clamp(v){return Math.max(0,Math.min(maxX,v));}
-function measure(){if(isMobile)return;var sw=slices[0]?slices[0].offsetWidth:BASE;var pad=Math.max(60,vp.clientWidth/2-sw/2);if(leadEl)leadEl.style.width=pad+'px';if(trailEl)trailEl.style.width=pad+'px';
-  maxX=Math.max(0,track.scrollWidth-vp.clientWidth);target=clamp(target);}
-addEventListener('resize',measure);addEventListener('load',measure);measure();
-
-function snapNearest(){var c=cur+vp.clientWidth/2,b=0,bd=1e9;for(var i=0;i<slices.length;i++){var cx=slices[i].offsetLeft+slices[i].offsetWidth/2,dd=Math.abs(cx-c);if(dd<bd){bd=dd;b=i;}}target=clamp(slices[b].offsetLeft+slices[b].offsetWidth/2-vp.clientWidth/2);}
-var snapT;function scheduleSnap(){clearTimeout(snapT);snapT=setTimeout(function(){if(Math.abs(target-cur)>1.5)return scheduleSnap();if(!dragging)snapNearest();},130);}
-vp.addEventListener('wheel',function(e){if(isMobile)return;e.preventDefault();clearPrev();var d=(Math.abs(e.deltaY)>=Math.abs(e.deltaX)?e.deltaY:e.deltaX);target=clamp(target+d*0.9);scheduleSnap();},{passive:false});
-addEventListener('keydown',function(e){if(isMobile)return;if(e.key==='ArrowRight'){clearPrev();target=clamp(target+vp.clientWidth*0.3);scheduleSnap();}else if(e.key==='ArrowLeft'){clearPrev();target=clamp(target-vp.clientWidth*0.3);scheduleSnap();}});
-var dragging=false,dsx=0,dst=0,dlx=0,dlt=0,dpv=0,dmoved=false;
-vp.addEventListener('pointerdown',function(e){if(isMobile||e.button!==0)return;dragging=true;dmoved=false;dpv=0;dsx=e.clientX;dst=target;dlx=e.clientX;dlt=performance.now();});
-vp.addEventListener('pointermove',function(e){if(!dragging)return;if(!dmoved){if(Math.abs(e.clientX-dsx)<=5)return;dmoved=true;clearPrev();document.body.classList.add('dragging');try{vp.setPointerCapture(e.pointerId);}catch(_){}}target=clamp(dst-(e.clientX-dsx)*1.5);var now=performance.now(),dt=now-dlt||16;dpv=(e.clientX-dlx)/dt;dlx=e.clientX;dlt=now;});
-function endDrag(){if(!dragging)return;dragging=false;document.body.classList.remove('dragging');if(dmoved){target=clamp(target-dpv*180);scheduleSnap();}}
-vp.addEventListener('pointerup',endDrag);vp.addEventListener('pointercancel',endDrag);
-slices.forEach(function(sl,i){sl.addEventListener('mouseenter',function(){hovered=i;});sl.addEventListener('mouseleave',function(){if(hovered===i)hovered=-1;});});
-
-/* ---- inline muted preview: the film plays inside the centred sleeve once it settles ---- */
-var prevIdx=-1,prevT;
-function clearPrev(){clearTimeout(prevT);if(prevIdx>=0){var p=slices[prevIdx].querySelector('.prev');if(p)p.innerHTML='';prevIdx=-1;}}
-function setPrev(i){
-  if(i===prevIdx)return;clearPrev();prevIdx=i;
-  var f=FILMS[i],p=slices[i].querySelector('.prev');if(!f||!p)return;
-  p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+f.yt+'?autoplay=1&mute=1&loop=1&playlist='+f.yt+'&controls=0&modestbranding=1&playsinline=1&rel=0&disablekb=1" allow="autoplay; encrypted-media" tabindex="-1" aria-hidden="true"></iframe>';
-}
-
-function frame(){
-  cur+=(target-cur)*(reduce?1:0.075);
-  if(Math.abs(target-cur)<0.05)cur=target;
-  var vel=cur-prev;prev=cur;var av=Math.abs(vel);
-  var skew=reduce?0:Math.max(-8,Math.min(8,vel/1.6));
-  track.style.transform='translateX('+(-cur)+'px) translateY(-50%) skewX('+skew+'deg)';
-  var half=vp.clientWidth/2,center=cur+half;
-  var sigma=reduce?9999:260+Math.min(av*7,300);
-  var amp=reduce?0:Math.min(av*0.6,12);
-  var tt=performance.now()/1000,best=0,bd=1e9;
-  slices.forEach(function(sl,i){
-    var cx=sl.offsetLeft+sl.offsetWidth/2,d=cx-center;
-    if(Math.abs(d)<bd){bd=Math.abs(d);best=i;}
-    var nd=Math.max(-1,Math.min(1,d/half)),ad=Math.abs(nd);
-    var f=Math.exp(-(d*d)/(sigma*sigma));
-    sl.style.opacity=(0.18+0.82*f).toFixed(3);
-    var foc=(i===hovered)?1:0;
-    var rotY=reduce?0:(-nd*24);
-    var tz=reduce?0:((1-ad)*80+foc*36);
-    var sc=(reduce?1:(0.84+0.16*(1-ad)))+foc*0.03;
-    var wave=reduce?0:Math.sin(cx*0.006+tt*1.2)*amp*(1-ad*0.6);
-    sl.style.transform='translateY('+wave.toFixed(2)+'px) translateZ('+tz.toFixed(1)+'px) rotateY('+rotY.toFixed(2)+'deg) scale('+sc.toFixed(3)+')';
-    sl.style.zIndex=Math.round(100-ad*100)+(foc?200:0);
-    sl.classList.toggle('active',i===best);
-    sl.querySelector('.vc').style.opacity=(i===best)?'1':'0';
-  });
-  curEl.textContent=String(best+1).padStart(2,'0');
-  /* settled? start the inline preview on the centred film */
-  if(!reduce && !dragging && av<0.08 && Math.abs(target-cur)<1){
-    if(best!==prevIdx){clearTimeout(prevT);prevT=setTimeout(function(){setPrev(best);},260);}
-  }
-  requestAnimationFrame(frame);
-}
-if(!isMobile)requestAnimationFrame(frame);else mobileShelf();
-function mobileShelf(){
-  function pads(){var sw=slices[0]?slices[0].getBoundingClientRect().width:vp.clientWidth*0.6;var pad=Math.max(0,(vp.clientWidth-sw)/2);if(leadEl)leadEl.style.width=pad+'px';if(trailEl)trailEl.style.width=pad+'px';}
-  var ticking=false;function upd(){ticking=false;var c=vp.scrollLeft+vp.clientWidth/2,best=0,bd=1e9;for(var i=0;i<slices.length;i++){var cx=slices[i].offsetLeft+slices[i].offsetWidth/2,d=Math.abs(cx-c);if(d<bd){bd=d;best=i;}}for(var j=0;j<slices.length;j++){slices[j].classList.toggle('active',j===best);slices[j].querySelector('.vc').style.opacity=(j===best)?'1':'0';}curEl.textContent=String(best+1).padStart(2,'0');}
-  function onS(){if(!ticking){ticking=true;requestAnimationFrame(upd);}}
-  pads();vp.addEventListener('scroll',onS,{passive:true});addEventListener('resize',function(){pads();upd();});requestAnimationFrame(function(){pads();upd();});
-}
-
-/* ---- click a sleeve → fold open & play full (HD, sound) ---- */
-var lb=document.getElementById('lb'),frameEl=document.getElementById('lbFrame'),closeB=document.getElementById('lbClose');
-function play(id){clearPrev();frameEl.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&vq=hd1080" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';lb.classList.add('on');document.body.style.overflow='hidden';}
-function shut(){lb.classList.remove('on');frameEl.innerHTML='';document.body.style.overflow='';}
-slices.forEach(function(sl){
-  sl.addEventListener('click',function(){if(dmoved){dmoved=false;return;}sl.classList.add('folding');sl.style.transform+=' scale(1.04)';setTimeout(function(){play(sl.getAttribute('data-yt'));sl.classList.remove('folding');},170);});
-  sl.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();play(sl.getAttribute('data-yt'));}});
-});
-closeB.addEventListener('click',shut);
-lb.addEventListener('click',function(e){if(e.target===lb)shut();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')shut();});
+var lb=document.getElementById('lb'),lbFrame=document.getElementById('lbFrame'),lbClose=document.getElementById('lbClose');
+function openLB(id){lbFrame.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';lb.classList.add('on');}
+function closeLB(){lb.classList.remove('on');lbFrame.innerHTML='';}
+gal.addEventListener('click',function(e){var it=e.target.closest('.gitem');if(it)openLB(it.dataset.yt);});
+gal.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('gitem')){e.preventDefault();openLB(e.target.dataset.yt);}});
+lbClose.addEventListener('click',closeLB);
+lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
+var yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
