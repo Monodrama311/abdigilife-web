@@ -101,7 +101,7 @@ addEventListener('pointerleave',function(){mx=my=-9999;});
 var fcv=document.getElementById('flow'),fx=fcv.getContext('2d'),FW,FH,FP=[],t=0;
 function fsize(){FW=fcv.width=Math.floor(innerWidth*DPR);FH=fcv.height=Math.floor(innerHeight*DPR);fcv.style.width=innerWidth+'px';fcv.style.height=innerHeight+'px';
   var n=Math.round(Math.min(300,(innerWidth*innerHeight)/5200));if(FP.length>n)FP.length=n;while(FP.length<n)FP.push(fspawn());fx.fillStyle='#f4f1ea';fx.fillRect(0,0,FW,FH);}
-function fspawn(){return{x:Math.random()*FW,y:FH+Math.random()*FH*0.4,s:(0.35+Math.random()*0.7)*DPR,hot:Math.random()<0.22,life:0,max:220+Math.random()*300};}
+function fspawn(){return{x:Math.random()*FW,y:Math.random()*FH*1.25-FH*0.12,s:(0.35+Math.random()*0.7)*DPR,hot:Math.random()<0.22,life:Math.random()*160,max:220+Math.random()*300};}
 function fang(x,y){var nx=x/FW,ny=y/FH;return -Math.PI/2+Math.sin(ny*3+t*0.6)*0.5+Math.sin(nx*4-t*0.4)*0.45+Math.cos((nx+ny)*2+t*0.3)*0.3;}
 function fframe(){t+=0.005;fx.fillStyle='rgba(244,241,234,0.10)';fx.fillRect(0,0,FW,FH);
   for(var i=0;i<FP.length;i++){var p=FP[i],a=fang(p.x,p.y),vx=Math.cos(a)*1.3*DPR,vy=Math.sin(a)*1.3*DPR;if(p.hot){vx*=1.7;vy*=1.7;}
