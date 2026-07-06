@@ -2,147 +2,161 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Work — AB Digilife</title>
-<meta name="description" content="Selected films from AB Digilife — brand film across fashion, dance, medical aesthetics, real estate, retail and story. The work behind the brands.">
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#0A0A0C">
+<meta name="description" content="Selected work from AB Digilife — brand image, content and the marketing channels that carry it, for businesses across industries.">
 <link rel="canonical" href="https://abdigilife.com/work">
-<meta property="og:site_name" content="AB Digilife">
-<meta property="og:url" content="https://abdigilife.com/work">
+<meta name="theme-color" content="#f4f1ea">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:site_name" content="AB Digilife"><meta property="og:type" content="website">
+<meta property="og:title" content="Work — AB Digilife"><meta property="og:url" content="https://abdigilife.com/work">
 <meta property="og:image" content="https://abdigilife.com/og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://abdigilife.com/og.jpg">
-<meta property="og:title" content="Work — AB Digilife"><meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://abdigilife.com/og.jpg">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet">
 <style>
-  .whead{padding:clamp(104px,14vw,168px) 0 clamp(30px,4vw,54px)}
-  .whead .lead{max-width:40ch;color:var(--on-2);margin-top:18px;font-size:clamp(15px,1.5vw,18px);line-height:1.55}
-  .reelno{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--on-3);
-    display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:clamp(30px,4vw,52px)}
-  .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(26px,3.2vw,56px);padding-bottom:clamp(40px,6vw,80px)}
-  @media(max-width:720px){.gal{grid-template-columns:1fr;gap:34px}}
-  .gitem{cursor:pointer}
-  .gframe{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:5px;background:#100f0d;border:1px solid var(--line)}
-  .gframe img{width:100%;height:100%;object-fit:cover;filter:grayscale(.16) brightness(.9) contrast(1.03);
-    transition:transform .7s var(--e),filter .7s var(--e);will-change:transform}
-  .gitem:hover .gframe img{filter:grayscale(0) brightness(1);transform:scale(1.04)}
-  .gno{position:absolute;top:14px;left:16px;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:#ffffffcf;mix-blend-mode:difference}
-  .gplay{position:absolute;inset:0;z-index:2;display:grid;place-items:center;opacity:0;transition:opacity .4s}
-  .gitem:hover .gplay{opacity:1}
-  .gplay i{width:62px;height:62px;border-radius:50%;border:1.5px solid #ffffffdd;display:grid;place-items:center;backdrop-filter:blur(2px)}
-  .gplay i::before{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
-  .gcap{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:15px}
-  .gt{font-family:var(--serif);font-weight:500;font-size:clamp(20px,2.2vw,28px);line-height:1.05;letter-spacing:-.01em;transition:color .3s}
-  .gitem:hover .gt{color:var(--red)}
-  .gc{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);white-space:nowrap;text-align:right}
-  .igband{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
-  .igband .handle{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(28px,4vw,52px);color:var(--ink-on-bone);text-decoration:none}
-  .igband .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
-  .igband .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-on-bone-2);border:1px solid var(--line-d2);padding:5px 11px;border-radius:100px}
-  .igband .right{text-align:right}
-  @media(max-width:760px){.igband{grid-template-columns:1fr}.igband .right{text-align:left}}
-  .lb{position:fixed;inset:0;z-index:100;background:rgba(5,5,7,.96);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:clamp(14px,3vw,40px);opacity:0;transition:opacity .35s}
-  .lb.on{display:flex;opacity:1}
-  .lb-inner{width:min(1240px,94vw,calc(82vh * 16 / 9));aspect-ratio:16/9;position:relative;border-radius:8px;overflow:hidden;box-shadow:0 40px 120px -20px #000}
-  .lb-inner iframe{width:100%;height:100%;border:0;display:block}
-  .lb-close{position:absolute;top:12px;right:14px;z-index:3;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;cursor:pointer;background:rgba(0,0,0,.5);border:1px solid #ffffff33;border-radius:3px;padding:7px 12px;backdrop-filter:blur(4px)}
-  .lb-close:hover{background:var(--red);border-color:var(--red)}
+:root{--bg:#f4f1ea;--ink:#1c1a17;--dim:#6f6a61;--faint:#a49d92;--line:#1c1a1714;--accent:#c8442e;
+  --serif:'Fraunces',Georgia,serif;--sans:'General Sans',system-ui,sans-serif;--mono:ui-monospace,Menlo,monospace;--e:cubic-bezier(.19,1,.22,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(22px,4vw,60px)}
+.top{position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+.top .mk{font-family:var(--serif);font-weight:500;font-size:20px}.top .mk b{color:var(--accent)}
+.top nav{display:flex;gap:26px}.top a{font-size:13px;text-decoration:none;color:var(--dim)}.top a:hover{color:var(--ink)}
+#flow{position:fixed;inset:0;z-index:0;opacity:.6;pointer-events:none}
+.hero{position:relative;height:86vh;min-height:560px}
+#logo{position:absolute;inset:0;z-index:2}
+.hero .cap{position:absolute;left:0;right:0;bottom:clamp(26px,5vw,60px);z-index:3;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;pointer-events:none}
+.hero .cap .l{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,32px);color:var(--ink)}
+.hero .cap .r{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);text-align:right}
+.sec{position:relative;z-index:3;background:var(--bg)}
+.whead{padding:clamp(30px,4vw,60px) 0 clamp(24px,3vw,44px)}
+.whead .k{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.whead h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,84px);line-height:.94;letter-spacing:-.02em;margin-top:14px}
+.whead h2 i{font-style:italic}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,3.4vw,56px);padding-bottom:clamp(50px,7vw,100px)}
+@media(max-width:760px){.gal{grid-template-columns:1fr;gap:36px}}
+.item{cursor:pointer}
+.frame{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#e7e2d8}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--e),filter .6s var(--e);filter:saturate(.97)}
+.item:hover .frame img{transform:scale(1.045);filter:saturate(1.06)}
+.frame .play{position:absolute;left:16px;bottom:16px;width:46px;height:46px;border-radius:50%;background:#fffffff0;display:grid;place-items:center;opacity:0;transform:translateY(8px);transition:.4s var(--e)}
+.item:hover .frame .play{opacity:1;transform:none}
+.frame .play::before{content:"";border-left:13px solid var(--ink);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px}
+.cap2{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:15px}
+.cap2 .t{font-family:var(--serif);font-weight:400;font-size:clamp(21px,2.3vw,30px);line-height:1.05;transition:color .3s}
+.item:hover .cap2 .t{color:var(--accent)}
+.cap2 .no{font-family:var(--mono);font-size:11px;color:var(--faint)}
+.cap2 .c{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:6px}
+.rev{opacity:0;transform:translateY(24px);transition:opacity .9s var(--e),transform .9s var(--e)}.rev.seen{opacity:1;transform:none}
+.foot{border-top:1px solid var(--line);padding:34px 0 56px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.foot a{text-decoration:none}.foot a:hover{color:var(--accent)}
+.lb{position:fixed;inset:0;z-index:200;background:#1c1a17ee;display:none;align-items:center;justify-content:center;padding:clamp(14px,3vw,44px)}.lb.on{display:flex}
+.lb-inner{width:min(1240px,94vw,calc(80vh * 16 / 9));aspect-ratio:16/9;position:relative;overflow:hidden;border-radius:8px}
+.lb-inner iframe{width:100%;height:100%;border:0}
+.lb-x{position:absolute;top:12px;right:14px;z-index:3;font-family:var(--mono);font-size:11px;text-transform:uppercase;color:#fff;background:#0006;border:1px solid #ffffff30;border-radius:4px;padding:7px 12px;cursor:pointer}
 </style>
 </head>
 <body>
-<header class="nav">
-  <a href="/" aria-label="AB Digilife home"><img class="logo dk" src="logo-dark.png" alt="AB Digilife"><img class="logo lt" src="logo-light.png" alt="AB Digilife"></a>
-  <nav><a class="lnk" href="/work.html">Work</a><a class="lnk" href="/services.html">Services</a><a class="lnk" href="/process.html">Process</a><a class="lnk" href="/studio.html">Studio</a><a class="lnk" href="/contact.html">Contact</a></nav>
-</header>
-
-<section class="sec ink">
-  <div class="wrap">
-    <div class="whead">
-      <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">Selected work — AB Digilife film &amp; video portfolio</h1>
-      <p class="kick rv">Reel 2026 · Selected work</p>
-      <h2 class="display serif rv d1" style="margin-top:20px">The films behind<br>the <span class="it" style="color:var(--red)">brands</span></h2>
-      <p class="lead rv d2">Brand film across fashion, dance, medical aesthetics, real estate, retail and story. Made to be seen — proven on camera, never louder than it needs to be.</p>
-    </div>
-    <div class="reelno"><span>Reel 02 · Work</span><span>8 films · 7 industries</span></div>
-    <div class="gal" id="gal"></div>
-  </div>
-</section>
-
-<div class="marquee" aria-hidden="true"><div class="track"><span>MADE TO BE SEEN</span><span class="dot">✳</span><span>PROVEN ON CAMERA</span><span class="dot">✳</span><span>MADE TO BE SEEN</span><span class="dot">✳</span><span>PROVEN ON CAMERA</span><span class="dot">✳</span></div></div>
-
-<section class="sec bone">
-  <div class="wrap igband">
-    <div>
-      <p class="kick">Currently shooting</p>
-      <h2 class="h2 serif" style="margin-top:16px">The latest lives<br>on <span class="it" style="color:var(--red)">Instagram</span></h2>
-      <p style="color:var(--ink-on-bone-2);margin-top:16px;max-width:44ch">Photography, food &amp; hospitality, retail, sport — the day-to-day client work goes up as we shoot it.</p>
-      <div class="tags"><span>Photography</span><span>Food &amp; Hospitality</span><span>Retail</span><span>Sport</span><span>Social</span></div>
-    </div>
-    <div class="right">
-      <a class="handle" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">@ab.digilife</a>
-      <div style="margin-top:22px"><a class="btn" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">See the latest ▸</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec ink" style="text-align:center">
-  <div class="wrap">
-    <p class="kick rv" style="justify-content:center">Your turn</p>
-    <h2 class="display serif rv d1" style="margin:20px 0 30px">Let's make something<br>worth <span class="it">watching</span></h2>
-    <a class="btn rv d2" href="/contact.html">Start a project ▸</a>
-  </div>
-</section>
-
-<footer class="site">
-  <div class="wrap">
-    <div class="big">Make it<br><span class="it" style="color:var(--red)">unmissable</span></div>
-    <div class="cols">
-      <div><h4>Studio</h4><a class="fl" href="/work.html">Work</a><a class="fl" href="/services.html">Services</a><a class="fl" href="/process.html">Process</a><a class="fl" href="/studio.html">Studio</a><a class="fl" href="/contact.html">Contact</a></div>
-      <div><h4>Contact</h4><a class="fl" href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a class="fl" href="tel:+15879680316">(587) 968 0316</a></div>
-      <div><h4>Based in</h4><p class="fl cities"><b>Vancouver</b> · Calgary · Edmonton · Toronto</p></div>
-      <div><h4>Social</h4><a class="fl" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">@ab.digilife</a><a class="fl" href="https://www.youtube.com/@MrGlvte" target="_blank" rel="noopener">YouTube ↗</a></div>
-    </div>
-    <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life. · <a href="https://dmlogic.ca" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Powered by DMLogic ↗</a></div>
-  </div>
-</footer>
-
-<div class="lb" id="lb" role="dialog" aria-modal="true">
-  <div class="lb-inner"><button class="lb-close" id="lbClose" aria-label="Close">✕ Close</button><div id="lbFrame"></div></div>
+<canvas id="flow"></canvas>
+<div class="wrap">
+  <header class="top">
+    <a class="mk" href="/" style="text-decoration:none;color:inherit">AB<b>·</b>Digilife</a>
+    <nav><a href="/work.html" style="color:var(--ink)">Work</a><a href="/services.html">Services</a><a href="/process.html">Process</a><a href="/studio.html">Studio</a><a href="/contact.html">Contact</a></nav>
+  </header>
 </div>
 
-<script src="site.js"></script>
+<section class="hero">
+  <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">AB Digilife — brand image and marketing channels for business, Vancouver</h1>
+  <canvas id="logo"></canvas>
+  <div class="wrap cap">
+    <div class="l">Where ideas come to life.</div>
+    <div class="r">Brand image &amp; marketing channels<br>for business · Vancouver</div>
+  </div>
+</section>
+
+<div class="sec">
+<div class="wrap">
+  <div class="whead"><div class="k rev">Selected work</div><h2 class="rev">Brands, built<br>to be <i>remembered</i></h2><p class="rev" style="max-width:46ch;color:var(--dim);font-size:clamp(15px,1.5vw,18px);line-height:1.55;margin-top:20px">Brand image, content and the channels that carry it — for businesses across industries. Made to be seen, never louder than it needs to be.</p></div>
+  <section class="gal" id="gal"></section>
+  <footer class="foot">
+    <span>© 2026 AB Digilife</span>
+    <a href="https://www.instagram.com/ab.digilife/">Instagram ↗</a>
+    <a href="https://www.youtube.com/@MrGlvte">YouTube ↗</a>
+    <span>Vancouver · Calgary · Edmonton · Toronto</span>
+  </footer>
+</div>
+</div>
+
+<div class="lb" id="lb"><div class="lb-inner"><button class="lb-x" id="lbx">✕ Close</button><div id="lbf"></div></div></div>
+
 <script>
+var DPR=Math.min(window.devicePixelRatio||1,2),coarse=matchMedia('(pointer:coarse)').matches,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches,mx=-9999,my=-9999;
+addEventListener('pointermove',function(e){mx=e.clientX*DPR;my=e.clientY*DPR;},{passive:true});
+addEventListener('pointerleave',function(){mx=my=-9999;});
+
+/* ---- YOUR background flow, re-tuned for light: faint ink+red streams ---- */
+var fcv=document.getElementById('flow'),fx=fcv.getContext('2d'),FW,FH,FP=[],t=0;
+function fsize(){FW=fcv.width=Math.floor(innerWidth*DPR);FH=fcv.height=Math.floor(innerHeight*DPR);fcv.style.width=innerWidth+'px';fcv.style.height=innerHeight+'px';
+  var n=Math.round(Math.min(300,(innerWidth*innerHeight)/5200));if(FP.length>n)FP.length=n;while(FP.length<n)FP.push(fspawn());fx.fillStyle='#f4f1ea';fx.fillRect(0,0,FW,FH);}
+function fspawn(){return{x:Math.random()*FW,y:FH+Math.random()*FH*0.4,s:(0.35+Math.random()*0.7)*DPR,hot:Math.random()<0.22,life:0,max:220+Math.random()*300};}
+function fang(x,y){var nx=x/FW,ny=y/FH;return -Math.PI/2+Math.sin(ny*3+t*0.6)*0.5+Math.sin(nx*4-t*0.4)*0.45+Math.cos((nx+ny)*2+t*0.3)*0.3;}
+function fframe(){t+=0.005;fx.fillStyle='rgba(244,241,234,0.10)';fx.fillRect(0,0,FW,FH);
+  for(var i=0;i<FP.length;i++){var p=FP[i],a=fang(p.x,p.y),vx=Math.cos(a)*1.3*DPR,vy=Math.sin(a)*1.3*DPR;if(p.hot){vx*=1.7;vy*=1.7;}
+    var px=p.x,py=p.y;p.x+=vx;p.y+=vy;p.life++;var fade=Math.min(1,p.life/30)*Math.max(0,1-p.life/p.max);
+    var c=p.hot?[200,68,46]:[110,106,97];fx.strokeStyle='rgba('+c[0]+','+c[1]+','+c[2]+','+((p.hot?0.16:0.09)*fade)+')';
+    fx.lineWidth=p.s;fx.beginPath();fx.moveTo(px,py);fx.lineTo(p.x,p.y);fx.stroke();
+    if(p.y<-20||p.life>p.max||p.x<-20||p.x>FW+20)FP[i]=fspawn();}
+  requestAnimationFrame(fframe);}
+
+/* ---- YOUR particle logo, recolored for light: white text -> ink, red stays red ---- */
+var lcv=document.getElementById('logo'),lx=lcv.getContext('2d'),LW,LH,P=[],img=new Image(),tt=0,iw=0,ih=0,samples=[],STEP=coarse?3:2;
+function lsize(){LW=lcv.width=Math.floor(lcv.offsetWidth*DPR);LH=lcv.height=Math.floor(lcv.offsetHeight*DPR);}
+function sampleLogo(){iw=img.width;ih=img.height;var off=document.createElement('canvas'),o=off.getContext('2d');off.width=iw;off.height=ih;o.drawImage(img,0,0);
+  var d=o.getImageData(0,0,iw,ih).data;samples=[];for(var y=0;y<ih;y+=STEP)for(var x=0;x<iw;x+=STEP){var i=(y*iw+x)*4;if(d[i+3]>140){var r=d[i],g=d[i+1],b=d[i+2];
+    if(r+g+b>540){r=28;g=26;b=23;} samples.push({sx:x,sy:y,r:r,g:g,b:b});}}}
+function buildParticles(){P=samples.map(function(s){var a=Math.random()*Math.PI*2,rr=Math.max(LW,LH)*(0.25+Math.random()*0.6);
+  return{x:LW/2+Math.cos(a)*rr,y:LH/2+Math.sin(a)*rr,sx:s.sx,sy:s.sy,ph:Math.random()*6.28,vx:0,vy:0,r:s.r,g:s.g,b:s.b,e:0.06+Math.random()*0.04};});}
+function ldraw(){
+  tt+=0.02;
+  var big=Math.min(420*DPR,LW*0.5),sc=big/iw,ox=(LW-iw*sc)/2,oy=LH*0.46-(ih*sc)/2,sz=Math.max(1,STEP*sc*0.62),R=120*DPR,shim=reduce?0:1.0*DPR;
+  lx.clearRect(0,0,LW,LH);
+  for(var i=0;i<P.length;i++){var q=P[i];
+    var tx=ox+q.sx*sc+Math.sin(tt+q.ph)*shim, ty=oy+q.sy*sc+Math.cos(tt*0.9+q.ph)*shim;
+    if(reduce){q.x=tx;q.y=ty;}
+    else{q.vx+=(tx-q.x)*q.e;q.vy+=(ty-q.y)*q.e;
+      var dx=q.x-mx,dy=q.y-my,d2=dx*dx+dy*dy;if(d2<R*R){var f=(R*R-d2)/(R*R)*0.9,d=Math.sqrt(d2)||1;q.vx+=dx/d*f*15;q.vy+=dy/d*f*15;}
+      q.vx*=0.82;q.vy*=0.82;q.x+=q.vx;q.y+=q.vy;}
+    lx.fillStyle='rgb('+q.r+','+q.g+','+q.b+')';lx.fillRect(q.x,q.y,sz,sz);}
+  requestAnimationFrame(ldraw);
+}
+img.onload=function(){lsize();sampleLogo();buildParticles();requestAnimationFrame(ldraw);};
+img.src='logo-particle.png';
+addEventListener('resize',function(){fsize();lsize();});
+fsize();lsize();if(!reduce)requestAnimationFrame(fframe);
+
+/* reveals + lightbox */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target);}});},{threshold:.14});
 var FILMS=[
-  {no:'01',t:'In Fashion',          cat:'Fashion · Brand Film',        yt:'6f0QkNxO8mU'},
-  {no:'02',t:'Studio in Motion',    cat:'Dance · Event Film',          yt:'7tSerANfgpk'},
-  {no:'03',t:'One Song, One Stage', cat:'Performance Film',            yt:'JwshyRJQcyg'},
-  {no:'04',t:'The Clinic',          cat:'Medical Aesthetics',          yt:'WAu69V64gxA'},
-  {no:'05',t:'Open House',          cat:'Real Estate · Property',      yt:'T9bhf0b1gjM'},
-  {no:'06',t:'Cozy Lab',            cat:'Retail · Space Film',         yt:'heEe8QrI6hA'},
-  {no:'07',t:'On the Record',       cat:'Interview · Story',           yt:'PeK0UpdBzuA'},
-  {no:'08',t:'Back to School',      cat:'Lifestyle · Talk',            yt:'K8UAlFxa8sM'}
+ {no:'01',t:'In Fashion',cat:'Fashion · Brand Film',yt:'6f0QkNxO8mU'},
+ {no:'02',t:'Studio in Motion',cat:'Dance · Event Film',yt:'7tSerANfgpk'},
+ {no:'03',t:'One Song, One Stage',cat:'Performance Film',yt:'JwshyRJQcyg'},
+ {no:'04',t:'The Clinic',cat:'Medical Aesthetics',yt:'WAu69V64gxA'},
+ {no:'05',t:'Open House',cat:'Real Estate · Property',yt:'T9bhf0b1gjM'},
+ {no:'06',t:'Cozy Lab',cat:'Retail · Space',yt:'heEe8QrI6hA'},
+ {no:'07',t:'On the Record',cat:'Interview · Story',yt:'PeK0UpdBzuA'},
+ {no:'08',t:'Back to School',cat:'Lifestyle · Talk',yt:'K8UAlFxa8sM'}
 ];
 var gal=document.getElementById('gal');
-gal.innerHTML=FILMS.map(function(f){
-  return '<figure class="gitem" data-yt="'+f.yt+'" role="button" tabindex="0" aria-label="Play '+f.t+'">'+
-    '<div class="gframe"><img loading="lazy" src="https://i.ytimg.com/vi/'+f.yt+'/maxresdefault.jpg" alt="'+f.t+'" '+
-    'onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/'+f.yt+'/hqdefault.jpg\'">'+
-    '<span class="gno">'+f.no+'</span><span class="gplay"><i></i></span></div>'+
-    '<figcaption class="gcap"><span class="gt">'+f.t+'</span><span class="gc">'+f.cat+'</span></figcaption></figure>';
-}).join('');
-
-var lb=document.getElementById('lb'),lbFrame=document.getElementById('lbFrame'),lbClose=document.getElementById('lbClose');
-function openLB(id){lbFrame.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';lb.classList.add('on');}
-function closeLB(){lb.classList.remove('on');lbFrame.innerHTML='';}
-gal.addEventListener('click',function(e){var it=e.target.closest('.gitem');if(it)openLB(it.dataset.yt);});
-gal.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('gitem')){e.preventDefault();openLB(e.target.dataset.yt);}});
-lbClose.addEventListener('click',closeLB);
-lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
-var yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
+gal.innerHTML=FILMS.map(function(f){return '<article class="item rev" data-yt="'+f.yt+'"><div class="frame"><img loading="lazy" src="https://i.ytimg.com/vi/'+f.yt+'/maxresdefault.jpg" onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/'+f.yt+'/hqdefault.jpg\'" alt="'+f.t+'"><span class="play"></span></div><div class="cap2"><span class="t">'+f.t+'<span class="c">'+f.cat+'</span></span><span class="no">'+f.no+' / 08</span></div></article>';}).join('');
+document.querySelectorAll('.rev').forEach(function(r){io.observe(r);});
+var lb=document.getElementById('lb'),lbf=document.getElementById('lbf');
+gal.addEventListener('click',function(e){var it=e.target.closest('.item');if(it){lbf.innerHTML='<iframe src="https://www.youtube.com/embed/'+it.dataset.yt+'?autoplay=1&rel=0" allow="autoplay;fullscreen" allowfullscreen></iframe>';lb.classList.add('on');}});
+function cl(){lb.classList.remove('on');lbf.innerHTML='';}
+document.getElementById('lbx').addEventListener('click',cl);lb.addEventListener('click',function(e){if(e.target===lb)cl();});
+addEventListener('keydown',function(e){if(e.key==='Escape')cl();});
 </script>
 </body>
 </html>
