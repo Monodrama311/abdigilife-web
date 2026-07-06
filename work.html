@@ -150,7 +150,7 @@ var FILMS=[
  {no:'08',t:'Back to School',cat:'Lifestyle · Talk',yt:'K8UAlFxa8sM'}
 ];
 var gal=document.getElementById('gal');
-gal.innerHTML=FILMS.map(function(f){return '<article class="item rev" data-yt="'+f.yt+'"><div class="frame"><img loading="lazy" src="https://i.ytimg.com/vi/'+f.yt+'/maxresdefault.jpg" onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/'+f.yt+'/hqdefault.jpg\'" alt="'+f.t+'"><span class="play"></span></div><div class="cap2"><span class="t">'+f.t+'<span class="c">'+f.cat+'</span></span><span class="no">'+f.no+' / 08</span></div></article>';}).join('');
+gal.innerHTML=FILMS.map(function(f){return '<article class="item rev" data-yt="'+f.yt+'"><div class="frame"><img loading="lazy" src="https://i.ytimg.com/vi/'+f.yt+'/hq2.jpg" onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/'+f.yt+'/hqdefault.jpg\'" alt="'+f.t+'"><span class="play"></span></div><div class="cap2"><span class="t">'+f.t+'<span class="c">'+f.cat+'</span></span><span class="no">'+f.no+' / 08</span></div></article>';}).join('');
 document.querySelectorAll('.rev').forEach(function(r){io.observe(r);});
 var lb=document.getElementById('lb'),lbf=document.getElementById('lbf');
 gal.addEventListener('click',function(e){var it=e.target.closest('.item');if(it){lbf.innerHTML='<iframe src="https://www.youtube.com/embed/'+it.dataset.yt+'?autoplay=1&rel=0" allow="autoplay;fullscreen" allowfullscreen></iframe>';lb.classList.add('on');}});

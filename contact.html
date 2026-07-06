@@ -5,80 +5,111 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Contact — AB Digilife</title>
 <meta name="description" content="Start a project with AB Digilife. hello@abdigilife.com · (587) 968 0316 · Vancouver, Calgary, Edmonton, Toronto.">
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#0A0A0C">
 <link rel="canonical" href="https://abdigilife.com/contact">
-<meta property="og:site_name" content="AB Digilife">
-<meta property="og:url" content="https://abdigilife.com/contact">
+<meta name="theme-color" content="#f4f1ea">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:site_name" content="AB Digilife"><meta property="og:type" content="website">
+<meta property="og:title" content="Contact — AB Digilife"><meta property="og:url" content="https://abdigilife.com/contact">
 <meta property="og:image" content="https://abdigilife.com/og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://abdigilife.com/og.jpg">
-<meta property="og:title" content="Contact — AB Digilife"><meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://abdigilife.com/og.jpg">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet">
 <style>
-  .ch{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:clamp(40px,6vw,72px)}
-  .ch a,.ch div{background:var(--ink);padding:clamp(24px,3.4vw,44px);display:block;transition:background .35s}
-  .ch a:hover{background:var(--ink-2)}
-  .ch .l{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-3)}
-  .ch .v{font-family:var(--disp);font-size:clamp(20px,2.8vw,34px);margin-top:14px;letter-spacing:-.01em}
-  .ch a:hover .v{color:var(--red)}
-  .brief{display:grid;grid-template-columns:.7fr 1fr;gap:clamp(24px,4vw,60px)}
-  .brief ol{list-style:none;counter-reset:b}
-  .brief li{counter-increment:b;display:flex;gap:16px;padding-block:16px;border-top:1px solid var(--line-d2);font-size:clamp(15px,1.7vw,18px);color:var(--ink-on-bone)}
-  .brief li::before{content:counter(b,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--red);letter-spacing:.08em;padding-top:4px}
-  @media(max-width:680px){.ch{grid-template-columns:1fr}.brief{grid-template-columns:1fr}}
+:root{--bg:#f4f1ea;--ink:#1c1a17;--dim:#6f6a61;--faint:#a49d92;--line:#1c1a1714;--accent:#c8442e;
+  --serif:'Fraunces',Georgia,serif;--sans:'General Sans',system-ui,sans-serif;--mono:ui-monospace,Menlo,monospace;--e:cubic-bezier(.19,1,.22,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(22px,4vw,60px)}
+.top{position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+.top .mk{font-family:var(--serif);font-weight:500;font-size:20px;text-decoration:none;color:inherit}.top .mk b{color:var(--accent)}
+.top nav{display:flex;gap:26px}.top nav a{font-size:13px;text-decoration:none;color:var(--dim)}.top nav a:hover,.top nav a.on{color:var(--ink)}
+#flow{position:fixed;inset:0;z-index:0;opacity:.72;pointer-events:none}
+.sec{position:relative;z-index:3}
+.hero{padding:clamp(48px,8vw,110px) 0 clamp(20px,3vw,40px)}
+.kick{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.big{font-family:var(--serif);font-weight:400;font-size:clamp(44px,8vw,116px);line-height:.92;letter-spacing:-.02em}
+.big i{font-style:italic;color:var(--accent)}
+.lead{color:var(--dim);font-size:clamp(16px,1.7vw,20px);line-height:1.55;max-width:50ch;margin-top:clamp(22px,3vw,32px)}
+.band{padding:clamp(30px,5vw,70px) 0}
+.ch{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:clamp(30px,4vw,52px)}
+.ch a,.ch div{background:#faf8f2;padding:clamp(22px,3.2vw,40px);display:block;transition:background .35s}
+.ch a:hover{background:#fff}
+.ch .l{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.ch .v{font-family:var(--serif);font-size:clamp(20px,2.6vw,32px);margin-top:12px;letter-spacing:-.01em;color:var(--ink)}
+.ch a:hover .v{color:var(--accent)}
+.brief{display:grid;grid-template-columns:.7fr 1fr;gap:clamp(24px,4vw,60px);border-top:1px solid var(--line);padding-top:clamp(34px,4vw,60px)}
+.brief h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,52px);line-height:.98;letter-spacing:-.02em}
+.brief ol{list-style:none;counter-reset:b}
+.brief li{counter-increment:b;display:flex;gap:16px;padding-block:16px;border-top:1px solid var(--line);font-size:clamp(15px,1.7vw,18px);color:var(--dim);line-height:1.5}
+.brief li::before{content:counter(b,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.08em;padding-top:4px}
+.rev{opacity:0;transform:translateY(24px);transition:opacity .9s var(--e),transform .9s var(--e)}.rev.seen{opacity:1;transform:none}
+.foot{position:relative;z-index:3;border-top:1px solid var(--line);margin-top:clamp(40px,6vw,90px);padding:34px 0 56px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.foot a{text-decoration:none;color:var(--dim)}.foot a:hover{color:var(--accent)}
+@media(max-width:680px){.ch{grid-template-columns:1fr}.brief{grid-template-columns:1fr}}
+@media(max-width:640px){.top{flex-wrap:wrap;gap:10px 18px}.top nav{gap:15px;font-size:12px;flex-wrap:wrap}.foot{gap:12px}}
 </style>
 </head>
 <body>
-<header class="nav">
-  <a href="/" aria-label="AB Digilife home"><img class="logo dk" src="logo-dark.png" alt="AB Digilife"><img class="logo lt" src="logo-light.png" alt="AB Digilife"></a>
-  <nav><a class="lnk" href="/work.html">Work</a><a class="lnk" href="/services.html">Services</a><a class="lnk" href="/process.html">Process</a><a class="lnk" href="/studio.html">Studio</a><a class="lnk" href="/contact.html">Contact</a></nav>
-</header>
+<canvas id="flow"></canvas>
+<div class="wrap">
+  <header class="top">
+    <a class="mk" href="/">AB<b>·</b>Digilife</a>
+    <nav><a href="/work.html">Work</a><a href="/services.html">Services</a><a href="/process.html">Process</a><a href="/studio.html">Studio</a><a class="on" href="/contact.html">Contact</a></nav>
+  </header>
+</div>
 
-<section class="sec ink" style="padding-top:clamp(120px,18vw,220px)">
-  <div class="wrap">
-    <p class="kick rv">Let's talk</p>
-    <h1 class="giant linemask" style="margin-top:20px" data-skew><span>Have an</span></h1>
-    <h1 class="giant linemask" data-skew><span>idea?</span></h1>
-    <h1 class="giant linemask" data-skew><span class="out">Let's make</span></h1>
-    <h1 class="giant linemask" data-skew><span class="red it">it unmissable</span></h1>
-    <p class="lead rv d2" style="margin-top:30px">Tell us what you're building. We bring the strategy, the camera and the screen — and turn it into something people stop for.</p>
-    <div class="ch">
-      <a href="mailto:hello@abdigilife.com?subject=New%20project%20%E2%80%94%20AB%20Digilife" data-cursor><div class="l">Email</div><div class="v">hello@abdigilife.com</div></a>
-      <a href="tel:+15879680316" data-cursor><div class="l">Phone</div><div class="v">(587) 968 0316</div></a>
+<div class="wrap">
+  <section class="sec hero">
+    <p class="kick rev">Let's talk</p>
+    <h1 class="big rev" style="margin-top:16px;max-width:13ch">Have an idea? Let's make it <i>unmissable</i>.</h1>
+    <p class="lead rev">Tell us what you're building. We bring the strategy, the camera and the screen — and turn it into something people stop for.</p>
+    <div class="ch rev">
+      <a href="mailto:hello@abdigilife.com?subject=New%20project%20%E2%80%94%20AB%20Digilife"><div class="l">Email</div><div class="v">hello@abdigilife.com</div></a>
+      <a href="tel:+15879680316"><div class="l">Phone</div><div class="v">(587) 968 0316</div></a>
       <div><div class="l">Based in</div><div class="v">Vancouver · Calgary</div></div>
       <div><div class="l">Also serving</div><div class="v">Edmonton · Toronto</div></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- bone brief -->
-<section class="sec bone">
-  <div class="wrap brief">
-    <div class="rv"><p class="kick">The brief</p><h2 class="h2" style="margin-top:18px">What to<br>send us.</h2></div>
-    <ol class="rv d1">
-      <li>Who you are and what you're building — a brand, a product, an event, a story.</li>
-      <li>What you need: branding, film, web, marketing, or the whole package.</li>
-      <li>Your timeline and rough budget, if you have one.</li>
-      <li>Any references that make you go "yes, like that."</li>
-    </ol>
-  </div>
-</section>
-
-<footer class="site">
-  <div class="wrap">
-    <div class="big">Where ideas<br>come to <span class="red">life</span></div>
-    <div class="cols">
-      <div><h4>Studio</h4><a class="fl" href="/work.html">Work</a><a class="fl" href="/services.html">Services</a><a class="fl" href="/studio.html">Studio</a><a class="fl" href="/contact.html">Contact</a></div>
-      <div><h4>Contact</h4><a class="fl" href="mailto:hello@abdigilife.com">hello@abdigilife.com</a><a class="fl" href="tel:+15879680316">(587) 968 0316</a></div>
-      <div><h4>Based in</h4><p class="fl cities"><b>Vancouver</b> · Calgary · Edmonton · Toronto</p></div>
-      <div><h4>Social</h4><a class="fl" href="https://www.instagram.com/ab.digilife/" target="_blank" rel="noopener">@ab.digilife</a><a class="fl" href="https://www.youtube.com/@MrGlvte" target="_blank" rel="noopener">YouTube ↗</a></div>
+  <section class="sec band">
+    <div class="brief rev">
+      <div><p class="kick">The brief</p><h2 style="margin-top:16px">What to<br>send us.</h2></div>
+      <ol>
+        <li>Who you are and what you're building — a brand, a product, an event, a story.</li>
+        <li>What you need: brand, film, web, marketing, or the whole system.</li>
+        <li>Your timeline and rough budget, if you have one.</li>
+        <li>Any references that make you go "yes, like that."</li>
+      </ol>
     </div>
-    <div class="legal">© <span id="yr">2026</span> AB Digilife — Where ideas come to life.</div>
-  </div>
-</footer>
-<script src="site.js"></script>
+  </section>
+
+  <footer class="foot">
+    <span>© 2026 AB Digilife</span>
+    <a href="https://www.instagram.com/ab.digilife/">Instagram ↗</a>
+    <a href="https://www.youtube.com/@MrGlvte">YouTube ↗</a>
+    <span>Vancouver · Calgary · Edmonton · Toronto · <a href="https://dmlogic.ca" target="_blank" rel="noopener">DMLogic ↗</a></span>
+  </footer>
+</div>
+
+<script>
+var DPR=Math.min(window.devicePixelRatio||1,2),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var fcv=document.getElementById('flow'),fx=fcv.getContext('2d'),FW,FH,FP=[],t=0;
+function fsize(){FW=fcv.width=Math.floor(innerWidth*DPR);FH=fcv.height=Math.floor(innerHeight*DPR);fcv.style.width=innerWidth+'px';fcv.style.height=innerHeight+'px';
+  var n=Math.round(Math.min(560,(innerWidth*innerHeight)/2900));if(FP.length>n)FP.length=n;while(FP.length<n)FP.push(fspawn());fx.fillStyle='#f4f1ea';fx.fillRect(0,0,FW,FH);}
+function fspawn(){return{x:Math.random()*FW,y:FH+Math.random()*FH*0.4,s:(0.35+Math.random()*0.7)*DPR,hot:Math.random()<0.32,life:0,max:220+Math.random()*300};}
+function fang(x,y){var nx=x/FW,ny=y/FH;return -Math.PI/2+Math.sin(ny*3+t*0.6)*0.5+Math.sin(nx*4-t*0.4)*0.45+Math.cos((nx+ny)*2+t*0.3)*0.3;}
+function fframe(){t+=0.005;fx.fillStyle='rgba(244,241,234,0.10)';fx.fillRect(0,0,FW,FH);
+  for(var i=0;i<FP.length;i++){var p=FP[i],a=fang(p.x,p.y),vx=Math.cos(a)*1.25*DPR,vy=Math.sin(a)*1.25*DPR;if(p.hot){vx*=1.7;vy*=1.7;}
+    var px=p.x,py=p.y;p.x+=vx;p.y+=vy;p.life++;var fade=Math.min(1,p.life/30)*Math.max(0,1-p.life/p.max);
+    var c=p.hot?[200,68,46]:[110,106,97];fx.strokeStyle='rgba('+c[0]+','+c[1]+','+c[2]+','+((p.hot?0.26:0.14)*fade)+')';
+    fx.lineWidth=p.s;fx.beginPath();fx.moveTo(px,py);fx.lineTo(p.x,p.y);fx.stroke();
+    if(p.y<-20||p.life>p.max||p.x<-20||p.x>FW+20)FP[i]=fspawn();}
+  requestAnimationFrame(fframe);}
+addEventListener('resize',fsize);fsize();if(!reduce)requestAnimationFrame(fframe);
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target);}});},{threshold:.14});
+document.querySelectorAll('.rev').forEach(function(r){io.observe(r);});
+</script>
 </body>
 </html>
