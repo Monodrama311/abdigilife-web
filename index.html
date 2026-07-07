@@ -4,27 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AB Digilife — brand image and marketing channels</title>
-<meta name="description" content="AB Digilife is a Vancouver B2B studio building brand image and the marketing channels that carry it — for businesses worth remembering.">
+<meta name="description" content="AB Digilife is a Vancouver studio building brand image and the marketing channels that carry it — cinematic commercial films for businesses worth remembering.">
 <link rel="canonical" href="https://abdigilife.com/">
 <meta name="theme-color" content="#0e0c0a">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:site_name" content="AB Digilife"><meta property="og:type" content="website">
 <meta property="og:title" content="AB Digilife — brand image and marketing channels"><meta property="og:url" content="https://abdigilife.com/">
-<meta property="og:description" content="A Vancouver B2B studio building brand image and the marketing channels that carry it.">
+<meta property="og:description" content="A Vancouver studio building brand image and the marketing channels that carry it.">
 <meta property="og:image" content="https://abdigilife.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://abdigilife.com/og.jpg">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AB Digilife","url":"https://abdigilife.com/","logo":"https://abdigilife.com/logo-dark.png","email":"hello@abdigilife.com","telephone":"+1-587-968-0316","sameAs":["https://www.instagram.com/ab.digilife/","https://www.youtube.com/@MrGlvte"],"areaServed":["Vancouver","Calgary","Edmonton","Toronto"],"description":"A B2B studio building brand image and marketing channels for businesses."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AB Digilife","url":"https://abdigilife.com/","logo":"https://abdigilife.com/logo-dark.png","email":"hello@abdigilife.com","telephone":"+1-587-968-0316","sameAs":["https://www.instagram.com/ab.digilife/","https://www.youtube.com/@MrGlvte"],"areaServed":["Vancouver","Calgary","Edmonton","Toronto"],"description":"A studio building brand image and marketing channels for businesses."}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ytimg.com">
+<link rel="preload" as="image" href="https://i.ytimg.com/vi/7tSerANfgpk/maxresdefault.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet">
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#f2efe7;--ink:#1a1815;--accent:#c9553c;--disp:'Clash Display',system-ui,sans-serif;--sans:'Satoshi',system-ui,sans-serif;--serif:'Fraunces',Georgia,serif;--mono:ui-monospace,Menlo,monospace}
+:root{--cream:#f2efe7;--ink:#1a1815;--accent:#c9553c;--disp:'Clash Display',system-ui,sans-serif;--sans:'Satoshi',system-ui,sans-serif;--serif:'Fraunces',Georgia,serif;--mono:ui-monospace,Menlo,monospace;--e:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;overflow:hidden}
 body{background:#0e0c0a;color:var(--cream);font-family:var(--sans);-webkit-font-smoothing:antialiased}
-/* video */
-.stage{position:fixed;inset:0;overflow:hidden;z-index:0;background:#0e0c0a}
-.poster{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.66) saturate(1.02)}
+/* video — warm cinematic ground so it is NEVER pure black on load */
+.stage{position:fixed;inset:0;overflow:hidden;z-index:0;background:radial-gradient(125% 120% at 50% 34%,#261d15 0%,#160f0a 56%,#0b0907 100%)}
+.poster{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.66) saturate(1.03);opacity:0;transition:opacity 1s ease}
+.poster.on{opacity:1}
 .vid{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100vh;min-width:177.78vh;transform:translate(-50%,-50%);border:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
 .vid.on{opacity:1}
 .vig{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(125% 95% at 50% 40%,transparent 38%,#0e0c0a 122%)}
@@ -37,20 +40,33 @@ body{background:#0e0c0a;color:var(--cream);font-family:var(--sans);-webkit-font-
 /* chrome */
 .wrap{position:relative;z-index:4;height:100%;display:flex;flex-direction:column;padding:clamp(28px,3.6vh,48px) clamp(22px,4vw,60px)}
 .top{display:flex;justify-content:space-between;align-items:center}
-.mk{display:block;text-decoration:none;color:var(--cream);filter:drop-shadow(0 2px 14px #0e0c0aaa)}.mk img{height:clamp(48px,5.4vh,66px);width:auto;display:block}
-nav{display:flex;gap:clamp(16px,1.8vw,28px)}
-nav a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#f2efe7cc;transition:color .3s}nav a:hover{color:var(--cream)}
+.mk{display:block;text-decoration:none;color:var(--cream);filter:drop-shadow(0 2px 14px #0e0c0aaa);opacity:0;animation:fadeIn .9s var(--e) .15s forwards}.mk img{height:clamp(48px,5.4vh,66px);width:auto;display:block}
+nav{display:flex;gap:clamp(16px,1.8vw,28px);opacity:0;animation:fadeIn .9s var(--e) .3s forwards}
+nav a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#f2efe7cc;transition:color .3s;position:relative}
+nav a:after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--cream);transition:width .35s var(--e)}
+nav a:hover{color:var(--cream)}nav a:hover:after{width:100%}
 .mid{flex:1}
-.bottom{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(12px,1.7vh,20px);max-width:min(92vw,900px)}
-.eyebrow{font-family:var(--mono);font-size:clamp(9.5px,1vw,11px);letter-spacing:.18em;text-transform:uppercase;color:#f2efe7b3;display:flex;align-items:center;gap:11px}
+.bottom{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(12px,1.7vh,20px);max-width:min(94vw,15ch)}
+.eyebrow{font-family:var(--mono);font-size:clamp(9.5px,1vw,11px);letter-spacing:.18em;text-transform:uppercase;color:#f2efe7b3;display:flex;align-items:center;gap:11px;white-space:nowrap;opacity:0;animation:rise 1s var(--e) .35s forwards}
 .eyebrow:before{content:'';width:clamp(20px,3vw,44px);height:1px;background:#f2efe766}
-.lede{font-family:var(--serif);font-weight:340;font-style:normal;font-size:clamp(40px,7.4vw,116px);line-height:.9;letter-spacing:-.018em;text-shadow:0 3px 44px #0e0c0a80}
-.lede em{font-style:italic;font-weight:340;color:var(--cream)}
-.mute{position:absolute;right:clamp(22px,4vw,60px);bottom:clamp(26px,3.6vh,48px);z-index:5;display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#f2efe7cc;background:#0e0c0a4d;backdrop-filter:blur(6px);border:1px solid #f2efe740;border-radius:100px;padding:8px 15px;cursor:pointer;transition:border-color .3s,color .3s,background .3s}
+.lede{font-family:var(--serif);font-weight:340;font-style:normal;font-size:clamp(38px,6.8vw,104px);line-height:.9;letter-spacing:-.018em;text-shadow:0 3px 44px #0e0c0a80}
+.lede .ln{display:block;overflow:hidden}
+.lede .ln>span{display:block;transform:translateY(105%);animation:reveal 1.05s var(--e) forwards}
+.lede .ln:nth-child(1)>span{animation-delay:.42s}
+.lede .ln:nth-child(2)>span{animation-delay:.54s}
+.lede em{font-style:italic;font-weight:340}
+.cta{display:inline-flex;align-items:center;gap:9px;margin-top:clamp(6px,1vh,12px);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#f2efe7;text-decoration:none;opacity:0;animation:rise 1s var(--e) .8s forwards}
+.cta:before{content:'';width:26px;height:1px;background:var(--accent);transition:width .35s var(--e)}
+.cta:hover:before{width:44px}
+.mute{position:absolute;right:clamp(22px,4vw,60px);bottom:clamp(26px,3.6vh,48px);z-index:5;display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#f2efe7cc;background:#0e0c0a4d;backdrop-filter:blur(6px);border:1px solid #f2efe740;border-radius:100px;padding:8px 15px;cursor:pointer;transition:border-color .3s,color .3s,background .3s;opacity:0;animation:fadeIn .9s var(--e) 1s forwards}
 .mute:hover{border-color:#f2efe7;color:#fff;background:#0e0c0a80}
 .mute i{width:6px;height:6px;border-radius:50%;background:var(--accent);display:block;box-shadow:0 0 8px var(--accent)}
-@media(max-width:760px){.mute{display:none}.lede{font-size:clamp(38px,11vw,64px)}}
+@keyframes reveal{to{transform:translateY(0)}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{to{opacity:1}}
+@media(max-width:760px){.mute{display:none}.lede{font-size:clamp(40px,11vw,66px)}.bottom{max-width:none}}
 @media(max-width:520px){nav{gap:12px}nav a{font-size:9.5px;letter-spacing:.08em}.mk img{height:44px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.mk,nav,.eyebrow,.cta,.mute{opacity:1!important}.lede .ln>span{transform:none!important}}
 </style>
 </head>
 <body>
@@ -72,7 +88,8 @@ nav a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform
   <div class="mid"></div>
   <footer class="bottom">
     <div class="eyebrow">Brand image &amp; marketing channels · Vancouver</div>
-    <div class="lede">Where ideas <em>come to life.</em></div>
+    <div class="lede"><span class="ln"><span>Where ideas</span></span><span class="ln"><span><em>come to life.</em></span></span></div>
+    <a class="cta" href="/work.html">View the work</a>
   </footer>
 </div>
 <button class="mute" id="mute"><i></i>Sound off</button>
@@ -80,14 +97,14 @@ nav a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform
 <script>
 var YT='7tSerANfgpk', START=6;
 var vid=document.getElementById('vid'),poster=document.getElementById('poster');
-poster.style.backgroundImage="url('https://i.ytimg.com/vi/"+YT+"/maxresdefault.jpg')";
+var pimg=new Image();pimg.onload=function(){poster.style.backgroundImage="url('https://i.ytimg.com/vi/"+YT+"/maxresdefault.jpg')";poster.classList.add('on');};pimg.src="https://i.ytimg.com/vi/"+YT+"/maxresdefault.jpg";
 function src(mute){return 'https://www.youtube.com/embed/'+YT+'?autoplay=1&mute='+(mute?1:0)+'&loop=1&playlist='+YT+'&controls=0&disablekb=1&modestbranding=1&rel=0&playsinline=1&start='+START+'&iv_load_policy=3';}
 vid.src=src(1);
-vid.addEventListener('load',function(){setTimeout(function(){vid.classList.add('on');},400);});
+vid.addEventListener('load',function(){setTimeout(function(){vid.classList.add('on');},500);});
 var muted=true,mute=document.getElementById('mute');
 mute.addEventListener('click',function(){muted=!muted;vid.src=src(muted?1:0);vid.classList.remove('on');vid.addEventListener('load',function(){setTimeout(function(){vid.classList.add('on');},300);},{once:true});mute.innerHTML='<i></i>'+(muted?'Sound off':'Sound on');});
 
-/* atmospheric dust particles */
+/* atmospheric dust particles — bright core + dark halo so visible on any footage */
 (function(){
 var c=document.getElementById('dust'),x=c.getContext('2d'),w,h,dpr,P=[];
 function rs(){dpr=Math.min(devicePixelRatio||1,2);w=c.width=innerWidth*dpr;h=c.height=innerHeight*dpr;c.style.width=innerWidth+'px';c.style.height=innerHeight+'px';}
