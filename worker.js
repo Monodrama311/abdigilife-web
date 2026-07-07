@@ -22,11 +22,11 @@ const CSP = [
   "font-src 'self' data: https://fonts.gstatic.com https://api.fontshare.com https://cdn.fontshare.com",
   "img-src 'self' data: https:",
   "media-src 'self' https:",
-  "connect-src 'self' https://www.youtube.com https://www.youtube-nocookie.com",
+  "connect-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://formspree.io",
   "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com",
   "frame-ancestors 'none'",
   "base-uri 'self'",
-  "form-action 'self'",
+  "form-action 'self' https://formspree.io",
 ].join("; ");
 
 const SECURITY_HEADERS = {
