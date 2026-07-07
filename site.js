@@ -14,6 +14,24 @@
     rvs.forEach(function (e) { io.observe(e); });
   }
 
+  /* ---------- reveal safety net ----------
+     Content must NEVER stay hidden/faded. IntersectionObserver, rAF and CSS
+     animations can stall (background tabs, slow loads, crawlers). This forces
+     every reveal element to its final visible state after a short grace period. */
+  function forceReveal(all) {
+    document.querySelectorAll('.rv,.linemask,.rev,.reveal').forEach(function (e) {
+      var r = e.getBoundingClientRect();
+      if (!all && r.top > innerHeight * 1.15) return; // leave below-fold to scroll-reveal
+      e.classList.add('in', 'seen', 'is-in');
+      e.style.animation = 'none';
+      e.style.opacity = '1';
+      e.style.transform = 'none';
+    });
+  }
+  setTimeout(function () { forceReveal(false); }, 1400);
+  addEventListener('load', function () { setTimeout(function () { forceReveal(false); }, 200); });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) forceReveal(false); });
+
   /* ---------- seamless marquees (clone once) ---------- */
   document.querySelectorAll('.marquee .track').forEach(function (t) {
     t.innerHTML += t.innerHTML;
