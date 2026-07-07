@@ -4,6 +4,9 @@
   "main": "worker.js",
   "assets": {
     "directory": "./",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
+    // Run the Worker ahead of static assets so security headers (and the 410
+    // spam-URL handling) apply to EVERY response, including HTML pages.
+    "run_worker_first": true
   }
 }
