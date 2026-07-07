@@ -16,7 +16,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AB Digilife","url":"https://abdigilife.com/","logo":"https://abdigilife.com/logo-dark.png","email":"hello@abdigilife.com","telephone":"+1-587-968-0316","sameAs":["https://www.instagram.com/ab.digilife/","https://www.youtube.com/@MrGlvte"],"areaServed":["Vancouver","Calgary","Edmonton","Toronto"],"description":"A studio building brand image and marketing channels for businesses."}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://i.ytimg.com">
-<link rel="preload" as="image" href="https://i.ytimg.com/vi/7tSerANfgpk/maxresdefault.jpg">
+<link rel="preload" as="image" href="https://i.ytimg.com/vi/7tSerANfgpk/maxresdefault.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet">
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500&display=swap" rel="stylesheet">
 <style>
@@ -68,6 +68,9 @@ nav a:hover{color:var(--cream)}nav a:hover:after{width:100%}
 @media(max-width:760px){.mute{display:none}.lede{font-size:clamp(40px,11vw,66px)}.bottom{max-width:none}}
 @media(max-width:520px){nav{gap:12px}nav a{font-size:9.5px;letter-spacing:.08em}.mk img{height:44px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}.mk,nav,.eyebrow,.cta,.mute{opacity:1!important}.lede .ln>span{transform:none!important}}
+
+/* a11y: visible keyboard focus */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #c9553c;outline-offset:3px;border-radius:2px}
 </style>
 </head>
 <body>
