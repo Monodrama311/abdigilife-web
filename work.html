@@ -41,8 +41,8 @@ nav{display:flex;gap:22px}nav a{text-decoration:none;color:var(--dim)}nav a.on{c
 .ticks{position:fixed;top:30px;left:50%;transform:translateX(-50%);z-index:9;display:flex;gap:4px}
 .ticks i{width:1px;height:9px;background:var(--faint);transition:background .2s,height .2s}.ticks i.on{background:var(--ink);height:12px}
 .stage{position:fixed;inset:0;z-index:4;display:flex;align-items:center;overflow:hidden}
-.track{display:flex;gap:clamp(16px,1.8vw,30px);padding:0 clamp(60px,16vw,240px) 0 clamp(20px,3vw,44px);will-change:transform}
-.slab{position:relative;flex:0 0 auto;width:clamp(196px,18vw,290px);height:min(56vh,516px);overflow:hidden;background:#e2ddd2;will-change:transform;transform-origin:center;text-decoration:none;opacity:0}
+.track{display:flex;gap:clamp(14px,1.5vw,26px);padding:0 clamp(80px,26vw,420px) 0 clamp(24px,3.5vw,52px);will-change:transform}
+.slab{position:relative;flex:0 0 auto;width:clamp(120px,9.5vw,158px);height:min(62vh,568px);overflow:hidden;background:#e2ddd2;will-change:transform;transform-origin:center;text-decoration:none;opacity:0}
 .slab .im{position:absolute;inset:-3%;background-size:cover;background-position:center;filter:grayscale(1) contrast(1.05);transition:filter .55s,opacity .55s,transform .6s}
 .slab .vg{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,transparent 50%,#1a181533 100%)}
 .slab .no{position:absolute;top:8px;left:7px;z-index:2;font-family:var(--mono);font-size:9px;color:#f2efe7;mix-blend-mode:difference}
