@@ -92,9 +92,10 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     </div>
   </section>
 
-  <!-- CONTACT FORM — TO ACTIVATE: sign up at formspree.io with mrglvte@gmail.com,
-       create a form, then replace YOUR_FORM_ID below with the form id (e.g. mvgpabcd).
-       Until then the form gracefully directs visitors to email. CSP already allows formspree.io. -->
+  <!-- CONTACT FORM — FormSubmit.co (no account needed). Submissions email mrglvte@gmail.com.
+       FIRST submission triggers a one-time confirmation email — Jack clicks it once to activate.
+       Optional privacy upgrade: after activation, FormSubmit emails a random alias you can use in
+       place of the raw address in the action URL. CSP already allows formsubmit.co. -->
   <section class="sec band">
     <style>
     .cform{max-width:640px;margin-top:6px;display:grid;gap:16px}
@@ -113,9 +114,11 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     <div class="brief rev" style="display:block">
       <p class="kick">Or send it here</p>
       <h2 style="margin:16px 0 24px">Start a project.</h2>
-      <form class="cform" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="cform">
-        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <form class="cform" action="https://formsubmit.co/ajax/mrglvte@gmail.com" method="POST" id="cform">
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <input type="hidden" name="_subject" value="New project — AB Digilife">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <div class="row"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
         <div class="row"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
         <div class="row"><label for="cf-msg">What you're building</label><textarea id="cf-msg" name="message" required></textarea></div>
@@ -125,14 +128,14 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
       </form>
     </div>
     <script>
-    (function(){var f=document.getElementById('cform');if(!f)return;var out=document.getElementById('cf-out');
+    (function(){var f=document.getElementById('cform');if(!f)return;var out=document.getElementById('cf-out');var btn=f.querySelector('button');
       f.addEventListener('submit',function(e){
-        if(f.action.indexOf('YOUR_FORM_ID')>-1){e.preventDefault();out.className='msg ok';out.innerHTML='Thanks! Please email us at <a href="mailto:hello@abdigilife.com" style="color:#c9553c">hello@abdigilife.com</a> — the form is being connected.';return;}
-        e.preventDefault();out.className='msg';out.textContent='Sending…';
-        fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){
-          if(r.ok){f.reset();out.className='msg ok';out.textContent='Thank you — we’ll be in touch shortly.';}
-          else{return r.json().then(function(d){out.className='msg err';out.textContent=(d.errors&&d.errors[0]&&d.errors[0].message)||'Something went wrong — please email us directly.';});}
-        }).catch(function(){out.className='msg err';out.textContent='Network error — please email hello@abdigilife.com directly.';});
+        e.preventDefault();out.className='msg';out.textContent='Sending…';btn.disabled=true;
+        fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.json().catch(function(){return {};}).then(function(d){return {ok:r.ok,d:d};});}).then(function(res){
+          btn.disabled=false;
+          if(res.ok||(res.d&&(res.d.success==='true'||res.d.success===true))){f.reset();out.className='msg ok';out.textContent='Thank you — we’ll be in touch shortly.';}
+          else{out.className='msg err';out.textContent=(res.d&&res.d.message)||'Something went wrong — please email hello@abdigilife.com directly.';}
+        }).catch(function(){btn.disabled=false;out.className='msg err';out.textContent='Network error — please email hello@abdigilife.com directly.';});
       });})();
     </script>
   </section>
