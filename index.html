@@ -26,10 +26,11 @@ html,body{height:100%;overflow:hidden}
 body{background:#0e0c0a;color:var(--cream);font-family:var(--sans);-webkit-font-smoothing:antialiased}
 /* video — warm cinematic ground so it is NEVER pure black on load */
 .stage{position:fixed;inset:0;overflow:hidden;z-index:0;background:radial-gradient(125% 120% at 50% 34%,#261d15 0%,#160f0a 56%,#0b0907 100%)}
-.poster{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.66) saturate(1.03);opacity:0;transition:opacity 1s ease}
-.poster.on{opacity:1}
-.vid{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100vh;min-width:177.78vh;transform:translate(-50%,-50%);border:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
+.vid{position:absolute;top:50%;left:50%;z-index:0;width:100vw;height:56.25vw;min-height:100vh;min-width:177.78vh;transform:translate(-50%,-50%);border:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
 .vid.on{opacity:1}
+.poster{position:absolute;inset:0;z-index:1;background-size:cover;background-position:center;filter:brightness(.62) saturate(1.03);opacity:0;transition:opacity 1.1s ease}
+.poster.on{opacity:1}
+.poster.hide{opacity:0}
 .vig{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(125% 95% at 50% 40%,transparent 38%,#0e0c0a 122%)}
 #dust{position:fixed;inset:0;z-index:3;pointer-events:none}
 .grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.06;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -46,10 +47,10 @@ nav a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform
 nav a:after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--cream);transition:width .35s var(--e)}
 nav a:hover{color:var(--cream)}nav a:hover:after{width:100%}
 .mid{flex:1}
-.bottom{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(12px,1.7vh,20px);max-width:min(94vw,15ch)}
+.bottom{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(11px,1.5vh,18px)}
 .eyebrow{font-family:var(--mono);font-size:clamp(9.5px,1vw,11px);letter-spacing:.18em;text-transform:uppercase;color:#f2efe7b3;display:flex;align-items:center;gap:11px;white-space:nowrap;opacity:0;animation:rise 1s var(--e) .35s forwards}
 .eyebrow:before{content:'';width:clamp(20px,3vw,44px);height:1px;background:#f2efe766}
-.lede{font-family:var(--serif);font-weight:340;font-style:normal;font-size:clamp(38px,6.8vw,104px);line-height:.9;letter-spacing:-.018em;text-shadow:0 3px 44px #0e0c0a80}
+.lede{font-family:var(--serif);font-weight:340;font-style:normal;font-size:clamp(34px,5.4vw,88px);line-height:.92;letter-spacing:-.018em;text-shadow:0 3px 44px #0e0c0a80;white-space:nowrap}
 .lede .ln{display:block;overflow:hidden}
 .lede .ln>span{display:block;transform:translateY(105%);animation:reveal 1.05s var(--e) forwards}
 .lede .ln:nth-child(1)>span{animation-delay:.42s}
@@ -100,9 +101,9 @@ var vid=document.getElementById('vid'),poster=document.getElementById('poster');
 var pimg=new Image();pimg.onload=function(){poster.style.backgroundImage="url('https://i.ytimg.com/vi/"+YT+"/maxresdefault.jpg')";poster.classList.add('on');};pimg.src="https://i.ytimg.com/vi/"+YT+"/maxresdefault.jpg";
 function src(mute){return 'https://www.youtube.com/embed/'+YT+'?autoplay=1&mute='+(mute?1:0)+'&loop=1&playlist='+YT+'&controls=0&disablekb=1&modestbranding=1&rel=0&playsinline=1&start='+START+'&iv_load_policy=3';}
 vid.src=src(1);
-vid.addEventListener('load',function(){setTimeout(function(){vid.classList.add('on');},500);});
+vid.addEventListener('load',function(){setTimeout(function(){vid.classList.add('on');poster.classList.add('hide');},2200);});
 var muted=true,mute=document.getElementById('mute');
-mute.addEventListener('click',function(){muted=!muted;vid.src=src(muted?1:0);vid.classList.remove('on');vid.addEventListener('load',function(){setTimeout(function(){vid.classList.add('on');},300);},{once:true});mute.innerHTML='<i></i>'+(muted?'Sound off':'Sound on');});
+mute.addEventListener('click',function(){muted=!muted;poster.classList.remove('hide');vid.src=src(muted?1:0);vid.classList.remove('on');vid.addEventListener('load',function(){setTimeout(function(){vid.classList.add('on');poster.classList.add('hide');},1400);},{once:true});mute.innerHTML='<i></i>'+(muted?'Sound off':'Sound on');});
 
 /* atmospheric dust particles — bright core + dark halo so visible on any footage */
 (function(){
