@@ -32,8 +32,8 @@ nav{display:flex;gap:22px}nav a{text-decoration:none;color:var(--dim)}nav a.on{c
 .ticks{position:fixed;top:30px;left:50%;transform:translateX(-50%);z-index:9;display:flex;gap:4px}
 .ticks i{width:1px;height:9px;background:var(--faint);transition:background .2s,height .2s}.ticks i.on{background:var(--ink);height:12px}
 .stage{position:fixed;inset:0;z-index:4;display:flex;align-items:center;overflow:hidden}
-.track{display:flex;gap:clamp(12px,1.3vw,20px);padding:0 55vw 0 clamp(20px,3vw,44px);will-change:transform}
-.slab{position:relative;flex:0 0 auto;width:clamp(52px,4.4vw,78px);height:min(42vh,372px);overflow:hidden;background:#e2ddd2;will-change:transform;transform-origin:center;text-decoration:none;opacity:0}
+.track{display:flex;gap:clamp(16px,1.8vw,30px);padding:0 clamp(60px,16vw,240px) 0 clamp(20px,3vw,44px);will-change:transform}
+.slab{position:relative;flex:0 0 auto;width:clamp(196px,18vw,290px);height:min(56vh,516px);overflow:hidden;background:#e2ddd2;will-change:transform;transform-origin:center;text-decoration:none;opacity:0}
 .slab .im{position:absolute;inset:-3%;background-size:cover;background-position:center;filter:grayscale(1) contrast(1.05);transition:filter .55s,opacity .55s,transform .6s}
 .slab .vg{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 42%,transparent 50%,#1a181533 100%)}
 .slab .no{position:absolute;top:8px;left:7px;z-index:2;font-family:var(--mono);font-size:9px;color:#f2efe7;mix-blend-mode:difference}
@@ -108,19 +108,14 @@ nav{display:flex;gap:22px}nav a{text-decoration:none;color:var(--dim)}nav a.on{c
 </div>
 <script>
 var ITEMS=[
-{no:'01',l1:'IN',l2:'FASHION',cat:'Fashion',type:'Brand Film',yr:'2025',yt:'6f0QkNxO8mU',sig:'#2a1d24'},
-{no:'02',l1:'STUDIO IN',l2:'MOTION',cat:'Dance · Event',type:'Event Film',yr:'2025',yt:'7tSerANfgpk',sig:'#1b2230'},
-{no:'03',l1:'ONE SONG',l2:'ONE STAGE',cat:'Performance',type:'Performance',yr:'2025',yt:'JwshyRJQcyg',sig:'#2c1a1c'},
-{no:'04',l1:'THE',l2:'CLINIC',cat:'Medical Aesthetics',type:'Brand Film',yr:'2025',yt:'WAu69V64gxA',sig:'#17242a'},
-{no:'05',l1:'OPEN',l2:'HOUSE',cat:'Real Estate',type:'Property Film',yr:'2024',yt:'T9bhf0b1gjM',sig:'#1a2620'},
-{no:'06',l1:'COZY',l2:'LAB',cat:'Retail · Space',type:'Brand Film',yr:'2024',yt:'heEe8QrI6hA',sig:'#26201a'},
-{no:'07',l1:'ON THE',l2:'RECORD',cat:'Interview · Story',type:'Story Film',yr:'2024',yt:'PeK0UpdBzuA',sig:'#221e1c'},
-{no:'08',l1:'POR',l2:'TRAIT',cat:'Talent · Demo',type:'Portrait',yr:'2025',yt:'_iP_Hybtny4',sig:'#261a22'},
-{no:'09',l1:'BACK TO',l2:'SCHOOL',cat:'Lifestyle',type:'Lifestyle',yr:'2024',yt:'K8UAlFxa8sM',sig:'#24261c'},
-{no:'10',l1:'TALENT',l2:'DEMO',cat:'Portrait · Story',type:'Portrait',yr:'2024',yt:'RV5i9Nu0J2Q',sig:'#16241f'}
+{no:'01',l1:'IN',l2:'FASHION',cat:'Fashion',type:'Brand Film',yr:'2025',yt:'6f0QkNxO8mU',frame:'maxresdefault',alt:['hq1','hq2','hq3'],sig:'#2a1d24'},
+{no:'02',l1:'STUDIO IN',l2:'MOTION',cat:'Dance · Event',type:'Event Film',yr:'2025',yt:'7tSerANfgpk',frame:'maxresdefault',alt:['hq1','hq2','hq3'],sig:'#1b2230'},
+{no:'03',l1:'ONE SONG',l2:'ONE STAGE',cat:'Performance',type:'Performance',yr:'2025',yt:'JwshyRJQcyg',frame:'maxresdefault',alt:['hq1','hq2','hq3'],sig:'#2c1a1c'},
+{no:'04',l1:'THE',l2:'CLINIC',cat:'Medical Aesthetics',type:'Brand Film',yr:'2025',yt:'WAu69V64gxA',frame:'maxresdefault',alt:['hq1','hq2','hq3'],sig:'#17242a'},
+{no:'05',l1:'THE',l2:'STAGE',cat:'Performance · Dance',type:'Performance',yr:'2024',yt:'RV5i9Nu0J2Q',frame:'maxresdefault',alt:['hq1','hq2','hq3'],sig:'#16241f'}
 ];
-function thumb(it){return 'https://i.ytimg.com/vi/'+it.yt+'/hq2.jpg';}
-function frames(it){return ['https://i.ytimg.com/vi/'+it.yt+'/maxresdefault.jpg','https://i.ytimg.com/vi/'+it.yt+'/hq1.jpg','https://i.ytimg.com/vi/'+it.yt+'/hq3.jpg','https://i.ytimg.com/vi/'+it.yt+'/hqdefault.jpg'];}
+function thumb(it){return 'https://i.ytimg.com/vi/'+it.yt+'/'+it.frame+'.jpg';}
+function frames(it){return [thumb(it)].concat(it.alt.map(function(a){return 'https://i.ytimg.com/vi/'+it.yt+'/'+a+'.jpg';}));}
 var track=document.getElementById('track'),stage=document.getElementById('stage');
 track.innerHTML=ITEMS.map(function(it,i){return '<a class="slab" href="#" data-i="'+i+'"><div class="im" style="background-image:url('+thumb(it)+')"></div><div class="vg"></div><span class="no">'+it.no+'</span></a>';}).join('');
 var slabs=[].slice.call(track.children);
@@ -183,7 +178,10 @@ addEventListener('keydown',function(e){if(e.key==='Escape')closeProj();});
 track.addEventListener('click',function(e){e.preventDefault();var s=e.target.closest('.slab');if(!s||Math.abs(flick)>4)return;openProj(+s.dataset.i,s);});
 /* preloader */
 var pre=document.getElementById('pre'),preN=document.getElementById('preN'),curtain=document.getElementById('curtain');
-var nn2=0,ci=setInterval(function(){nn2+=Math.max(1,Math.round((100-nn2)*.12));if(nn2>=100){nn2=100;clearInterval(ci);intro();}preN.textContent=nn2;},32);
+var preT0=performance.now(),PREDUR=1350,preDone=false;
+function preTick(){var e=Math.min(1,(performance.now()-preT0)/PREDUR);preN.textContent=Math.round(e*100);if(e>=1){if(!preDone){preDone=true;intro();}}else requestAnimationFrame(preTick);}
+requestAnimationFrame(preTick);
+setTimeout(function(){if(!preDone){preDone=true;intro();}},2800);
 function intro(){setTimeout(function(){pre.style.transition='opacity .4s';pre.style.opacity='0';
   curtain.style.transition='transform .8s cubic-bezier(.7,0,.15,1)';curtain.style.transform='scaleY(1)';
   setTimeout(function(){curtain.style.transformOrigin='top';curtain.style.transform='scaleY(0)';pre.style.display='none';
