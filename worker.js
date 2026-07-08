@@ -9,10 +9,36 @@
 // Kept deliberately permissive on style/font hosts to avoid breaking the live
 // look; the hardening value is in the other headers + frame-ancestors.
 const GONE = [
-  /^\/products(\/|$)/i,
+  // Legacy WordPress-era + spam paths (verified still in Google 2026-07-07:
+  // /photos/, /author/focus1/). 410 + noindex, never redirect.
+  /^\/products?(\/|$)/i,
   /^\/video(\/|$)/i,
+  /^\/photos?(\/|$)/i,
+  /^\/author(\/|$)/i,
+  /^\/tag(\/|$)/i,
+  /^\/category(\/|$)/i,
+  /^\/page\/\d+/i,
+  /^\/feed(\/|$)/i,
+  /^\/wp-/i,
+  /^\/xmlrpc\.php$/i,
   /casino/i,
   /roulette/i,
+];
+
+// Internal working files that live in the assets dir but must never be
+// publicly served (strategy docs, concept pages, worker source, stray assets).
+// Belt: .assetsignore keeps them out of the deploy. Suspenders: this 404s
+// them even if a deploy ships them. work-preview.html deliberately NOT listed
+// (pending promote decision — it is noindex'd in its own <head>).
+const INTERNAL = [
+  /^\/_/,                        // _concept-*.html, _work-production, _设计理念*
+  /\.md$/i,                      // SITE-AUDIT.md, OBYS-DESIGN-LAW.md, …
+  /^\/frame-audit\.html$/i,
+  /^\/index-preview\.html$/i,
+  /^\/logo\.b64\.txt$/i,
+  /^\/1000000921\.JPG$/i,
+  /^\/worker\.js$/i,
+  /^\/wrangler\.jsonc$/i,
 ];
 
 const CSP = [
@@ -47,8 +73,21 @@ function withSecurity(base) {
 export default {
   async fetch(request, env) {
     const { pathname } = new URL(request.url);
+    let decoded = pathname;
+    try { decoded = decodeURIComponent(pathname); } catch (_) {}
 
-    if (GONE.some((re) => re.test(pathname))) {
+    if (INTERNAL.some((re) => re.test(pathname) || re.test(decoded))) {
+      return new Response("Not found.", {
+        status: 404,
+        headers: withSecurity({
+          "content-type": "text/plain; charset=utf-8",
+          "x-robots-tag": "noindex",
+          "cache-control": "no-store",
+        }),
+      });
+    }
+
+    if (GONE.some((re) => re.test(pathname) || re.test(decoded))) {
       return new Response("410 Gone — this page has been permanently removed.", {
         status: 410,
         headers: withSecurity({

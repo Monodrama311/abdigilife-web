@@ -1,0 +1,12 @@
+# Keep internal working files OUT of the deployed asset bundle.
+# (Worker also 404s these as defense-in-depth — see INTERNAL in worker.js.)
+_*
+*.md
+frame-audit.html
+index-preview.html
+logo.b64.txt
+1000000921.JPG
+worker.js
+wrangler.jsonc
+.assetsignore
+# work-preview.html intentionally NOT ignored — pending promote decision.
