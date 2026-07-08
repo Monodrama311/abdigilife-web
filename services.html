@@ -65,6 +65,9 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-
 
 /* a11y: visible keyboard focus */
 a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #c9553c;outline-offset:3px;border-radius:2px}
+.tags a{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+.tags a:hover{color:var(--accent)}
+html{scroll-behavior:smooth}
 </style>
 </head>
 <body>
@@ -83,15 +86,32 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     <p class="lead rev">We don't sell packages. We start with what a business actually needs to be noticed, then build it from the pieces below — strategy, film, web, growth, story — kept in one place so nothing contradicts itself.</p>
   </section>
 
+  <section class="sec band" id="start">
+    <div class="note rev" style="margin-bottom:clamp(28px,4vw,52px)">
+      <div>
+        <p class="kick">Where most briefs start</p>
+        <h2 class="big" style="font-size:clamp(30px,4.4vw,58px);margin-top:16px;max-width:16ch">Five ways in. <i>One team behind them.</i></h2>
+      </div>
+      <div>
+        <p>Every business arrives with a different story, but it usually sounds like one of these five. Start where it hurts — we'll assemble the rest from the pieces below.</p>
+      </div>
+    </div>
+    <div class="row rev" id="start-launch"><div class="n">A</div><div><h3>Opening something new</h3><p class="d">New restaurant, new clinic, new name on the door. Identity, a launch film, and a site that's ready before the doors open.</p><div class="tags"><span>Project</span><a href="#svc-brand">Brand ↓</a><a href="#svc-film">Film ↓</a><a href="#svc-web">Web ↓</a></div></div></div>
+    <div class="row rev" id="start-content"><div class="n">B</div><div><h3>Keeping the feed alive</h3><p class="d">小红书, Instagram, Shorts — a monthly rhythm of short pieces, English and Chinese, so the channel grows instead of going quiet.</p><div class="tags"><span>Monthly</span><a href="#svc-social">Social ↓</a><a href="#svc-post">Post ↓</a></div></div></div>
+    <div class="row rev" id="start-events"><div class="n">C</div><div><h3>A day you only get once</h3><p class="d">Openings, shows, signings, salons — filmed properly, cut fast, delivered while people are still talking about it.</p><div class="tags"><span>Event day</span><a href="#svc-events">Events ↓</a></div></div></div>
+    <div class="row rev" id="start-founder"><div class="n">D</div><div><h3>The face of the brand</h3><p class="d">Founder stories and interviews — because people trust a person long before they trust a logo.</p><div class="tags"><span>Project</span><a href="#svc-story">Story ↓</a><a href="#svc-film">Film ↓</a></div></div></div>
+    <div class="row rev" id="start-web"><div class="n">E</div><div><h3>A site that closes</h3><p class="d">Web design with a visual system behind it — quick to open, easy to read, clear about what to do next.</p><div class="tags"><span>Project</span><a href="#svc-web">Web ↓</a><a href="#svc-brand">Brand ↓</a></div></div></div>
+  </section>
+
   <section class="sec band">
-    <div class="row rev"><div class="n">01</div><div><h3>Brand Strategy &amp; Identity</h3><p class="d">We work out who you are before we design anything — the name, where you sit, how you sound, how you look. Get this right and every later decision gets easier.</p><div class="tags"><span>Positioning</span><span>Naming</span><span>Logo &amp; System</span><span>Guidelines</span></div></div></div>
-    <div class="row rev"><div class="n">02</div><div><h3>Commercial Film &amp; Cinematography</h3><p class="d">The camera work — brand films, product pieces, the founder talking like an actual person. The kind of thing people watch to the end.</p><div class="tags"><span>Brand Film</span><span>Commercials</span><span>Product</span><span>Founder Stories</span></div></div></div>
-    <div class="row rev"><div class="n">03</div><div><h3>Post-Production</h3><p class="d">Where footage turns into a film. Edit, color, sound, the small motion touches — paced so no one reaches for the skip button.</p><div class="tags"><span>Edit</span><span>Color</span><span>Sound</span><span>Motion</span></div></div></div>
-    <div class="row rev"><div class="n">04</div><div><h3>Web Design &amp; Development</h3><p class="d">A site that's yours, not a template — quick to open, easy to read, and clear about what to do next.</p><div class="tags"><span>Design</span><span>Build</span><span>Performance</span><span>E-commerce</span></div></div></div>
-    <div class="row rev"><div class="n">05</div><div><h3>Digital Marketing &amp; SEO</h3><p class="d">The quieter work — getting found on search, spending ad budget where it comes back, and paying attention to what actually moves.</p><div class="tags"><span>SEO</span><span>Paid Media</span><span>Analytics</span><span>Lead Gen</span></div></div></div>
-    <div class="row rev"><div class="n">06</div><div><h3>Social &amp; New Media</h3><p class="d">A rhythm for the feed — short pieces and a system to keep them coming, English and Chinese, so a channel grows instead of going quiet.</p><div class="tags"><span>Short-form</span><span>Content Systems</span><span>Channel Growth</span></div></div></div>
-    <div class="row rev"><div class="n">07</div><div><h3>Events &amp; Weddings</h3><p class="d">The days you only get once, filmed properly and cut into something you'll want to sit and watch again.</p><div class="tags"><span>Events</span><span>Weddings</span><span>Coverage</span></div></div></div>
-    <div class="row rev"><div class="n">08</div><div><h3>Brand Storytelling &amp; Interviews</h3><p class="d">We find the story worth telling and get it on camera — the interview, the through-line, words that sound like you.</p><div class="tags"><span>Writing</span><span>Interviews</span><span>Narrative</span></div></div></div>
+    <div class="row rev" id="svc-brand"><div class="n">01</div><div><h3>Brand Strategy &amp; Identity</h3><p class="d">We work out who you are before we design anything — the name, where you sit, how you sound, how you look. Get this right and every later decision gets easier.</p><div class="tags"><span>Positioning</span><span>Naming</span><span>Logo &amp; System</span><span>Guidelines</span></div></div></div>
+    <div class="row rev" id="svc-film"><div class="n">02</div><div><h3>Commercial Film &amp; Cinematography</h3><p class="d">The camera work — brand films, product pieces, the founder talking like an actual person. The kind of thing people watch to the end.</p><div class="tags"><span>Brand Film</span><span>Commercials</span><span>Product</span><span>Founder Stories</span></div></div></div>
+    <div class="row rev" id="svc-post"><div class="n">03</div><div><h3>Post-Production</h3><p class="d">Where footage turns into a film. Edit, color, sound, the small motion touches — paced so no one reaches for the skip button.</p><div class="tags"><span>Edit</span><span>Color</span><span>Sound</span><span>Motion</span></div></div></div>
+    <div class="row rev" id="svc-web"><div class="n">04</div><div><h3>Web Design &amp; Development</h3><p class="d">A site that's yours, not a template — quick to open, easy to read, and clear about what to do next.</p><div class="tags"><span>Design</span><span>Build</span><span>Performance</span><span>E-commerce</span></div></div></div>
+    <div class="row rev" id="svc-seo"><div class="n">05</div><div><h3>Digital Marketing &amp; SEO</h3><p class="d">The quieter work — getting found on search, spending ad budget where it comes back, and paying attention to what actually moves.</p><div class="tags"><span>SEO</span><span>Paid Media</span><span>Analytics</span><span>Lead Gen</span></div></div></div>
+    <div class="row rev" id="svc-social"><div class="n">06</div><div><h3>Social &amp; New Media</h3><p class="d">A rhythm for the feed — short pieces and a system to keep them coming, English and Chinese, so a channel grows instead of going quiet.</p><div class="tags"><span>Short-form</span><span>Content Systems</span><span>Channel Growth</span></div></div></div>
+    <div class="row rev" id="svc-events"><div class="n">07</div><div><h3>Events &amp; Weddings</h3><p class="d">The days you only get once, filmed properly and cut into something you'll want to sit and watch again.</p><div class="tags"><span>Events</span><span>Weddings</span><span>Coverage</span></div></div></div>
+    <div class="row rev" id="svc-story"><div class="n">08</div><div><h3>Brand Storytelling &amp; Interviews</h3><p class="d">We find the story worth telling and get it on camera — the interview, the through-line, words that sound like you.</p><div class="tags"><span>Writing</span><span>Interviews</span><span>Narrative</span></div></div></div>
   </section>
 
   <section class="sec band">

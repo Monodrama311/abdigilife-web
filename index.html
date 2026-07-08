@@ -59,6 +59,9 @@ nav a:hover{color:var(--cream)}nav a:hover:after{width:100%}
 .cta{display:inline-flex;align-items:center;gap:9px;margin-top:clamp(6px,1vh,12px);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#f2efe7;text-decoration:none;opacity:0;animation:rise 1s var(--e) .8s forwards}
 .cta:before{content:'';width:26px;height:1px;background:var(--accent);transition:width .35s var(--e)}
 .cta:hover:before{width:44px}
+.sub{font-family:var(--sans);font-size:clamp(13px,1.3vw,15.5px);letter-spacing:.015em;line-height:1.5;color:#f2efe7d9;max-width:52ch;margin-top:clamp(10px,1.6vh,18px);text-shadow:0 2px 24px #0e0c0a99;opacity:0;animation:rise 1s var(--e) .72s forwards}
+.ctas{display:flex;flex-wrap:wrap;gap:8px clamp(18px,2.6vw,34px)}
+.ctas .cta{animation-delay:.86s}.ctas .cta:nth-child(2){animation-delay:.96s}.ctas .cta:nth-child(3){animation-delay:1.06s}
 .mute{position:absolute;right:clamp(22px,4vw,60px);bottom:clamp(26px,3.6vh,48px);z-index:5;display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#f2efe7cc;background:#0e0c0a4d;backdrop-filter:blur(6px);border:1px solid #f2efe740;border-radius:100px;padding:8px 15px;cursor:pointer;transition:border-color .3s,color .3s,background .3s;opacity:0;animation:fadeIn .9s var(--e) 1s forwards}
 .mute:hover{border-color:#f2efe7;color:#fff;background:#0e0c0a80}
 .mute i{width:6px;height:6px;border-radius:50%;background:var(--accent);display:block;box-shadow:0 0 8px var(--accent)}
@@ -93,7 +96,12 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
   <footer class="bottom">
     <div class="eyebrow">Brand image &amp; marketing channels · Vancouver</div>
     <div class="lede"><span class="ln"><span>Where ideas</span></span><span class="ln"><span><em>come to life.</em></span></span></div>
-    <a class="cta" href="/work.html">View the work</a>
+    <p class="sub">Brand image, content, and marketing channels — for local businesses ready to be seen.</p>
+    <div class="ctas">
+      <a class="cta" href="/services.html#start-launch">Launch a brand</a>
+      <a class="cta" href="/services.html#start-content">Build a content system</a>
+      <a class="cta" href="/services.html#start-events">Cover an event</a>
+    </div>
   </footer>
 </div>
 <button class="mute" id="mute"><i></i>Sound off</button>

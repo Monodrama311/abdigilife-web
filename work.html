@@ -76,6 +76,8 @@ nav{display:flex;gap:22px}nav a{text-decoration:none;color:var(--dim)}nav a.on{c
 .pmeta .a{font-family:var(--mono);font-size:9px;color:var(--accent);width:12px}
 .pmeta .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:#b3ac9f;width:74px}
 .pmeta .v{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase}
+.pmeta .row.wide{grid-column:1/-1;max-width:min(520px,72vw);margin-bottom:7px}
+.pmeta .v.lc{text-transform:none;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:14px;letter-spacing:.01em;line-height:1.35}
 .prail{position:fixed;right:clamp(16px,2.5vw,34px);top:50%;transform:translateY(-50%);z-index:53;display:flex;flex-direction:column;gap:10px;opacity:0;transition:opacity .6s ease .5s}
 .proj.on .prail{opacity:1}
 .prail .th{width:74px;height:48px;background-size:cover;background-position:center;filter:grayscale(1) brightness(.7);cursor:none;transition:filter .4s,transform .4s}
@@ -122,18 +124,18 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 </div>
 <script>
 var ITEMS=[
-{no:'01',l1:'ENRICH EVERY',l2:'MOMENT',cat:'Place · Lifestyle',type:'Lifestyle Film',yr:'2021',yt:'wFzP-N1qTNs',frame:'hq2',alt:['hq3','hq1','maxresdefault'],sig:'#241a12'},
-{no:'02',l1:'AZALEA',l2:'KOREAN',cat:'Restaurant · Food',type:'Brand Film',yr:'2021',yt:'jysFagNj-ZQ',frame:'maxresdefault',alt:['hq2','hq1','hq3'],sig:'#2a1410'},
-{no:'03',l1:'IN',l2:'FASHION',cat:'Fashion',type:'Brand Film',yr:'2025',yt:'6f0QkNxO8mU',frame:'hq1',alt:['hq2','maxresdefault','hq3'],sig:'#2a1d24'},
-{no:'04',l1:'GREEN',l2:'MAGIC',cat:'Lifestyle · Nature',type:'Short Film',yr:'2020',yt:'GVVxatgv1hQ',frame:'hq2',alt:['hq3','hq1','maxresdefault'],sig:'#14241a'},
-{no:'05',l1:'STUDIO IN',l2:'MOTION',cat:'Dance · Event',type:'Event Film',yr:'2025',yt:'7tSerANfgpk',frame:'maxresdefault',alt:['hq1','hq2','hq3'],sig:'#1b2230'},
-{no:'06',l1:'THE',l2:'ORCHARD',cat:'Place · Nature',type:'Short Film',yr:'2020',yt:'83CPGRACB_c',frame:'hq1',alt:['hq2','hq3','sddefault'],sig:'#1c2416'},
-{no:'07',l1:'THE',l2:'CLINIC',cat:'Medical Aesthetics',type:'Brand Film',yr:'2024',yt:'WAu69V64gxA',frame:'hq3',alt:['hq2','hq1','maxresdefault'],sig:'#17242a'},
-{no:'08',l1:'RAMEN',l2:'MISOYA',cat:'Food · B-roll',type:'Cinematic B-roll',yr:'2021',yt:'osOQ3sf6Gm4',frame:'hq2',alt:['hq3','hq1','maxresdefault'],sig:'#241610'},
-{no:'09',l1:'ONE SONG',l2:'ONE STAGE',cat:'Performance',type:'Performance',yr:'2025',yt:'JwshyRJQcyg',frame:'maxresdefault',alt:['hq3','hq1','hq2'],sig:'#2c1a1c'},
-{no:'10',l1:'TIRAMISU',l2:'MOCHA',cat:'Café · Beverage',type:'Brand Film',yr:'2021',yt:'J4oiUpXNtZ4',frame:'hq2',alt:['hq3','maxresdefault','hq1'],sig:'#2a1e14'},
-{no:'11',l1:'THE',l2:'STAGE',cat:'Performance · Dance',type:'Performance',yr:'2024',yt:'RV5i9Nu0J2Q',frame:'maxresdefault',alt:['hq1','hq2','hq3'],sig:'#16241f'},
-{no:'12',l1:'POKE',l2:'BOWL',cat:'Food · Cinematic',type:'Cinematic B-roll',yr:'2021',yt:'VLRsOtjg-iw',frame:'hq3',alt:['sddefault','hq2','hq1'],sig:'#241812'}
+{no:'01',l1:'ENRICH EVERY',l2:'MOMENT',cat:'Place · Lifestyle',type:'Lifestyle Film',yr:'2021',yt:'wFzP-N1qTNs',frame:'hq2',alt:['hq3','hq1','maxresdefault'],sig:'#241a12',ind:'Tourism · Place',job:'Make a small city feel like somewhere worth the drive.',del:'Lifestyle film'},
+{no:'02',l1:'AZALEA',l2:'KOREAN',cat:'Restaurant · Food',type:'Brand Film',yr:'2021',yt:'jysFagNj-ZQ',frame:'maxresdefault',alt:['hq2','hq1','hq3'],sig:'#2a1410',ind:'Restaurant',job:'Open the kitchen — let the food and the fire do the talking.',del:'Brand film'},
+{no:'03',l1:'IN',l2:'FASHION',cat:'Fashion',type:'Brand Film',yr:'2025',yt:'6f0QkNxO8mU',frame:'hq1',alt:['hq2','maxresdefault','hq3'],sig:'#2a1d24',ind:'Fashion Retail',job:'Give a boutique a look book that moves.',del:'Brand film'},
+{no:'04',l1:'GREEN',l2:'MAGIC',cat:'Lifestyle · Nature',type:'Short Film',yr:'2020',yt:'GVVxatgv1hQ',frame:'hq2',alt:['hq3','hq1','maxresdefault'],sig:'#14241a',ind:'Lifestyle · Nature',job:'Slow the scroll down to the pace of a garden.',del:'Short film'},
+{no:'05',l1:'STUDIO IN',l2:'MOTION',cat:'Dance · Event',type:'Event Film',yr:'2025',yt:'7tSerANfgpk',frame:'maxresdefault',alt:['hq1','hq2','hq3'],sig:'#1b2230',ind:'Dance Studio',job:'Show the room the way students feel it — mid-movement.',del:'Event film'},
+{no:'06',l1:'THE',l2:'ORCHARD',cat:'Place · Nature',type:'Short Film',yr:'2020',yt:'83CPGRACB_c',frame:'hq1',alt:['hq2','hq3','sddefault'],sig:'#1c2416',ind:'Agritourism',job:'Sell the season, not just the fruit.',del:'Short film'},
+{no:'07',l1:'THE',l2:'CLINIC',cat:'Medical Aesthetics',type:'Brand Film',yr:'2024',yt:'WAu69V64gxA',frame:'hq3',alt:['hq2','hq1','maxresdefault'],sig:'#17242a',ind:'Medical Aesthetics',job:'Make expertise feel calm instead of clinical.',del:'Brand film'},
+{no:'08',l1:'RAMEN',l2:'MISOYA',cat:'Food · B-roll',type:'Cinematic B-roll',yr:'2021',yt:'osOQ3sf6Gm4',frame:'hq2',alt:['hq3','hq1','maxresdefault'],sig:'#241610',ind:'Restaurant',job:'A bowl of ramen, shot like it deserves a trailer.',del:'Cinematic b-roll'},
+{no:'09',l1:'ONE SONG',l2:'ONE STAGE',cat:'Performance',type:'Performance',yr:'2025',yt:'JwshyRJQcyg',frame:'maxresdefault',alt:['hq3','hq1','hq2'],sig:'#2c1a1c',ind:'Performance',job:'Keep a live night alive after the lights go down.',del:'Performance film'},
+{no:'10',l1:'TIRAMISU',l2:'MOCHA',cat:'Café · Beverage',type:'Brand Film',yr:'2021',yt:'J4oiUpXNtZ4',frame:'hq2',alt:['hq3','maxresdefault','hq1'],sig:'#2a1e14',ind:'Café',job:'Make one drink the reason to cross town.',del:'Brand film'},
+{no:'11',l1:'THE',l2:'STAGE',cat:'Performance · Dance',type:'Performance',yr:'2024',yt:'RV5i9Nu0J2Q',frame:'maxresdefault',alt:['hq1','hq2','hq3'],sig:'#16241f',ind:'Dance · Performance',job:'Follow one performer from rehearsal to curtain.',del:'Performance film'},
+{no:'12',l1:'POKE',l2:'BOWL',cat:'Food · Cinematic',type:'Cinematic B-roll',yr:'2021',yt:'VLRsOtjg-iw',frame:'hq3',alt:['sddefault','hq2','hq1'],sig:'#241812',ind:'Restaurant',job:'Fresh, fast, close — in ninety seconds.',del:'Cinematic b-roll'}
 ];
 function thumb(it){return 'https://i.ytimg.com/vi/'+it.yt+'/'+it.frame+'.jpg';}
 function frames(it){return [thumb(it)].concat(it.alt.map(function(a){return 'https://i.ytimg.com/vi/'+it.yt+'/'+a+'.jpg';}));}
@@ -181,8 +183,8 @@ function openProj(i,slab){var it=ITEMS[i];curItem=it;var r=slab.getBoundingClien
   hero.style.transition='none';hero.style.left=r.left+'px';hero.style.top=r.top+'px';hero.style.width=r.width+'px';hero.style.height=r.height+'px';
   pTitle.innerHTML='<span class="ln"><span>'+it.l1+'</span></span><span class="ln"><span>'+it.l2+'</span></span>';
   var total=('0'+ITEMS.length).slice(-2);
-  var rows=[['A','Field',it.cat],['B','Format',it.type],['C','Language','EN / 中文'],['D','Year',it.yr],['E','Studio','AB Digilife'],['F','Index',it.no+' / '+total]];
-  pMeta.innerHTML=rows.map(function(r){return '<div class="row"><span class="a">'+r[0]+'</span><span class="k">'+r[1]+'</span><span class="v">'+r[2]+'</span></div>';}).join('');
+  var rows=[['A','Industry',it.ind||it.cat],['B','Deliverable',it.del||it.type],['C','Format',it.type],['D','Year',it.yr],['E','Language','EN / 中文'],['F','Index',it.no+' / '+total]];
+  pMeta.innerHTML=(it.job?'<div class="row wide"><span class="a">◆</span><span class="k">The job</span><span class="v lc">'+it.job+'</span></div>':'')+rows.map(function(r){return '<div class="row"><span class="a">'+r[0]+'</span><span class="k">'+r[1]+'</span><span class="v">'+r[2]+'</span></div>';}).join('');
   pRail.innerHTML=fr.slice(1).map(function(s,j){return '<div class="th'+(0?'on':'')+'" data-s="'+s+'"></div>';}).join('');
   [].forEach.call(pRail.children,function(th){var s=th.dataset.s;var t=new Image();t.onload=function(){th.style.backgroundImage='url('+s+')';};t.src=s;
     th.addEventListener('click',function(){setHero(s);[].forEach.call(pRail.children,function(x){x.className='th';});th.className='th on';});});
