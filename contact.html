@@ -20,6 +20,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet">
 <style>
+::selection{background:#c8442e;color:#f4f1ea}
+
 :root{--bg:#f4f1ea;--ink:#1c1a17;--dim:#6f6a61;--faint:#a49d92;--line:#1c1a1714;--accent:#c8442e;
   --serif:'Fraunces',Georgia,serif;--sans:'General Sans',system-ui,sans-serif;--mono:ui-monospace,Menlo,monospace;--e:cubic-bezier(.19,1,.22,1)}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -55,7 +57,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-
 @media(max-width:640px){.top{flex-wrap:wrap;gap:10px 18px}.top nav{gap:15px;font-size:12px;flex-wrap:wrap}.foot{gap:12px}}
 
 /* a11y: visible keyboard focus */
-a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #c9553c;outline-offset:3px;border-radius:2px}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #c8442e;outline-offset:3px;border-radius:2px}
 </style>
 </head>
 <body>
@@ -101,18 +103,18 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     .cform{max-width:640px;margin-top:6px;display:grid;gap:16px}
     .cform .row{display:grid;gap:7px}
     .cform label{font-family:var(--mono,ui-monospace,monospace);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a8378}
-    .cform input,.cform textarea{width:100%;background:#00000005;border:1px solid #1a181524;border-radius:2px;padding:13px 14px;font-family:inherit;font-size:16px;line-height:1.4;color:#1a1815;transition:border-color .25s}
-    .cform input:focus,.cform textarea:focus,.cform select:focus{outline:none;border-color:#c9553c}
-    .cform select{width:100%;background:#00000005;border:1px solid #1a181524;border-radius:2px;padding:13px 14px;font-family:inherit;font-size:16px;line-height:1.4;color:#1a1815;transition:border-color .25s;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238a8378' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    .cform input,.cform textarea{width:100%;background:#00000005;border:1px solid #1c1a1724;border-radius:2px;padding:13px 14px;font-family:inherit;font-size:16px;line-height:1.4;color:#1c1a17;transition:border-color .25s}
+    .cform input:focus,.cform textarea:focus,.cform select:focus{outline:none;border-color:#c8442e}
+    .cform select{width:100%;background:#00000005;border:1px solid #1c1a1724;border-radius:2px;padding:13px 14px;font-family:inherit;font-size:16px;line-height:1.4;color:#1c1a17;transition:border-color .25s;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238a8378' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
     .cform .row.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     @media(max-width:560px){.cform .row.two{grid-template-columns:1fr}}
     .cform textarea{min-height:130px;resize:vertical}
     .cform .hp{position:absolute!important;left:-9999px}
-    .cform button{justify-self:start;margin-top:2px;background:#1a1815;color:#f2efe7;border:0;padding:14px 30px;font-family:var(--mono,ui-monospace,monospace);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .25s}
-    .cform button:hover{background:#c9553c}
+    .cform button{justify-self:start;margin-top:2px;background:#1c1a17;color:#f4f1ea;border:0;padding:14px 30px;font-family:var(--mono,ui-monospace,monospace);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .25s}
+    .cform button:hover{background:#c8442e}
     .cform .note{font-size:13px;line-height:1.5;color:#8a8378}
     .cform .msg{font-size:14px;line-height:1.5;padding:10px 0;display:none}
-    .cform .msg.ok{display:block;color:#3a7a52}.cform .msg.err{display:block;color:#c9553c}
+    .cform .msg.ok{display:block;color:#3a7a52}.cform .msg.err{display:block;color:#c8442e}
     </style>
     <div class="brief rev" style="display:block">
       <p class="kick">Or send it here</p>
@@ -156,7 +158,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
         <div class="row"><label for="cf-msg">What you're building</label><textarea id="cf-msg" name="message" required></textarea></div>
         <div class="msg" id="cf-out" role="status" aria-live="polite"></div>
         <button type="submit">Send &rarr;</button>
-        <p class="note">Prefer email? <a href="mailto:hello@abdigilife.com?subject=New%20project%20%E2%80%94%20AB%20Digilife" style="color:#c9553c;text-decoration:underline">hello@abdigilife.com</a></p>
+        <p class="note">Prefer email? <a href="mailto:hello@abdigilife.com?subject=New%20project%20%E2%80%94%20AB%20Digilife" style="color:#c8442e;text-decoration:underline">hello@abdigilife.com</a></p>
       </form>
     </div>
     <script>

@@ -18,9 +18,11 @@
 <link rel="preconnect" href="https://i.ytimg.com">
 <link rel="preload" as="image" href="https://i.ytimg.com/vi/7tSerANfgpk/maxresdefault.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet">
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#f2efe7;--ink:#1a1815;--accent:#c9553c;--disp:'Clash Display',system-ui,sans-serif;--sans:'Satoshi',system-ui,sans-serif;--serif:'Fraunces',Georgia,serif;--mono:ui-monospace,Menlo,monospace;--e:cubic-bezier(.22,1,.36,1)}
+::selection{background:#c8442e;color:#f4f1ea}
+
+:root{--cream:#f4f1ea;--ink:#1c1a17;--accent:#c8442e;--disp:'Clash Display',system-ui,sans-serif;--sans:'General Sans',system-ui,sans-serif;--serif:'Fraunces',Georgia,serif;--mono:ui-monospace,Menlo,monospace;--e:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;overflow:hidden}
 body{background:#0e0c0a;color:var(--cream);font-family:var(--sans);-webkit-font-smoothing:antialiased}
@@ -43,27 +45,27 @@ body{background:#0e0c0a;color:var(--cream);font-family:var(--sans);-webkit-font-
 .top{display:flex;justify-content:space-between;align-items:center}
 .mk{display:block;text-decoration:none;color:var(--cream);filter:drop-shadow(0 2px 14px #0e0c0aaa);opacity:0;animation:fadeIn .9s var(--e) .15s forwards}.mk img{height:clamp(48px,5.4vh,66px);width:auto;display:block}
 nav{display:flex;gap:clamp(16px,1.8vw,28px);opacity:0;animation:fadeIn .9s var(--e) .3s forwards}
-nav a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#f2efe7cc;transition:color .3s;position:relative}
+nav a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#f4f1eacc;transition:color .3s;position:relative}
 nav a:after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--cream);transition:width .35s var(--e)}
 nav a:hover{color:var(--cream)}nav a:hover:after{width:100%}
 .mid{flex:1}
 .bottom{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(11px,1.5vh,18px)}
-.eyebrow{font-family:var(--mono);font-size:clamp(9.5px,1vw,11px);letter-spacing:.18em;text-transform:uppercase;color:#f2efe7b3;display:flex;align-items:center;gap:11px;white-space:nowrap;opacity:0;animation:rise 1s var(--e) .35s forwards}
-.eyebrow:before{content:'';width:clamp(20px,3vw,44px);height:1px;background:#f2efe766}
+.eyebrow{font-family:var(--mono);font-size:clamp(9.5px,1vw,11px);letter-spacing:.18em;text-transform:uppercase;color:#f4f1eab3;display:flex;align-items:center;gap:11px;white-space:nowrap;opacity:0;animation:rise 1s var(--e) .35s forwards}
+.eyebrow:before{content:'';width:clamp(20px,3vw,44px);height:1px;background:#f4f1ea66}
 .lede{font-family:var(--serif);font-weight:340;font-style:normal;font-size:clamp(34px,5.4vw,88px);line-height:.92;letter-spacing:-.018em;text-shadow:0 3px 44px #0e0c0a80;white-space:nowrap}
 .lede .ln{display:block;overflow:hidden}
 .lede .ln>span{display:block;transform:translateY(105%);animation:reveal 1.05s var(--e) forwards}
 .lede .ln:nth-child(1)>span{animation-delay:.42s}
 .lede .ln:nth-child(2)>span{animation-delay:.54s}
 .lede em{font-style:italic;font-weight:340}
-.cta{display:inline-flex;align-items:center;gap:9px;margin-top:clamp(6px,1vh,12px);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#f2efe7;text-decoration:none;opacity:0;animation:rise 1s var(--e) .8s forwards}
+.cta{display:inline-flex;align-items:center;gap:9px;margin-top:clamp(6px,1vh,12px);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#f4f1ea;text-decoration:none;opacity:0;animation:rise 1s var(--e) .8s forwards}
 .cta:before{content:'';width:26px;height:1px;background:var(--accent);transition:width .35s var(--e)}
 .cta:hover:before{width:44px}
-.sub{font-family:var(--sans);font-size:clamp(13px,1.3vw,15.5px);letter-spacing:.015em;line-height:1.5;color:#f2efe7d9;max-width:52ch;margin-top:clamp(10px,1.6vh,18px);text-shadow:0 2px 24px #0e0c0a99;opacity:0;animation:rise 1s var(--e) .72s forwards}
+.sub{font-family:var(--sans);font-size:clamp(13px,1.3vw,15.5px);letter-spacing:.015em;line-height:1.5;color:#f4f1ead9;max-width:52ch;margin-top:clamp(10px,1.6vh,18px);text-shadow:0 2px 24px #0e0c0a99;opacity:0;animation:rise 1s var(--e) .72s forwards}
 .ctas{display:flex;flex-wrap:wrap;gap:8px clamp(18px,2.6vw,34px)}
 .ctas .cta{animation-delay:.86s}.ctas .cta:nth-child(2){animation-delay:.96s}.ctas .cta:nth-child(3){animation-delay:1.06s}
-.mute{position:absolute;right:clamp(22px,4vw,60px);bottom:clamp(26px,3.6vh,48px);z-index:5;display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#f2efe7cc;background:#0e0c0a4d;backdrop-filter:blur(6px);border:1px solid #f2efe740;border-radius:100px;padding:8px 15px;cursor:pointer;transition:border-color .3s,color .3s,background .3s;opacity:0;animation:fadeIn .9s var(--e) 1s forwards}
-.mute:hover{border-color:#f2efe7;color:#fff;background:#0e0c0a80}
+.mute{position:absolute;right:clamp(22px,4vw,60px);bottom:clamp(26px,3.6vh,48px);z-index:5;display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#f4f1eacc;background:#0e0c0a4d;backdrop-filter:blur(6px);border:1px solid #f4f1ea40;border-radius:100px;padding:8px 15px;cursor:pointer;transition:border-color .3s,color .3s,background .3s;opacity:0;animation:fadeIn .9s var(--e) 1s forwards}
+.mute:hover{border-color:#f4f1ea;color:#fff;background:#0e0c0a80}
 .mute i{width:6px;height:6px;border-radius:50%;background:var(--accent);display:block;box-shadow:0 0 8px var(--accent)}
 @keyframes reveal{to{transform:translateY(0)}}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
@@ -73,7 +75,7 @@ nav a:hover{color:var(--cream)}nav a:hover:after{width:100%}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}.mk,nav,.eyebrow,.cta,.mute{opacity:1!important}.lede .ln>span{transform:none!important}}
 
 /* a11y: visible keyboard focus */
-a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #c9553c;outline-offset:3px;border-radius:2px}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #c8442e;outline-offset:3px;border-radius:2px}
 </style>
 </head>
 <body>
