@@ -102,7 +102,10 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
     .cform .row{display:grid;gap:7px}
     .cform label{font-family:var(--mono,ui-monospace,monospace);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8a8378}
     .cform input,.cform textarea{width:100%;background:#00000005;border:1px solid #1a181524;border-radius:2px;padding:13px 14px;font-family:inherit;font-size:16px;line-height:1.4;color:#1a1815;transition:border-color .25s}
-    .cform input:focus,.cform textarea:focus{outline:none;border-color:#c9553c}
+    .cform input:focus,.cform textarea:focus,.cform select:focus{outline:none;border-color:#c9553c}
+    .cform select{width:100%;background:#00000005;border:1px solid #1a181524;border-radius:2px;padding:13px 14px;font-family:inherit;font-size:16px;line-height:1.4;color:#1a1815;transition:border-color .25s;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238a8378' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+    .cform .row.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:560px){.cform .row.two{grid-template-columns:1fr}}
     .cform textarea{min-height:130px;resize:vertical}
     .cform .hp{position:absolute!important;left:-9999px}
     .cform button{justify-self:start;margin-top:2px;background:#1a1815;color:#f2efe7;border:0;padding:14px 30px;font-family:var(--mono,ui-monospace,monospace);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .25s}
@@ -121,6 +124,35 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
         <input type="hidden" name="_template" value="table">
         <div class="row"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
         <div class="row"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="row"><label for="cf-type">What do you need?</label>
+          <select id="cf-type" name="project_type" required>
+            <option value="" disabled selected>Choose the closest fit…</option>
+            <option>Opening something new — brand, launch film, site</option>
+            <option>Keeping the feed alive — monthly bilingual content</option>
+            <option>A day you only get once — event coverage</option>
+            <option>The face of the brand — founder story / interviews</option>
+            <option>A site that closes — web + visual system</option>
+            <option>Something else</option>
+          </select></div>
+        <div class="row two">
+          <div class="row"><label for="cf-timeline">Timeline</label>
+            <select id="cf-timeline" name="timeline">
+              <option value="" disabled selected>When do you need it?</option>
+              <option>ASAP — within 2 weeks</option>
+              <option>This month</option>
+              <option>Next 1–3 months</option>
+              <option>Just exploring</option>
+            </select></div>
+          <div class="row"><label for="cf-budget">Budget range</label>
+            <select id="cf-budget" name="budget">
+              <option value="" disabled selected>Rough range (optional)</option>
+              <option>Under $2k</option>
+              <option>$2k – $5k</option>
+              <option>$5k – $15k</option>
+              <option>$15k+</option>
+              <option>Not sure yet</option>
+            </select></div>
+        </div>
         <div class="row"><label for="cf-msg">What you're building</label><textarea id="cf-msg" name="message" required></textarea></div>
         <div class="msg" id="cf-out" role="status" aria-live="polite"></div>
         <button type="submit">Send &rarr;</button>
