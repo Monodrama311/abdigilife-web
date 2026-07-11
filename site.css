@@ -63,7 +63,7 @@ header.nav.on-light::before{background:linear-gradient(180deg,rgba(241,234,220,.
 header.nav .logo{height:clamp(28px,3.4vw,38px);width:auto;transition:opacity .3s}
 header.nav .logo.lt{display:none} header.nav.on-light .logo.dk{display:none} header.nav.on-light .logo.lt{display:block}
 header.nav nav{display:flex;gap:clamp(14px,1.8vw,30px);font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
-header.nav a.lnk{position:relative;padding:5px 0;color:var(--on);transition:color .3s}
+header.nav a.lnk{position:relative;padding:12px 8px;display:inline-block;color:var(--on);transition:color .3s}
 header.nav.on-light a.lnk{color:var(--ink-on-bone)}
 header.nav a.lnk::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--red);transition:right .35s var(--e)}
 header.nav a.lnk:hover{color:var(--red)} header.nav a.lnk:hover::after,header.nav a.lnk[aria-current]::after{right:0}
